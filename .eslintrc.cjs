@@ -10,6 +10,13 @@ module.exports = {
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh'],
   rules: {
-    'react-refresh/only-export-components': 'warn',
+    "react-refresh/only-export-components": "warn",
+    "no-unused-vars": [
+      "warn",
+      { vars: "all", args: "after-used", ignoreRestSiblings: false },
+      "no-unused-vars"[
+        ("warn", { vars: "all", args: "after-used", ignoreRestSiblings: false })
+      ],
+    ],
   },
 }

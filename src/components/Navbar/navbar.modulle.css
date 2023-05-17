@@ -1,0 +1,56 @@
+.conteiner{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #333333;
+    height: 120px;
+ 
+ border-bottom: 2px solid #ffcc00;
+ }
+ .blok{
+     margin: 0 auto ;
+ color: white;
+ width: 100%;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ text-decoration: none;
+ }
+ .logo{
+     cursor: pointer;
+     color: white;
+ margin-right: 140px;
+ font-family: Oswald;
+ font-weight: 600;
+ font-size: clamp(30px , 6vw , 50px);
+ }
+ .label{
+     color: #ffcc00;
+ }
+ .contlink{
+     display: flex;
+     gap: 100px;
+     font-size: clamp(14px , 8vw, 25px);
+ 
+      text-decoration: none;
+ }
+ .join{
+     font-family: Oswald;
+ font-weight: 400;
+     text-decoration: none;
+     color: #ffcc00;
+  
+ }
+ .registr{
+     font-family: Oswald;
+ font-weight: 400;
+     color: #ffcc00;
+     text-decoration: none;
+ }
+ .admins{
+     font-family: Oswald;
+ font-weight: 400;
+     color: #3079ef;
+     text-decoration: none;
+ }
+ 
