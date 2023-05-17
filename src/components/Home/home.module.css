@@ -1,0 +1,25 @@
+.wrappper_container{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* .wrapper{
+  background: #ffcc00;
+  width: 100%;
+  min-height: 100vh;
+} */
+
+.banner{
+  padding: 35px;
+}
+
+.description_title{
+  color: #333;
+  font-size: 45px;
+  padding-bottom: 35px;
+}
+
+.paragraph{
+  font-size: 24px;
+  max-width: 550px;
+}
