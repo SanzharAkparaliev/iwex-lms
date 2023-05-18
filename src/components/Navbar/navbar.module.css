@@ -44,10 +44,10 @@ color: #ffffff;
   text-decoration: none;
   color: #333333;
 }
-/* .join:hover {
+.join:hover {
   transition: 0.4s;
-  color: #ffcc00;
-} */
+  color: #ffffff;
+}
 .registr {
   font-family: Oswald;
   font-weight: 400;
@@ -69,13 +69,15 @@ color: #ffffff;
   gap: 10px;
   align-items: center;
 }
-img {
-  width: 50px;
+.img {
+  width: 200px;
+  height: auto;
 }
 .parag {
+  opacity: 90%;
   margin: 0;
-  color: #ffffff;
+  color: #333333;
   font-family: Roboto;
-  font-weight: 700;
-  font-size: clamp(16px, 6vw, 24px);
+  font-weight: 400;
+  font-size: clamp(16px, 6vw, 25px);
 }
