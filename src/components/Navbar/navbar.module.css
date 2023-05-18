@@ -2,8 +2,8 @@
   width: 100%;
   display: flex;
   align-items: center;
-  background: #222222;
-  height: 100px;
+  background: #333333;
+  height: 90px;
 }
 .blok {
   margin: 0 auto;
@@ -13,6 +13,11 @@
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
+}
+.icon{
+    cursor: pointer;
+    font-size: clamp(14px, 8vw, 25px);
+    color: white;
 }
 .logo {
   cursor: pointer;
@@ -40,7 +45,7 @@ color: #ffffff;
 }
 .join:hover {
   transition: 0.4s;
-  color: #1ee2e7;
+  color: #ffcc00;
 }
 .registr {
   font-family: Oswald;

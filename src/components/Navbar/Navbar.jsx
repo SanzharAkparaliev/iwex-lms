@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import styles from './navbar.module.css';
 import logo from './header-logo2.png';
+import { BiLogIn } from "react-icons/bi";
 const Navbar = () => {
   return (
     <div className={styles.conteiner}>
@@ -17,7 +18,7 @@ const Navbar = () => {
             Home
           </NavLink>
           <NavLink to="/login" className={styles.join}>
-            sign in
+          {BiLogIn}
           </NavLink>
         </nav>
       </div>
