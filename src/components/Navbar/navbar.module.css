@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   background: #222222;
-  height: 100px;
+  height: 90px;
 }
 .blok {
   margin: 0 auto;
@@ -40,7 +40,7 @@ color: #ffffff;
 }
 .join:hover {
   transition: 0.4s;
-  color: #1ee2e7;
+  color: #ffcc00;
 }
 .registr {
   font-family: Oswald;
