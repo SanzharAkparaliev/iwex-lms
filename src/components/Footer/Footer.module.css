@@ -1,26 +1,31 @@
 .site_footer{
-    background-color:#333333;
+    background-color:#26272b;
+    color:#737373;
+    font-family: 'Poppins', sans-serif;
+     
 }
 .row{
+    padding-top: 30px;
+    padding-bottom: 30px;
     max-width: 1400PX;
     display: flex;
     margin: 0 auto;
     width: 100%;
-    border: 1px solid #000;
 }
 .ab{
     width: 50%;
 }
+.title{
+    color: white;
+}
 .cat{
-    text-align: center;
+    padding-left: 80px;
     margin: 0 auto;
     text-decoration: none;
-    border: 1px solid #000;
     width: 25%;
 }
 .contact{
-    text-align: center;
-    border: 1px solid #000;
+    
     margin: 0 auto;
     text-decoration: none;
     width: 25%;
@@ -29,4 +34,55 @@
 .footer_links{
     text-decoration: none;
     list-style: none;
+}
+.footer_links a{
+    transition: .5s;
+}
+.phone {
+    transition: .5s;
+}
+.phone:hover{
+    color: #00e1ff;
+}
+
+
+
+.line{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    border-top: 1px solid #737373 ;
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 20px 0px;
+}
+.icon_footer{
+    display: flex;
+    gap: 20px;
+    padding-right: 100px;
+}
+.icon_fac,
+.icon_link,
+.icon_twitt,
+.icon_inst
+{
+    width: 35px;
+    transition: .5s;
+    height: 35px;
+}
+.icon_fac:hover{
+color: #0071fc;
+}
+.icon_link:hover{
+    color: #0077B5;
+}
+.icon_twitt:hover{
+    color: #1DA1F2;
+}
+.icon_inst:hover{
+    color: #E1306C;
+}
+.footer_links a:hover{
+    color: #ffcc00;
+
 }
