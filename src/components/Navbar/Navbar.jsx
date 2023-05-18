@@ -1,16 +1,20 @@
-import { NavLink } from "react-router-dom";
-import styles from "./navbar.modulle.css";
+import { NavLink } from 'react-router-dom';
+import styles from './navbar.module.css';
+import logo from './header-logo2.png';
 const Navbar = () => {
   return (
     <div className={styles.conteiner}>
       <div className={styles.blok}>
-        <NavLink className={styles.logo} to="/">
-          {" "}
-          I<label className={styles.label}>WEX</label>
-        </NavLink>
+        <div className={styles.contlogo}>
+          <img className={styles.img} src={logo} alt="" />
+          <NavLink className={styles.logo} to="/">
+            IWEX
+          </NavLink>
+          <p className={styles.parag}>LMS</p>
+        </div>
         <nav className={styles.contlink}>
           <NavLink to="/" className={styles.admins}>
-            Admins
+            Home
           </NavLink>
           <NavLink to="/login" className={styles.join}>
             sign in
