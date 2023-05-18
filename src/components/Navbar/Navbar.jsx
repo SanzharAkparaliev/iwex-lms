@@ -13,7 +13,7 @@ const Navbar = () => {
           <p className={styles.parag}>LMS</p>
         </div>
         <nav className={styles.contlink}>
-          <NavLink to="/" className={styles.admins}>
+          <NavLink to="/" className={styles.join}>
             Home
           </NavLink>
           <NavLink to="/login" className={styles.join}>
