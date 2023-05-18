@@ -1,78 +1,75 @@
-.conteiner{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background: #ffffff;
-    height: 120px;
- 
-box-shadow: 0px 0px 2px 0px black;
- }
- .blok{
-     margin: 0 auto ;
- color: white;
- width: 100%;
- display: flex;
- justify-content: space-between;
- align-items: center;
- text-decoration: none;
- }
- .logo{
-     cursor: pointer;
-     color: rgb(6, 6, 6);
+.conteiner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #222222;
+  height: 100px;
+}
+.blok {
+  margin: 0 auto;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+.logo {
+  cursor: pointer;
+color: #ffffff;
 
- font-family: Oswald;
- font-weight: 600;
- font-size: clamp(20px , 6vw , 30px);
- }
- .label{
-     color: #ffcc00;
- }
- .contlink{
-     display: flex;
-     gap: 100px;
-     font-size: clamp(14px , 8vw, 25px);
- margin-right: 70px;
-      text-decoration: none;
- }
- .join{
-     font-family: Oswald;
- font-weight: 400;
-     text-decoration: none;
-     color: #ffcc00;
-  
- }
- .registr{
-     font-family: Oswald;
- font-weight: 400;
-     color: #ffcc00;
-     text-decoration: none;
- }
- .admins{
-     font-family: Oswald;
- font-weight: 400;
-     color: #3079ef;
-     text-decoration: none;
- }
- .contlogo{
-    max-width: 120px;
-    height: 100px;
-    margin-left: 70px;
-    display: flex;
+  font-family: Oswald;
+  font-weight: 700;
+  font-size: clamp(20px, 6vw, 30px);
+}
+.label {
+  color: #ffcc00;
+}
+.contlink {
+  display: flex;
+  gap: 100px;
+  font-size: clamp(14px, 8vw, 25px);
+  margin-right: 70px;
+  text-decoration: none;
+}
+.join {
+  font-family: Roboto;
+  font-weight: 500;
+  text-decoration: none;
+  color: #ffffff;
+}
+.join:hover {
+  transition: 0.4s;
+  color: #1ee2e7;
+}
+.registr {
+  font-family: Oswald;
+  font-weight: 400;
+  color: #ffcc00;
+  text-decoration: none;
+}
+.admins {
+  font-family: Oswald;
+  font-weight: 400;
+  color: #3079ef;
+  text-decoration: none;
+}
+.contlogo {
+  max-width: 120px;
+  height: 100px;
+  margin-left: 70px;
+  display: flex;
 
-    gap: 10px;
-    align-items: center;
-
- }
- img{
-width: 50px;
-
- }
- .parag{
-    margin: 0;
-color: black;
-
-
-font-family: Oswald;
-font-weight: 600;
-font-size: clamp(16px , 6vw , 24px);
- }
+  gap: 10px;
+  align-items: center;
+}
+img {
+  width: 50px;
+}
+.parag {
+  margin: 0;
+  color: #ffffff;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: clamp(16px, 6vw, 24px);
+}
