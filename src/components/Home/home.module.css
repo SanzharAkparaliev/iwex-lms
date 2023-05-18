@@ -83,3 +83,34 @@
 .iconLink{
   font-size: 24px;
 }
+
+
+@media screen and (max-width: 1200px) {
+  .banner{
+    padding: 35px;
+  }
+  .banner_girl{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner{
+    display: flex;
+    flex-direction: column;
+  }
+  .descriptions{
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .description_title{
+    text-align: center;
+  }
+  .paragraph{
+    text-align: center;
+  }
+  .label{
+    display: flex;
+    justify-content: center;
+  }
+}
