@@ -46,13 +46,8 @@ color: #ffffff;
 }
 .join:hover {
   transition: 0.4s;
-<<<<<<< HEAD
   color: #ffffff;
 }
-=======
-  color: #ffcc00;
-} */
->>>>>>> 8c809a23fb580cc9b2692a2a0796bf4d461b4302
 .registr {
   font-family: Oswald;
   font-weight: 400;
