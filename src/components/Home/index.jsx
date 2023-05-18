@@ -1,5 +1,6 @@
 import AboutContent from '../AboutContent/AboutContent';
 import BannerContent from '../Banner';
+import ChooseUs from '../ChooseUs';
 
 import styles from './home.module.css';
 
@@ -8,7 +9,8 @@ const HomePage = () => {
     <div className={styles.wrapper}>
       <div className={styles.wrappper_container}>
         <BannerContent />
-        <AboutContent/>
+        <AboutContent />
+        <ChooseUs />
       </div>
     </div>
   );

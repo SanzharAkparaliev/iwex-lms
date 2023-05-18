@@ -13,7 +13,7 @@ const SocialS = () => {
     <div className={styles.socials}>
       <div className={styles.socialIcon}>
         <FaInstagram className={styles.iconInstagram} />
-        <a href="#" className={styles.iconLink}>Instagrmam</a>
+        <a href="#" className={styles.iconLink}>Instagram</a>
       </div>
       <div className={styles.socialIcon}>
         <FaTelegram className={styles.iconInstagram} />

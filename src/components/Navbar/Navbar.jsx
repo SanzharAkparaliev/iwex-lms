@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styles from './navbar.module.css';
-import logo from './header-logo2.png';
+
 import logo1 from './logo3.png'
 import { BiLogIn } from "react-icons/bi";
 const Navbar = () => {

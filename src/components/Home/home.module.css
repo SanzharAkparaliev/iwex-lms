@@ -67,12 +67,15 @@
   align-items: center;
   /* justify-content: space-between; */
   gap: 110px;
+  /* overflow-x: scroll; */
+  flex-wrap: wrap;
 }
 
 .socialIcon{
   display: flex;
   align-items: center;
   gap: 12px;
+  margin: 0 auto;
 }
 
 .iconInstagram{
@@ -82,4 +85,59 @@
 
 .iconLink{
   font-size: 24px;
+}
+
+@media screen and (max-width: 1396px) {
+  .socials{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .banner{
+    padding: 35px;
+  }
+  .banner_girl{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner{
+    display: flex;
+    flex-direction: column;
+  }
+  .descriptions{
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .description_title{
+    text-align: center;
+  }
+  .paragraph{
+    text-align: center;
+  }
+  .label{
+    display: flex;
+    justify-content: center;
+  }
+
+  .socials{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
