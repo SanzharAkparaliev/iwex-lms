@@ -61,7 +61,7 @@
     height: 100px;
     margin-left: 70px;
     display: flex;
-  border: 1px solid black;
+
     gap: 10px;
     align-items: center;
   }
@@ -77,20 +77,32 @@
     font-weight: 400;
     font-size: clamp(16px, 6vw, 25px);
   }
+
+   .nav {
+    display: flex;
+    gap: 100px;
+    font-size: clamp(14px, 8vw, 25px);
+    margin-right: 70px;
+    text-decoration: none;
+  } 
+
   @media(  max-width: 768px){
-    .nav{
+     .nav{
       position: fixed;
       width:  100%;
       top: 0;
       right: 0;
+      margin: 0 auto;
       flex-direction: column;
       border: 1px solid black;
       transform:translateX( calc(100% + 70px)) ;
-    }
+    } 
     .contlogo{
       margin-left: 10px;
     }
-    .nav.is-active{
-      transform:translateX(0) ;
+  
+    
+    .nav.active{
+      transform:translateX( calc(0%)) ;
     }
   }
