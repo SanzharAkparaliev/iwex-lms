@@ -1,21 +1,10 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import styles from '../Home/home.module.css';
 import VideoPlayer from './Video';
+import { FaPlayCircle } from 'react-icons/fa';
 
 const ChooseUs = () => {
-
-  const videoRef = useRef(null);
   const [showVideo, setShowVideo] = useState(false);
-
-  const togglePlay = () => {
-    const video = videoRef.current;
-    if (video.paused) {
-      video.play();
-    } else {
-      video.pause();
-    }
-    setShowVideo(!video.paused);
-  };
 
   return (
     <article className={styles.article}>
@@ -33,7 +22,25 @@ const ChooseUs = () => {
           </p>
         </div>
         <div className={styles.article_video_blog}>
-          <VideoPlayer />
+          {showVideo ? (
+            <VideoPlayer />
+          ) : (
+            <img
+              className={styles.subImage}
+              src="https://courses.iwex.kg/pluginfile.php/13123/block_cocoon_about_1/content/aaaa.jpg"
+              alt=""
+            />
+          )}
+          {!showVideo && (
+            <FaPlayCircle
+              className={styles.play_icon}
+              onClick={() => setShowVideo(!showVideo)}
+            />
+            // <i
+            //   className={styles.play_icon}
+            //   onClick={() => setShowVideo(!showVideo)}
+            // ></i>
+          )}
         </div>
       </div>
     </article>

@@ -1,17 +1,12 @@
-import { useRef, useState } from 'react';
 import ReactPlayer from 'react-player';
+import styles from '../../Home/home.module.css';
 
 const VideoPlayer = () => {
-  const videoRef = useRef(null);
-  const [showVideo, setShowVideo] = useState(false);
-
-
-  return;
-  <div className={styles.video_img}>
-    <video width="100%" height="100%" controls>
-
-    </video>
-  </div>;
+  return (
+    <div className={styles.video_img}>
+      <ReactPlayer url="https://www.youtube.com/watch?v=IqAjdbgzMV8" controls />
+    </div>
+  );
 };
 
 export default VideoPlayer;

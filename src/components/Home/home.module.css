@@ -91,9 +91,37 @@
   display: flex;
 }
 
+.article_blog{
+  display: flex;
+  gap: 100px;
+}
+
 .article_title{
   font-size: 30px;
   padding-bottom: 18px;
+}
+
+.subImage{
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+
+
+.play_icon{
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #ffcc00;
+    z-index: 7777;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .article_description{
@@ -102,7 +130,18 @@
   line-height: 30px;
 }
 
-/* .article_video_blog */
+.article_video_blog{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 777;
+}
+
+.video_img{
+  border-radius: 50px;
+}
 
 @media screen and (max-width: 1396px) {
   .socials{
