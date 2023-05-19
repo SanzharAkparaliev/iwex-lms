@@ -39,6 +39,7 @@ margin-left: 20px;
     font-size: clamp(15px , 8vw ,35px);
 }
 .title {
+  font-size: clamp(25px ,6vw , 35px);
   font-family: Roboto;
   font-weight: 500;
   margin-left: 20px;
@@ -80,5 +81,8 @@ margin-left: 20px;
   .cont {
     max-width: 500px;
     margin: 0 auto;
+  }
+  .title{
+text-align: center;
   }
 }
