@@ -1,4 +1,4 @@
-import React from 'react' 
+
 import styled from './Teachers.module.css'
 
 import React from 'react'
