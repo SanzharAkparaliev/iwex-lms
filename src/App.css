@@ -30,6 +30,8 @@
   color: inherit;
   box-sizing: border-box;
 }
+body{
+}
 .cont {
   width: 1400px;
 }
