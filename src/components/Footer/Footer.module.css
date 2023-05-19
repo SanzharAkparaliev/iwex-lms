@@ -7,7 +7,7 @@
 .row{
     padding-top: 30px;
     padding-bottom: 30px;
-    max-width: 1400PX;
+    max-width: 1440PX;
     margin: 0 auto;
 }
 .roww{
@@ -48,7 +48,7 @@
     display: flex;
     border-top: 1px solid #737373 ;
     margin: 0 auto;
-    max-width: 1400px;
+    max-width: 1440px;
     padding: 20px 0px;
 }
 .icon_footer{
