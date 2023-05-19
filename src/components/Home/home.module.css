@@ -87,6 +87,23 @@
   font-size: 24px;
 }
 
+.article{
+  display: flex;
+}
+
+.article_title{
+  font-size: 30px;
+  padding-bottom: 18px;
+}
+
+.article_description{
+  width: 600px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+/* .article_video_blog */
+
 @media screen and (max-width: 1396px) {
   .socials{
     display: flex;
