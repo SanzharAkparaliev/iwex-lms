@@ -3,7 +3,7 @@ import BannerContent from '../Banner';
 
 import ChooseUs from '../ChooseUs';
 
-
+import { Footer } from '../Footer/Footer';
 import { Teachers } from '../Teachers/Teachers';
 
 
@@ -18,8 +18,7 @@ const HomePage = () => {
         <AboutContent />
         <ChooseUs />
 
-        <Teachers/>
-
+        
       </div>
      
     </div>

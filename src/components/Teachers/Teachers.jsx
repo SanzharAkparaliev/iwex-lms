@@ -1,8 +1,13 @@
 import React from 'react' 
 import styled from './Teachers.module.css'
 
-export const Teachers = () => {
+import React from 'react'
+
+const Teachers = () => {
   return (
-    <div className={styled.wrap}>Teachers</div>
+    <div>Teachers</div>
   )
 }
+
+export default Teachers
+
