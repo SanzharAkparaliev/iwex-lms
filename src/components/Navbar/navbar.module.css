@@ -44,10 +44,12 @@ color: #ffffff;
   text-decoration: none;
   color: #333333;
 }
-.join:hover {
+ .join:hover {
   transition: 0.4s;
-  color: #ffffff;
-}
+
+  color: #ffcc00;
+} 
+
 .registr {
   font-family: Oswald;
   font-weight: 400;

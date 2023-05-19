@@ -1,28 +1,84 @@
-.conteiner{
+.conteiner {
+  margin-bottom: 20px;
+  width: 100%;
+  margin: 50px auto;
+}
+.postBlok {
+  display: flex;
+  margin: 0 auto;
+  gap: 20px;
+}
+.blok {
+  width: 50%;
 
-    margin-bottom: 20px;
-    width: 100%;
-    margin: 50px auto;
+  margin: 0 auto;
 }
-.postBlok{
+.imgmen {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.cont {
+  margin-top: 40px;
+margin-left: 20px;
+  max-width: 400px;
+
+}
+.contblok {
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.icon{
+    margin-top: 6px;
+    font-family: Roboto;
+  font-weight: 500;
+    font-size: clamp(15px , 8vw ,35px);
+}
+.title {
+  font-family: Roboto;
+  font-weight: 500;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.text {
+    margin-top: 30px;
+  width: 90%;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.8;
+  margin-left: 20px;
+  color: #c8c8c8;
+  opacity: 100%;
+  font-size: clamp(12px, 8vw, 18px);
+}
+.intblok {
     display: flex;
-margin: 0 auto;
-gap: 20px;
-    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+  margin: 0 auto;
+
+  width: 180px;
+  height: 100px;
 }
-.blok{
-    width: 50%;
-    height: 500px;
-    border: 1px solid red;
-    margin: 0 auto;
+.par{
+    font-family: Roboto;
+  font-weight: 500;
+    font-size: clamp(15px , 6vw , 32px);
 }
-.imgmen{
-width: 100%;
-object-fit: cover;
-height: 100%;
-}
-@media(max-width:1100px) {
-.postBlok{
+
+@media (max-width: 1100px) {
+  .postBlok {
     flex-wrap: wrap-reverse;
-}
+  }
+  .blok {
+    width: 80%;
+  }
+  .cont {
+    max-width: 500px;
+    margin: 0 auto;
+  }
 }
