@@ -4,7 +4,10 @@
     align-items: center;
     background: #ffcc00;
     height: 90px;
-    
+    position: fixed;
+    width: 100%;
+    box-shadow: 3px 1px 4px 3px #333333b7;
+    z-index: 1200;
   }
   .blok {
     margin: 0 auto;
@@ -22,8 +25,7 @@
   }
   .logo {
     cursor: pointer;
-  color: #ffffff;
-  
+    color: #ffffff;
     font-family: Oswald;
     font-weight: 700;
     font-size: clamp(20px, 6vw, 30px);

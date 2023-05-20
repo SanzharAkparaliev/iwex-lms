@@ -10,6 +10,8 @@
     margin: 0 auto;
 }
 .roww{
+    /* padding-top: 24px; */
+    padding: 20px;
     display: flex;
     }
 
@@ -83,8 +85,9 @@ color: #0071fc;
 }
 .footer_links a:hover{
     color: #333;
-
 }
+
+
 @media(max-width:1060px){
     .catt{
         max-width: 500px;
@@ -109,6 +112,13 @@ color: #0071fc;
     flex-wrap: wrap;
    }
 }
+
+@media screen and(max-width: 785px) {
+    .cat{
+        margin-top: 25px;
+    }
+}
+
 @media(max-width:683px){
     .icon_footer{
         padding-right: 0;

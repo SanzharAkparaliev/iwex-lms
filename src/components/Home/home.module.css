@@ -146,11 +146,12 @@
 }
 
 .card_section{
-  padding-top: 55px;
+  padding-top: 35px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 25px;
+  padding-bottom: 35px;
 }
 
 .single_card{
