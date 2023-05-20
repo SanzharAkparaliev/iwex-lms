@@ -1,8 +1,7 @@
 .site_footer{
-    background-color:#26272b;
-    color:#737373;
+    background-color:#ffcc00;
+    color:#333;
     font-family: 'Poppins', sans-serif;
-     
 }
 .row{
     padding-top: 30px;
@@ -15,7 +14,7 @@
     }
 
 .title{
-    color: white;
+    color: #333;
 }
 .catt{
     max-width: 700px;
@@ -29,9 +28,14 @@
     margin: 0 auto;
     text-decoration: none;
     list-style: none;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 .footer_links a{
     transition: .5s;
+    font-weight: 500;
 }
 .phone {
     transition: .5s;
@@ -78,7 +82,7 @@ color: #0071fc;
     color: #E1306C;
 }
 .footer_links a:hover{
-    color: #ffcc00;
+    color: #333;
 
 }
 @media(max-width:1060px){
