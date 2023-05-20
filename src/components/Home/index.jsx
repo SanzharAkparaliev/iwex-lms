@@ -11,14 +11,10 @@ const HomePage = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.wrappper_container}>
-
         <BannerContent />
         <AboutContent />
         <ChooseUs />
-
-        
       </div>
-     
     </div>
   );
 };

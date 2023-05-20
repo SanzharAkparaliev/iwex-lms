@@ -43,6 +43,9 @@ const hendler = () =>{
         <NavLink className={styles.join} to={"/"}>
             Home
         </NavLink>
+        <NavLink className={styles.join} to={"/tech"}>
+            Techers
+        </NavLink>
         <NavLink className={styles.join} to={"/login"}>
             {<BiLogIn/>}
         </NavLink>
