@@ -36,10 +36,6 @@ const ChooseUs = () => {
               className={styles.play_icon}
               onClick={() => setShowVideo(!showVideo)}
             />
-            // <i
-            //   className={styles.play_icon}
-            //   onClick={() => setShowVideo(!showVideo)}
-            // ></i>
           )}
         </div>
       </div>
