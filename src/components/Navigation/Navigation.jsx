@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './Navigation.module.css'
 import cn from 'clsx'
@@ -7,32 +7,20 @@ import logo1 from './logo3.png'
 import './habmerger.css'
 
 const Navigation = () => {
+  const [show , setShow] = useState(false)
 
+//   var nav = document.querySelector(".nav");
+//   var hamburger = document.querySelector(".hamburger");
+//  const hambActive = (e) => {
+//    hamburger.classList.toggle("is-active")
+//    nav.classList.toggle("is-active");
+//    // Do something else, like open/close menu
+// }
 
-  var nav = document.querySelector(".nav");
-  var hamburger = document.querySelector(".hamburger");
-  // // Look for .hamburger
-  
-  // // On click
-  // hamburger.addEventListener("click", function() {
-  //   // Toggle class "is-active"
-  //   hamburger.classList.toggle("is-active");
-  //   nav.classList.toggle("is-active");
-  //   // Do something else, like open/close menu
-  // });
-
-
- const hamburgerr = (e) => {
-   e.hamburger.classList.add("is-active")
-
-   nav.classList.add("is-active");
-   // Do something else, like open/close menu
+const hendler = () =>{
+  setShow((show) => !show);
 }
 
-//   // hamburger.addEventListener("click", function() {
-//   //   // Toggle class "is-active"
-   
-//   // });
 
   return (
 
@@ -45,22 +33,20 @@ const Navigation = () => {
           <p className={styles.parag}>LMS</p>
         </div>  
 
-        <button className="hamburger hamburger--spring" onClick={hamburgerr} type="button">
+        <button className="hamburger hamburger--spring " onClick={hendler} type="button">
   <span className="hamburger-box">
     <span className="hamburger-inner"></span>
   </span>
 </button>
 
-
-
-    <nav className='nav'>
+    <div className={cn(styles.nav , show && styles.active )}>
         <NavLink className={styles.join} to={"/"}>
             Home
         </NavLink>
         <NavLink className={styles.join} to={"/login"}>
             {<BiLogIn/>}
         </NavLink>
-    </nav>
+    </div>
     
 </div>
 

@@ -1,32 +1,134 @@
 .site_footer{
-    background-color:#333333;
+    background-color:#26272b;
+    color:#737373;
+    font-family: 'Poppins', sans-serif;
+     
 }
 .row{
-    max-width: 1400PX;
-    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 1440PX;
     margin: 0 auto;
-    width: 100%;
-    border: 1px solid #000;
 }
-.ab{
-    width: 50%;
+.roww{
+    display: flex;
+    }
+
+.title{
+    color: white;
+}
+.catt{
+    max-width: 700px;
 }
 .cat{
-    text-align: center;
     margin: 0 auto;
     text-decoration: none;
-    border: 1px solid #000;
-    width: 25%;
 }
-.contact{
-    text-align: center;
-    border: 1px solid #000;
-    margin: 0 auto;
-    text-decoration: none;
-    width: 25%;
 
-}
 .footer_links{
+    margin: 0 auto;
     text-decoration: none;
     list-style: none;
+}
+.footer_links a{
+    transition: .5s;
+}
+.phone {
+    transition: .5s;
+}
+.phone:hover{
+    color: #00e1ff;
+}
+
+
+
+.line{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    border-top: 1px solid #737373 ;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 20px 0px;
+}
+.icon_footer{
+    display: flex;
+    gap: 20px;
+    padding-right: 100px;
+}
+.icon_fac,
+.icon_link,
+.icon_twitt,
+.icon_inst
+{
+    width: 35px;
+    transition: .5s;
+    height: 35px;
+}
+.icon_fac:hover{
+color: #0071fc;
+}
+.icon_link:hover{
+    color: #0077B5;
+}
+.icon_twitt:hover{
+    color: #1DA1F2;
+}
+.icon_inst:hover{
+    color: #E1306C;
+}
+.footer_links a:hover{
+    color: #ffcc00;
+
+}
+@media(max-width:1060px){
+    .catt{
+        max-width: 500px;
+    }
+}
+@media(max-width:858px){
+    .catt{
+        max-width: 400px;
+    }
+}
+@media(max-width:800px){
+    .catt{
+        margin: 0 auto;
+        text-align: center;
+        max-width: 700px;
+    }
+    .cat{
+        margin: 0 auto;
+        text-align: center;
+    }
+   .roww{
+    flex-wrap: wrap;
+   }
+}
+@media(max-width:683px){
+    .icon_footer{
+        padding-right: 0;
+    }
+    .icon_fac,
+.icon_link,
+.icon_twitt,
+.icon_inst{
+    width: 30px;
+    height: 30px;
+}
+.line{
+    padding: 12px 0;
+}
+}
+@media(max-width:544px){
+    .line{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .icon_footer{
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
 }
