@@ -68,6 +68,14 @@ const Navigation = () => {
             className={({ isActive }) =>
               cn(styles.join, isActive && styles.activeJoin)
             }
+            to={'/corses'}
+          >
+            Courses
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              cn(styles.join, isActive && styles.activeJoin)
+            }
             to={'/profile'}
           >
             Profile
