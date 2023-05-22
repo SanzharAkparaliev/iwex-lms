@@ -37,11 +37,12 @@
     font-weight: 500;
     text-decoration: none;
     color: #333333;
+    transition: 0.5s;
   }
    .join:hover {
     transition: 0.4s;
   
-    color: #ffcc00;
+    color: #ffffff;
   } 
   
   .registr {
