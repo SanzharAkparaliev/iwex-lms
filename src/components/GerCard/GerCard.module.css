@@ -1,7 +1,7 @@
 .conteiner{
     width: 100%;
     margin-inline: auto;
-    border: 1px solid black;
+    
 
 }
 .cardBlok{
@@ -10,5 +10,5 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-border: 1px solid rebeccapurple;
+
 }
