@@ -3,6 +3,12 @@ import { NavLink } from 'react-router-dom';
 import styles from './Navigation.module.css';
 import cn from 'clsx';
 import { BiLogIn } from 'react-icons/bi';
+<<<<<<< HEAD
+=======
+import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+
+>>>>>>> 283f2cfe3e3628d1e53b776361c235ddbc459815
 import logo1 from './logo3.png';
 import './habmerger.css';
 
@@ -30,6 +36,7 @@ const Navigation = () => {
           <p className={styles.parag}>LMS</p>
         </div>
 
+<<<<<<< HEAD
         <button
           className="hamburger hamburger--spring "
           onClick={hendler}
@@ -52,11 +59,56 @@ const Navigation = () => {
             Profile
           </NavLink>
             {<BiLogIn />}
+=======
+        <button className={styles.hamburger} onClick={hendler} type="button">
+          {show ? (
+            <AiOutlineClose className={styles.iconCloss} />
+          ) : (
+            <AiOutlineMenu className={styles.iconCloss} />
+          )}
+        </button>
+
+        <div
+          className={
+            show ? [styles.nav, styles.active].join(' ') : [styles.nav]
+          }
+          onClick={() => setShow(false)}
+        >
+          <NavLink
+            className={({ isActive }) =>
+              cn(styles.join, isActive && styles.activeJoin)
+            }
+            to={'/'}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              cn(styles.join, isActive && styles.activeJoin)
+            }
+            to={'/tech'}
+          >
+            Techers
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              cn(styles.join, isActive && styles.activeJoin)
+            }
+            to={'/login'}
+          >
+            <label className={styles.lab}>login </label>
+>>>>>>> 283f2cfe3e3628d1e53b776361c235ddbc459815
           </NavLink>
         </div>
       </div>
     </div>
   );
 };
+<<<<<<< HEAD
 
+=======
+{
+  /* <i className={styles.icon2}>{<BiLogIn/>} </i> */
+}
+>>>>>>> 283f2cfe3e3628d1e53b776361c235ddbc459815
 export default Navigation;
