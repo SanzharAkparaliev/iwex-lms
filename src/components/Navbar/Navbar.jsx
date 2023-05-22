@@ -19,9 +19,6 @@ const Navbarr = () => {
           <NavLink to="/login" className={styles.join}>
             {BiLogIn}
           </NavLink>
-          <NavLink to="/profile" className={styles.join}>
-            Profile
-          </NavLink>
         </nav>
       </div>
     </div>

@@ -1,45 +1,12 @@
 .conteiner {
-<<<<<<< HEAD
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background: #ffcc00;
-    height: 90px;
-    position: fixed;
-    width: 100%;
-    box-shadow: 3px 1px 3px 1px #333333d5;
-    z-index: 1200;
-  }
-  .blok {
-    margin: 0 auto;
-    color: white;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
-  }
-  .icon{
-      cursor: pointer;
-      font-size: clamp(14px, 8vw, 25px);
-      color: white;
-  }
-  .logo {
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Oswald;
-    font-weight: 700;
-    font-size: clamp(20px, 6vw, 30px);
-  }
-  .label {
-    color: #ffcc00;
-  }
-=======
   width: 100%;
   display: flex;
   align-items: center;
   background: #ffcc00;
   height: 80px;
+  /* position: fixed; */
+  /* z-index: 999;
+  box-shadow: 2px 3px 5px 3px #0000006b; */
 }
 .blok {
   margin: 0 auto;
@@ -58,7 +25,6 @@
 .logo {
   cursor: pointer;
   color: #ffffff;
->>>>>>> 283f2cfe3e3628d1e53b776361c235ddbc459815
 
   font-family: Oswald;
   font-weight: 700;
@@ -91,9 +57,7 @@
 .lab {
   padding-bottom: 20px;
 }
-.icon2 {
- 
-}
+
 .admins {
   font-family: Oswald;
   font-weight: 400;
@@ -127,7 +91,6 @@
   border: 1px solid #ffcc00;
 }
 .hamburger{
- 
   display: none;
 }
 .nav {

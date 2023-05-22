@@ -23,6 +23,7 @@ const Navigation = () => {
   const hendler = () => {
     setShow((show) => !show);
   };
+  const [user, setUser] = useState(false);
 
   return (
     <div className={styles.conteiner}>
@@ -67,6 +68,14 @@ const Navigation = () => {
             className={({ isActive }) =>
               cn(styles.join, isActive && styles.activeJoin)
             }
+            to={'/profile'}
+          >
+            Profile
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              cn(styles.join, isActive && styles.activeJoin)
+            }
             to={'/login'}
           >
             <label className={styles.lab}>login </label>
@@ -76,9 +85,5 @@ const Navigation = () => {
     </div>
   );
 };
-
-{
-  /* <i className={styles.icon2}>{<BiLogIn/>} </i> */
-}
 
 export default Navigation;
