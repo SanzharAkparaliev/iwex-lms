@@ -4,6 +4,9 @@
   align-items: center;
   background: #ffcc00;
   height: 80px;
+  /* position: fixed; */
+  /* z-index: 999;
+  box-shadow: 2px 3px 5px 3px #0000006b; */
 }
 .blok {
   margin: 0 auto;
@@ -54,9 +57,7 @@
 .lab {
   padding-bottom: 20px;
 }
-.icon2 {
- 
-}
+
 .admins {
   font-family: Oswald;
   font-weight: 400;
@@ -90,7 +91,6 @@
   border: 1px solid #ffcc00;
 }
 .hamburger{
- 
   display: none;
 }
 .nav {

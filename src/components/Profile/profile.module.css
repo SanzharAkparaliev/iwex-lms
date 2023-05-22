@@ -1,0 +1,7 @@
+.sidebar_wrapper{
+  padding: 35px;
+  width: 300px;
+  min-height: 100vh;
+  background: #000;
+  border: 1px solid #000;
+}
