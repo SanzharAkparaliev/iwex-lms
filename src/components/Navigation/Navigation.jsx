@@ -48,6 +48,9 @@ const Navigation = () => {
             Techers
           </NavLink>
           <NavLink className={styles.join} to={'/login'}>
+          <NavLink className={styles.join} to={'/profile'}>
+            Profile
+          </NavLink>
             {<BiLogIn />}
           </NavLink>
         </div>

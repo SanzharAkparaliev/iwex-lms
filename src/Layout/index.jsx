@@ -5,9 +5,9 @@ import Navigation from '../components/Navigation/Navigation';
 const Layout = ({ children }) => {
   return (
     <div>
-      <Navigation/>
+      <Navigation />
       <main>{children}</main>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

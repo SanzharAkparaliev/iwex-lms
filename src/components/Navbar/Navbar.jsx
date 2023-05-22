@@ -1,17 +1,14 @@
 import { NavLink } from 'react-router-dom';
 import styles from './navbar.module.css';
 
-
-import { BiLogIn } from "react-icons/bi";
+import { BiLogIn } from 'react-icons/bi';
 const Navbarr = () => {
-
   return (
     <div className={styles.conteiner}>
       <div className={styles.blok}>
         <div className={styles.contlogo}>
-
           {/* <img className={styles.img} src={logo1} alt="" />
-         */}
+           */}
 
           <p className={styles.parag}>LMS</p>
         </div>
@@ -21,6 +18,9 @@ const Navbarr = () => {
           </NavLink>
           <NavLink to="/login" className={styles.join}>
             {BiLogIn}
+          </NavLink>
+          <NavLink to="/profile" className={styles.join}>
+            Profile
           </NavLink>
         </nav>
       </div>
