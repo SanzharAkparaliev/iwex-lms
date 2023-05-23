@@ -48,11 +48,8 @@ const ProfilePage = () => {
                 translate: `0 calc(0px - ${menuHeight} * ${activeBlock})`,
               }}
             >
-              {/* {blocks.map((blocks) => {
-                    <div className={styles.block}>{blocks}</div>;
-                  })} */}
               <div className={styles.block}>
-                <h2>Оценки</h2>
+                <h2 className={styles.name_object}>Оценки</h2>
                 <p>
                   Vivamus volutpat ipsum ac ipsum feugiat, vel molestie elit
                   vestibulum. Donec luctus commodo dictum. Aenean in turpis
@@ -61,7 +58,7 @@ const ProfilePage = () => {
                 </p>
               </div>
               <div className={styles.block}>
-                <h2>Результаты экзаменов</h2>
+                <h2 className={styles.name_object}>Результаты экзаменов</h2>
                 <p>
                   Vivamus volutpat ipsum ac ipsum feugiat, vel molestie elit
                   vestibulum. Donec luctus commodo dictum. Aenean in turpis
@@ -70,7 +67,7 @@ const ProfilePage = () => {
                 </p>
               </div>
               <div className={styles.block}>
-                <h2>Посещаемость</h2>
+                <h2 className={styles.name_object}>Посещаемость</h2>
                 <p>
                   Vivamus volutpat ipsum ac ipsum feugiat, vel molestie elit
                   vestibulum. Donec luctus commodo dictum. Aenean in turpis
