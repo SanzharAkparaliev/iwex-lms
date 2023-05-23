@@ -2,7 +2,7 @@
     max-width: 640px;
     display: flex;
     margin: 0 auto;
-    border-radius: 20px;
+    border-radius: 30px;
     background: #333333;
 }
 .card_img{
@@ -18,7 +18,7 @@ img{
     object-fit: cover;
     max-width: 100%;
     height: 100%;
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 30px 0px 0px 30px;
 
 }
 .card_text{
@@ -52,8 +52,136 @@ img{
     padding-top: 0px;
     padding-bottom: 10px;
 }
-.card_a{
+.card_fac,
+.card_inst,
+.card_twitt,
+.card_link{
     color: #737373;
     width: 32px;
+    transition: .5s;
     height:32px;
+}
+.card_fac:hover{
+    color: #0071fc;
+}
+.card_link:hover{
+    color: #0077B5;
+}
+.card_inst:hover{
+    color: #E1306C;
+}
+.card_twitt:hover{
+    color: #1DA1F2;
+}
+@media(max-width:1182px){
+    .card{
+        max-width: 500px;
+    }
+    .card_img{
+        max-width: 200px;
+    }
+    .card_text{
+        max-width: 300px;
+    }
+    .card_title{
+        font-size: 24px;
+    }
+    .card_prof{
+        font-size: 18px;
+    }
+    .line{
+        max-width: 160px;
+    }
+    .card_op{
+        font-size: 14px;
+        padding-top: 5px;
+        height: 10px;
+    }
+    .card_fac,
+.card_inst,
+.card_twitt,
+.card_link{
+    width: 28px;
+    height: 28px;
+}
+}
+@media(max-width:1024px){
+    .card{
+        max-width: 400px;
+    }
+    .card_img{
+        max-width: 150px;
+    }
+    .card_text{
+        max-width: 250px;
+    }
+    .card_title{
+        padding-bottom: 0;
+        margin-bottom: 0;
+        font-size: 22px;
+    }
+    .card_prof{
+        padding-bottom: 5px;
+        padding-top: 2px;
+        margin-top: 0;
+        font-size: 16px;
+    }
+    .line{
+        max-width: 140px;
+    }
+    .card_op{
+        font-size: 11px;
+        min-height: 40px;
+    }
+    .card_fac,
+.card_inst,
+.card_twitt,
+.card_link{
+    width: 24px;
+    height: 24px;
+}
+.icon{
+    padding-bottom: 6px;
+}
+}
+@media(max-width:812px){
+    .card{display: block;}
+    .card_img{
+        max-width: 200px;
+        clip-path: none;
+    }
+    .card_text{
+        max-width: 200px;
+        padding-right: 0;
+    }
+    .img{
+        border-radius: 20px 20px 00px 00px;
+        width: 100%;
+    }
+    .card_title{
+        text-align: center;
+        font-size: 20px;
+        padding-top: 0px;
+        padding: 0;
+        margin: 0;
+    }
+    .card_prof{
+        text-align: center  ;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+    }
+    .line{
+        max-width: 120px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .card_op{
+        text-align: center;
+        font-size: 10px;
+    }
+    .icon{
+        justify-content: center;
+        align-items: center;
+    }
 }
