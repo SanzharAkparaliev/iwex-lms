@@ -3,7 +3,7 @@ import Teachers from '../components/Teachers/Teachers'
 
 const Techers = () => {
   return (
-    <div>
+    <div >
         <Teachers/>
     </div>
   )

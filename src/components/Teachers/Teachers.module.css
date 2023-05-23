@@ -1,3 +1,326 @@
+
+
 .wrap{
-    border: 1px solid #000;
+    background: #333333c9;
+
+    padding:  0;
+    margin: 0;
+    box-sizing: border-box;
 }
+.wraper{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+/* ------------------ */
+.soft{
+    max-width: 1440px;
+
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    padding-top: 140px;
+    padding-bottom: 140px;
+    background: #333333;
+    background-position: center;
+    background-size: cover;
+}
+.soft2{
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #ffcc00;
+    border-right: 2px solid #ffcc00;
+    border-left: 2px solid #ffcc00;
+
+    padding-top: 100px;
+    padding-bottom: 60px;
+    border-radius: 20px;
+}
+.soft_title{
+    text-align: center;
+    color: #ffcc00;
+    font-size: 70px;
+}
+.soft_par{
+    color: #737373;
+    font-size: 20px;
+    text-align: center;
+}
+.btn_s{
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.soft_btn{
+    background: #ffcc00;
+    color: #333333;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+    
+    font-size: 26px;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 8px 100px ;
+    font-family: 'Poppins', sans-serif;
+    transition: .5s;
+
+}
+.soft_btn:hover{
+    background: none;
+    color: #ffcc00;
+    border: 1px solid #ffcc00;
+}
+/* -------------------------- */
+.cardbox{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-bottom: 140px;
+    background: #ffcc00;
+}
+.card_title{
+    padding-top: 50px;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+color: #333333;
+}
+.card_cont{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+/* ----------------------------- */
+.grid{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.grid:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#333333;
+}
+.grid:nth-child(2){
+    background: url(./bac1.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    object-fit: cover;
+}
+.grid:nth-child(3){
+    background: url(./bac2.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.grid:nth-child(4){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffcc00;
+    transition: .5s;
+}
+.textdiv{
+    padding: 20px;
+    max-width: 500px;
+    border: none;
+    border-radius: 20px;
+    border-top: 2px solid #ffcc00;
+    border-left: 2px solid #ffcc00    ;
+    transition: .5s;
+}
+.textdivv{
+    padding: 20px;
+    max-width: 500px;
+    border: none;
+    border-bottom: 2px solid #333333;
+    border-right: 2px solid #333333;
+    border-radius: 20px ;
+}
+.textdiv:hover .par{
+    color: white;
+}
+.textdivv:hover .parr{
+    color: white
+}
+.title{
+    color: #ffcc00;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+.titlee{
+    color: #333333;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+
+}
+.par{
+    color: #737373;
+    font-size: 20px;
+    transition: .5s;
+    font-family: 'Poppins', sans-serif;
+
+}
+.parr{
+    color: #737373;
+    font-size: 20px;
+    transition: .5s;
+
+    font-family: 'Poppins', sans-serif;
+
+}
+@media(max-width:1083px){
+    .grid{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+   .textdiv{
+    max-width: 450px;
+   }
+   .textdivv{
+    max-width: 450px;
+   }
+   .title{
+    font-size: 30px;
+   }
+   .titlee{
+    font-size: 30px;
+   }
+   .par{
+    font-size: 16px;
+   }
+   .parr{
+    font-size: 16px;
+   }
+}
+@media(max-width:940px){
+    .grid{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .textdiv{
+        max-width: 360px;
+       }
+       .textdivv{
+        max-width: 360px;
+       }
+       .title{
+        font-size: 26px;
+       }
+       .titlee{
+        font-size: 26px;
+       }
+       .par{
+        font-size: 14px;
+       }
+       .parr{
+        font-size: 14px;
+       }
+}
+@media(max-width:775px){
+    .textdiv{
+        max-width: 300px;
+       }
+       .textdivv{
+        max-width: 300px;
+       }
+       .title{
+        font-size: 24px;
+       }
+       .titlee{
+        font-size: 24px;
+       }
+       .par{
+        font-size: 13px;
+       }
+       .parr{
+        font-size: 13px;
+       }
+}
+@media(max-width:649px){
+  
+    .textdiv{
+        max-width: 260px;
+       }
+       .textdivv{
+        max-width: 260px;
+       }
+       .title{
+        font-size: 22px;
+       }
+       .titlee{
+        font-size: 22px;
+       }
+       .par{
+        font-size: 12px;
+       }
+       .parr{
+        font-size: 12px;
+       }
+}
+@media(max-width:555px){
+ 
+    .textdiv{
+        margin: 10px;
+        max-width: 240px;
+        border: none;
+        text-align: center;
+       }
+       .textdivv{
+        text-align: center;
+        border: none;
+        margin: 10px;
+        max-width: 240px;
+       }
+       .title{
+        font-size: 20px;
+       }
+       .titlee{
+        font-size: 20px;
+       }
+       .par{
+        font-size: 10px;
+       }
+       .parr{
+        font-size: 10px;
+       }
+}
+@media(max-width:424px){
+   
+      .textdiv{
+          margin: 5px;
+          max-width: 200px;
+          border: none;
+          text-align: center;
+          padding: 10px;
+         }
+         .textdivv{
+          text-align: center;
+          border: none;
+          margin: 5px;
+          max-width: 200px;
+          padding: 10px;
+         }
+         .title{
+          font-size: 18px;
+         }
+         .titlee{
+          font-size: 18px;
+         }
+         .par{
+          font-size: 10px;
+         }
+         .parr{
+          font-size: 10px;
+         }
+  }
+/* ----------------------- */

@@ -1,12 +1,12 @@
 .site_footer{
-    background-color:#ffcc00;
-    color:#333;
+    background-color:#26272b;
+    color:#737373;
     font-family: 'Poppins', sans-serif;
 }
 .row{
     padding-top: 30px;
     padding-bottom: 30px;
-    max-width: 1440PX;
+    max-width: 1440px;
     margin: 0 auto;
 }
 .roww{
@@ -16,7 +16,7 @@
     }
 
 .title{
-    color: #333;
+    color: white;
 }
 .catt{
     max-width: 700px;
@@ -84,7 +84,7 @@ color: #0071fc;
     color: #E1306C;
 }
 .footer_links a:hover{
-    color: #333;
+    color: #ffcc00;
 }
 
 
