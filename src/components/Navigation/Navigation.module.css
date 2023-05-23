@@ -4,9 +4,9 @@
   align-items: center;
   background: #ffcc00;
   height: 80px;
-  /* position: fixed; 
+  position: fixed; 
   z-index: 999;
-  box-shadow: 2px 3px 5px 3px #0000006b; */
+  box-shadow: 2px 3px 5px 3px #0000006b;
 }
 .blok {
   margin: 0 auto;
