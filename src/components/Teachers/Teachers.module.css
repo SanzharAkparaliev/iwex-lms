@@ -90,7 +90,12 @@
     font-family: 'Poppins', sans-serif;
 color: #333333;
 }
-
+.card_cont{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
 /* ----------------------------- */
 .grid{
     padding-top: 60px;
@@ -263,9 +268,7 @@ color: #333333;
        }
 }
 @media(max-width:555px){
-  .grid{
-   
-  }
+ 
     .textdiv{
         margin: 10px;
         max-width: 240px;

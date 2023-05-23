@@ -36,6 +36,8 @@ const Teachers = () => {
           <h1 className={styled.card_title}>OUR  TEAM</h1>
         <div className={styled.card_cont}>
           <CardTech/>
+          <CardTech/>
+         
 
         </div>
       </div>
