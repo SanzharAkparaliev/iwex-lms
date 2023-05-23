@@ -140,3 +140,8 @@
     transform: translateX(calc(0%));
   }
 }
+@media (max-width: 608px) {
+.nav{
+  width: 50%;
+}
+}
