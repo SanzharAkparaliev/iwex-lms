@@ -15,14 +15,6 @@ const ProfilePage = () => {
   const toggleMenuBlock = (index) => {
     setActiveBlock(index);
   };
-  // const menuHeight = '200px';
-
-  // const blocks = [
-  //   <>
-  //     <h2>Title</h2>
-  //     <p>Content</p>
-  //   </>,
-  // ];
 
   return (
     <div className={styles.article_body}>
@@ -58,7 +50,7 @@ const ProfilePage = () => {
                 </p>
               </div>
               <div className={styles.block}>
-                <h2 className={styles.name_object}>Результаты экзаменов</h2>
+                <h2 className={styles.name_object}>Результаты экз-ов </h2>
                 <p>
                   Vivamus volutpat ipsum ac ipsum feugiat, vel molestie elit
                   vestibulum. Donec luctus commodo dictum. Aenean in turpis

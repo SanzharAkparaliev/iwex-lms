@@ -1,6 +1,6 @@
 :root {
   --color-primary: #6d63ff;
-  --sidebar-width: 180px;
+  --sidebar-width: 200px;
   --menu-height: 450px;
 }
 
@@ -57,7 +57,7 @@
 
 .buttons button {
   margin: 0;
-  font-size: 14px;
+  font-size: 15px;
   width: 100%;
   height: 36px;
   padding: 0 0 0 12px;
@@ -70,9 +70,10 @@
   font-family: inherit;
   cursor: pointer;
   color: #a7a7a7;
+  margin-bottom: 12px;
 }
 
-button.active {
+.buttons button.active {
   background: var(--color-primary);
   color: #f9f9f9;
 }
@@ -132,7 +133,7 @@ button.active {
   margin: 0 0 6px;
   font-size: 18px;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   padding-bottom: 12px;
 }
   
