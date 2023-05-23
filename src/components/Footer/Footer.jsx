@@ -3,6 +3,7 @@ import styled from './Footer.module.css'
 import { FaFacebook } from "react-icons/fa";
 import { RxLinkedinLogo } from "react-icons/rx";
 import { RiInstagramFill, RiTwitterFill} from "react-icons/ri";
+import { NavLink } from 'react-router-dom';
 
 
 export const Footer = () => {
@@ -19,11 +20,11 @@ export const Footer = () => {
               <div className={styled.cat}>
                   <h4 className={styled.title}>C A T E G O R I E S</h4>
                   <ul className={styled.footer_links}>
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">Teachers</a></li>
+                      <li><NavLink to={'/'}>Home </NavLink></li>
+                      <li><NavLink to={'/tech'}>Techers </NavLink></li>
                       <li><a href="#">Courses</a></li>
                       <li><a href="#">Profile</a></li>
-                      <li><a href="#">Logout</a></li>
+                      <li><NavLink to={'/'}>Logout </NavLink></li>
                   </ul>
               </div>
               <div className={styled.cat}>

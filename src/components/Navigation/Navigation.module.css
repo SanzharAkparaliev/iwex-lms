@@ -1,109 +1,142 @@
 .conteiner {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background: #ffcc00;
-    height: 90px;
-    
-  }
-  .blok {
-    margin: 0 auto;
-    color: white;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
-  }
-  .icon{
-      cursor: pointer;
-      font-size: clamp(14px, 8vw, 25px);
-      color: white;
-  }
-  .logo {
-    cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #ffcc00;
+  height: 80px;
+  /* position: fixed; 
+  z-index: 999;
+  box-shadow: 2px 3px 5px 3px #0000006b; */
+}
+.blok {
+  margin: 0 auto;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+.icon {
+  cursor: pointer;
+  font-size: clamp(14px, 8vw, 25px);
+  color: white;
+}
+.logo {
+  cursor: pointer;
   color: #ffffff;
-  
-    font-family: Oswald;
-    font-weight: 700;
-    font-size: clamp(20px, 6vw, 30px);
-  }
-  .label {
-    color: #ffcc00;
-  }
 
-  .join {
-    font-family: Roboto;
-    font-weight: 500;
-    text-decoration: none;
-    color: #333333;
-    transition: 0.5s;
+  font-family: Oswald;
+  font-weight: 700;
+  font-size: clamp(20px, 6vw, 30px);
+}
+.label {
+  color: #ffcc00;
+}
+
+.join {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: clamp(17px , 2.5vw , 25px);
+  text-decoration: none;
+  color: #333333;
+  padding: 15px;
+
+}
+.join:hover {
+  transition: 0.4s;
+
+  color: #ffffff;
+}
+.activeJoin {
+  border-radius: 10px;
+  transition: 0.5s;
+ 
+  color: white;
+}
+.lab {
+  padding-bottom: 20px;
+}
+
+.admins {
+  font-family: Oswald;
+  font-weight: 400;
+  color: #3079ef;
+  text-decoration: none;
+}
+.contlogo {
+  height: 100px;
+  margin-left: 70px;
+  display: flex;
+
+  gap: 10px;
+  align-items: center;
+}
+.img {
+  width: 110px;
+  height: auto;
+}
+.parag {
+  opacity: 90%;
+  margin: 0;
+  color: #333333;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: clamp(16px, 6vw, 25px);
+}
+.iconCloss{
+  background: #ffcc00;
+  color: black;
+  font-size: 30px;
+  border: 1px solid #ffcc00;
+}
+.hamburger{
+  display: none;
+}
+.nav {
+  background: none;
+  display: flex;
+  gap: 30px;
+  font-size: clamp(14px, 8vw, 25px);
+
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+  .hamburger{
+    z-index: 160;
+      display: inline-flex;
+      background: none;
+    
+      margin-right: 20px;
+      border: none;
+     
   }
-   .join:hover {
-    transition: 0.4s;
-  
-    color: #ffffff;
-  } 
-  
-  .registr {
-    font-family: Oswald;
-    font-weight: 400;
-    color: #ffcc00;
-    text-decoration: none;
-  }
-  .admins {
-    font-family: Oswald;
-    font-weight: 400;
-    color: #3079ef;
-    text-decoration: none;
+  .nav {
+    position: fixed;
+    width: 30%;
+    top: 0;
+    height: 100%;
+    right: 0;
+    gap: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    flex-direction: column;
+    background-image: linear-gradient(#ffcc00, rgb(235, 235, 32));
+    transition: 0.5s  ;
+    transform: translateX(calc(100% + 70px));
   }
   .contlogo {
- 
-    height: 100px;
-    margin-left: 70px;
-    display: flex;
-
-    gap: 10px;
-    align-items: center;
-  }
-  .img {
-    width: 110px;
-    height: auto;
-  }
-  .parag {
-    opacity: 90%;
-    margin: 0;
-    color: #333333;
-    font-family: Roboto;
-    font-weight: 400;
-    font-size: clamp(16px, 6vw, 25px);
+    margin-left: 10px;
   }
 
-   .nav {
-    display: flex;
-    gap: 100px;
-    font-size: clamp(14px, 8vw, 25px);
-    margin-right: 70px;
-    text-decoration: none;
-  } 
+  .nav.active {
+  transition: 0.5s  ;
 
-  @media(  max-width: 768px){
-     .nav{
-      position: fixed;
-      width:  100%;
-      top: 0;
-      right: 0;
-      margin: 0 auto;
-      flex-direction: column;
-      border: 1px solid black;
-      transform:translateX( calc(100% + 70px)) ;
-    } 
-    .contlogo{
-      margin-left: 10px;
-    }
-  
-    
-    .nav.active{
-      transform:translateX( calc(0%)) ;
-    }
+    transform: translateX(calc(0%));
   }
+}

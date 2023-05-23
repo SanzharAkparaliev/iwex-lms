@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styles from './style.module.css';
 import { BsCurrencyDollar } from "react-icons/bs"; 
 import img from './a.jpg';
@@ -19,9 +19,9 @@ const AboutContent = () => {
             perferendis asperiores exercitationem.
           </p>
           <div className={styles.cont}>
-           <div className={styles.contblok}>
+            <div className={styles.contblok}>
                 <div className={styles.intblok}>
-                <span className={styles.par}>  <CountUp   start={0} end={25} duration={2}suffix='K'/></span>
+                <span className={styles.par}>  <CountUp start={0} end={25} duration={2}suffix='K'/></span>
                  {/* <i className={styles.icon}>{<BsCurrencyDollar/>}</i> */}
                 </div>
                 <div className={styles.intblok}>
@@ -36,9 +36,8 @@ const AboutContent = () => {
                 </div>
                 <div className={styles.intblok}>
                 <span className={styles.par}>  <CountUp   start={0} end={12} duration={2}suffix='M'/></span>
-                 {/* <i className={styles.icon}>{<BsCurrencyDollar/>}</i> */}
                 </div>
-           </div>
+            </div>
           </div>
         </div>
       </div>

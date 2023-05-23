@@ -1,4 +1,4 @@
-
+/* 
 
 .hamburger {
     padding: 15px 15px;
@@ -85,7 +85,7 @@
           
 @media(  max-width: 768px){
     .hamburger{
-      z-index: 10;
+      z-index: 160;
         display: inline-flex;
        
     }
@@ -105,4 +105,4 @@
 
 
 
-    }
+     
