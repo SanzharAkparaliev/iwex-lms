@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './card.module.css'
 const CardCourses = ({name, title}) => {
   return (
+    
     <div className={styles.box}>
         <div className={styles.flagBox}>
             <img className={styles.imgGer} src="https://i.ibb.co/gRpP2Lm/icons8-online-128.png" alt="" />

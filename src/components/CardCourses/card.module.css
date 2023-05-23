@@ -11,6 +11,10 @@ box-shadow: 0 0 3px 1px rgb(16, 16, 16);
   border-right:1px solid #333333; */
   /* border: 1px solid black; */
 }
+.box:hover{
+    transition: 0.3s;
+    transform: scale(1.03);
+}
 .flagBox{
    height: 200px;
     width: 100%;
@@ -106,4 +110,10 @@ justify-content: center;
     text-shadow: 4px 0 0 0  #ffcc00;
     color: #ffcc00;
     border-radius: 5px;
+    transition: 0.3s;
+}
+.goRegistr:hover{
+    transition: 0.3s;
+    transform: scale(1.2);
+    padding: 10px;
 }

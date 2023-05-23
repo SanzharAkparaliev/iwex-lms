@@ -1,0 +1,109 @@
+.wraper{
+    max-width: 100%;
+    margin-top: 200px;
+    display: flex;
+}
+.block1{
+    width: 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.block2{
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid black;
+    width: 100%;
+}
+.title{
+    padding: 0;
+    max-width: 300px;
+    border: 2px solid#474444;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    background: #474444;
+}
+.text{
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center  ;
+    font-family: 'Mulish', sans-serif;
+
+}
+.yy{
+    margin-top: 50px;
+}
+.item{
+   
+  width: 100%;
+    margin-top: 10px;
+}
+.label{
+    padding: 15px 20px;
+    display: block;
+    padding: 25px;
+    background: #FFcc00;
+    position: relative;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: 'Mulish', sans-serif;
+    transition: 0.5s ease-out;
+    border-radius: 20px ;
+
+}
+.label:hover{
+    background: #000000;
+}
+label::after{
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 14px 10px 0 10px;
+    border-color: #fffefe transparent transparent transparent;
+
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.input:checked ~ .label::after{
+    content: "";
+    border-style: solid;
+    border-width: 0 10px 14px 10px;
+    border-color: transparent transparent #ffffff transparent;
+    transform: translateY(-50%);
+    top: 50%;
+}
+.input{
+    width: 0;
+    height: 0;
+    -webkit-appearance:none ;
+    position: absolute;
+    appearance: none;
+}
+.input:checked ~ .label{
+    background:#474444;
+    border-radius: 20px 20px 0px 0px 
+}
+.input:checked ~ .text_f{
+    display: block;
+}
+.text_f{
+    padding: 0;
+    
+    
+    padding: 15px 20px;
+    display: none;
+    font-family: 'Mulish', sans-serif;
+   color: #474444;
+    border-radius: 0px 0px 20px 20px ;
+}
+.p{
+    width: 80%;
+    padding: 0;
+   
+    margin: 0 auto;
+}
