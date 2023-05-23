@@ -19,7 +19,7 @@ export const CardTech = () => {
             <h2 className={styled.card_title}>Jon Smitt</h2>
             <h4 className={styled.card_prof}>Product Manager</h4>
             <div className={styled.line}></div>
-            <p className={styled.card_op}>Professional translator with 4 years experience sdfsdfsdf  </p>
+            <p className={styled.card_op}>Professional translator with 4 years experience   </p>
             <div className={styled.icon}>
                 <a href=""><FaFacebook  className={styled.card_a}/></a>
                 <a href=""><RxLinkedinLogo className={styled.card_a}/></a>
