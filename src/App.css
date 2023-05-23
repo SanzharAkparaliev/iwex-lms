@@ -37,5 +37,18 @@
 
 body{
   font-family: 'Roboto';
+  display: grid;
 }
+
+.card{
+  display: flex;
+  padding: 0 20px;
+  width: 480px;
+  height: var(--menu-height);
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 20px 30px rgba(57, 76, 96, 0.06);
+  transition: 0.3s;
+}
+
 

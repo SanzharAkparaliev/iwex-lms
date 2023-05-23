@@ -1,7 +1,127 @@
 .sidebar_wrapper{
-  padding: 35px;
-  width: 300px;
-  min-height: 100vh;
-  background: #000;
-  border: 1px solid #000;
+  padding: 24px;
+  width: 500px;
+  /* background: #333; */
+  /* min-height: 900; */
+}
+
+
+.sidebar_title{
+  margin-bottom: 18px;
+  font-size: 20px;
+}
+
+.user_wrapper{
+  background: #ffcc00;
+  padding: 10px;
+  width: 350px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 4px 1px 4px 3px #00000021;
+}
+
+.user_name{
+  padding-bottom: 5px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.user_email{
+  font-size: 14px;
+}
+
+.card{
+  display: flex;
+  padding: 0 20px;
+  width: 480px;
+  height: 190px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 20px 30px rgba(57, 76, 96, 0.06);
+  transition: 0.3s;
+}
+
+.buttons{
+  padding-top: 20px;
+  width: 140px;
+}
+
+.buttons button {
+  margin: 0;
+  font-size: 14px;
+  width: 100%;
+  height: 36px;
+  padding: 0 0 0 12px;
+  background: transparent;
+  border-radius: 6px;
+  border: 0;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  color: #a7a7a7;
+}
+
+.buttons button.active{
+  background: #6d63ff;
+  color: #f9f9f9;
+}
+
+.content{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: calc(190px * 3);
+  transition: 0.6s;
+}
+
+.content p {
+  display: flex;
+  align-items: center;
+  line-height: 1.6;
+  font-size: 13px;
+  margin: 0;
+  color: #222222;
+  opacity: 0.5;
+}
+
+.block{
+  padding: 0px 20px;
+  height: 190px;
+}
+
+.block h2 {
+  padding-top: 20px;
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.wrapper{
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 auto;
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  width: 100%;
+  height: 36px;
+}
+
+.wrapper::before{
+  top: 0;
+  background: linear-gradient(#ffffff, rgb(255 255 255 / 0%));
+}
+
+.wrapper::after{
+  bottom: 0;
+  background: linear-gradient( rgb(255 255 255 / 0%), #ffffff );
 }
