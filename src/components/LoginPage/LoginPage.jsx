@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from './LoginPage.module.css';
 import { BsEnvelopeFill, BsCpuFill } from 'react-icons/bs';
 import { userAuth } from '../../api/clientApi';
+import Cookies from 'js-cookie';
 
 export const LoginPage = () => {
   const [authData, setAuthData] = useState({
@@ -22,6 +23,12 @@ export const LoginPage = () => {
     e.preventDefault();
     const data = await userAuth(authData);
     console.log(data);
+
+    const date = new Date();
+    date.setTime(date.getTime() + 20 * 1000);
+    Cookies.set('token', data.token, {
+      expires: date,
+    });
   };
 
   return (
@@ -32,12 +39,22 @@ export const LoginPage = () => {
             <h1 className={styled.text}>Login</h1>
             <div className={styled.inputbox}>
               <BsEnvelopeFill className={styled.icon} />
-              <input type="email" required onChange={changeHandler} />
+              <input
+                type="email"
+                required
+                onChange={changeHandler}
+                name="email"
+              />
               <label htmlFor="">Email</label>
             </div>
             <div className={styled.inputbox}>
               <BsCpuFill className={styled.icon} />
-              <input type="password" required onChange={changeHandler} />
+              <input
+                type="password"
+                required
+                onChange={changeHandler}
+                name="password"
+              />
               <label htmlFor="">Password</label>
             </div>
             <div className={styled.forget}>

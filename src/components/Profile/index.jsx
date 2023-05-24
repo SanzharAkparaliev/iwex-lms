@@ -25,7 +25,7 @@ const ProfilePage = () => {
         <article className={`card ${isOpen ? 'open' : ''}`}>
           <div className={styles.buttons}>
             {buttons.map((button, index) => (
-              <button
+              <button key={''}
                 className={index === activeBlock ? 'active' : ''}
                 onClick={() => toggleMenuBlock(index)}
               >

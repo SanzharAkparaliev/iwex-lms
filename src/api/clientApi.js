@@ -1,7 +1,7 @@
 import ky from 'ky';
 
 const requestApi = ky.create({
-  prefixUrl: 'process.env.REACT_USER_AUTH',
+  prefixUrl: import.meta.env.USER_AUTH,
 });
 
 // export const authUser =
@@ -14,5 +14,7 @@ const requestApi = ky.create({
 // };
 
 export const userAuth = (data) => {
-  return requestApi.post('/api/v1/auth/login', { json: data }).json();
+  return requestApi
+    .post('http://146.190.46.127:8080/api/v1/auth/login', { json: data })
+    .json();
 };
