@@ -25,6 +25,7 @@ const Navigation = () => {
   };
   const [user, setUser] = useState(false);
 
+  // if (loading) return <h2>Loading....</h2>;
   return (
     <div className={styles.conteiner}>
       <div className={styles.blok}>

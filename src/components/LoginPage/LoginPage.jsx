@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import styled from './LoginPage.module.css';
 import { BsEnvelopeFill, BsCpuFill } from 'react-icons/bs';
-import { userAuth } from '../../api/clientApi';
-import Cookies from 'js-cookie';
+import { useAuth } from '../../context/auth';
 
 export const LoginPage = () => {
   const [authData, setAuthData] = useState({
     email: '',
     password: '',
   });
+
+  const { login, isAuth } = useAuth();
 
   const changeHandler = (e) => {
     setAuthData((prev) => {
@@ -21,14 +22,17 @@ export const LoginPage = () => {
 
   const submitForm = async (e) => {
     e.preventDefault();
-    const data = await userAuth(authData);
-    console.log(data);
+    if (validateForm) {
+      alert('Авторизация выполнено успешно');
+    } 
+    login(authData);
+  };
 
-    const date = new Date();
-    date.setTime(date.getTime() + 20 * 1000);
-    Cookies.set('token', data.token, {
-      expires: date,
-    });
+  const validateForm = () => {
+    const { email, password } = authData;
+    if (!email && !password) {
+      alert('Заполните необходимые поля для авторизации');
+    }
   };
 
   return (
