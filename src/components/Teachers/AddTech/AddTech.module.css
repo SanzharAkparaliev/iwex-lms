@@ -1,0 +1,75 @@
+.addTech{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    justify-content: center ;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 30px ;
+    background: #333333;
+    color: #c8c6be;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.5s;
+    border: 3px solid #333333;
+    padding: 12px 60px;
+    
+}
+.addTech:hover{
+    background: none;
+    color: #333333;
+}
+.add{
+    position: relative;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+   
+
+ .modal{
+   z-index: 1   ;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.566);
+    width: 700px;
+    height: 100%;
+    width: 100%;
+    right: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+} 
+.modal_card{
+    width: 500px;
+    margin: 0 auto;
+    top: 50%;
+    display: block !important;
+    background: #333333;
+    min-height: 500px;
+    border-radius: 30px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.exitt{
+    display: flex;
+    justify-content: end;
+
+}
+.exit{
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 15px;
+    color: rgb(242, 242, 242);
+    width: 40px;
+    height: 40px;
+    transition: 0.5s ease-out;
+}
+.exit:hover{
+color: #ffcc00;
+}

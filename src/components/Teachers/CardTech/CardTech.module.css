@@ -148,7 +148,7 @@ img{
     .card{display: block;}
     .card_img{
         max-width: 200px;
-        clip-path: none;
+        clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 82%, 50% 100%, 50% 100%, 0 83%, 0% 20%);
     }
     .card_text{
         max-width: 200px;
