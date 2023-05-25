@@ -6,7 +6,20 @@ const menuHeight = getComputedStyle(document.documentElement).getPropertyValue(
   '--menu-height'
 );
 
-const buttons = ['Оценки', 'Результаты экзаменов', 'Посещаемость'];
+const dataButton = [
+  {
+    name: 'Оценки',
+    id: 1,
+  },
+  {
+    name: 'Результаты',
+    id: 2,
+  },
+  {
+    name: 'Посещаемость',
+    id: 3,
+  },
+];
 
 const ProfilePage = () => {
   const [activeBlock, setActiveBlock] = useState(0);
@@ -15,14 +28,6 @@ const ProfilePage = () => {
   const toggleMenuBlock = (index) => {
     setActiveBlock(index);
   };
-  // const menuHeight = '200px';
-
-  // const blocks = [
-  //   <>
-  //     <h2>Title</h2>
-  //     <p>Content</p>
-  //   </>,
-  // ];
 
   return (
     <div className={styles.article_body}>
@@ -32,12 +37,13 @@ const ProfilePage = () => {
 
         <article className={`card ${isOpen ? 'open' : ''}`}>
           <div className={styles.buttons}>
-            {buttons.map((button, index) => (
+            {dataButton.map((item, index) => (
               <button
-                className={index === activeBlock ? 'active' : ''}
+                key={item.id}
+                className={index === activeBlock ? styles.active : ''}
                 onClick={() => toggleMenuBlock(index)}
               >
-                {button}
+                {item.name}
               </button>
             ))}
           </div>
@@ -50,7 +56,7 @@ const ProfilePage = () => {
             >
               <div className={styles.block}>
                 <h2 className={styles.name_object}>Оценки</h2>
-                <p>
+                <p className={styles.desc_object}>
                   Vivamus volutpat ipsum ac ipsum feugiat, vel molestie elit
                   vestibulum. Donec luctus commodo dictum. Aenean in turpis
                   erat. Vestibulum imperdiet nibh. Ipsum ac ipsum feugiat, vel
@@ -58,8 +64,8 @@ const ProfilePage = () => {
                 </p>
               </div>
               <div className={styles.block}>
-                <h2 className={styles.name_object}>Результаты экзаменов</h2>
-                <p>
+                <h2 className={styles.name_object}>Результаты экз-ов </h2>
+                <p className={styles.desc_object}>
                   Vivamus volutpat ipsum ac ipsum feugiat, vel molestie elit
                   vestibulum. Donec luctus commodo dictum. Aenean in turpis
                   erat. Vestibulum imperdiet nibh. Ipsum ac ipsum feugiat, vel
@@ -68,7 +74,7 @@ const ProfilePage = () => {
               </div>
               <div className={styles.block}>
                 <h2 className={styles.name_object}>Посещаемость</h2>
-                <p>
+                <p className={styles.desc_object}>
                   Vivamus volutpat ipsum ac ipsum feugiat, vel molestie elit
                   vestibulum. Donec luctus commodo dictum. Aenean in turpis
                   erat. Vestibulum imperdiet nibh. Ipsum ac ipsum feugiat, vel
