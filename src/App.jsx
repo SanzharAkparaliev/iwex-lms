@@ -18,7 +18,10 @@ function App() {
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="*" element={<h1>Страница не найдено</h1>} />
         <Route path="/corses">
-          <Route path=":id" element={<Lessons />} />
+
+          <Route index element={<Courses />} />
+           <Route path=":id" element={<Lessons/>} /> 
+
         </Route>
       </Routes>
     </Layout>
