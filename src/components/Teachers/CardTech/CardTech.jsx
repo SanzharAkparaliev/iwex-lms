@@ -28,7 +28,6 @@ export const CardTech = ({key, title, prof, opi, imgg, twitt, insta, link, fack}
                 <a href={insta}><RiInstagramFill  className={styled.card_inst}/></a>
                 <a href={twitt}><RiTwitterFill  className={styled.card_twitt}/></a>
 
-               
             </div>
 
         </div>

@@ -13,7 +13,7 @@
     background-size: cover;
     max-width: 240px;
 }
-img{
+.img{
     overflow: hidden;
     object-fit: cover;
     max-width: 100%;
