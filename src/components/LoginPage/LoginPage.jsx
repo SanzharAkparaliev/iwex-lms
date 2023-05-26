@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import styled from './LoginPage.module.css';
 import { BsEnvelopeFill, BsCpuFill } from 'react-icons/bs';
-import { useAuth } from '../../context/auth';
+import Cookies from 'js-cookie';
+import { userAuth } from '../../api/clientApi';
+import { useNavigate } from 'react-router';
 
 export const LoginPage = () => {
+  const redirect = useNavigate();
+
   const [authData, setAuthData] = useState({
     email: '',
     password: '',
   });
-
-  const { login, isAuth } = useAuth();
 
   const changeHandler = (e) => {
     setAuthData((prev) => {
@@ -22,16 +24,19 @@ export const LoginPage = () => {
 
   const submitForm = async (e) => {
     e.preventDefault();
-    if (validateForm) {
-      alert('Авторизация выполнено успешно');
-    } 
-    login(authData);
-  };
+    const data = await userAuth(authData);
+    console.log(data);
 
-  const validateForm = () => {
-    const { email, password } = authData;
-    if (!email && !password) {
-      alert('Заполните необходимые поля для авторизации');
+    const date = new Date();
+    date.setTime(date.getTime() + 20 * 1000);
+    Cookies.set('token', data.token, {
+      expires: date,
+    });
+
+    if (data.token) {
+      redirect('/');
+    } else {
+      alert('идите лесом');
     }
   };
 
@@ -79,17 +84,3 @@ export const LoginPage = () => {
     </div>
   );
 };
-
-// <div className={styled.wrap}>
-//     <div className={styled.card}>
-//             <h1 className={styled.h}>Login </h1>
-//             <div className={styled.inputbox}>
-//                 <input type="text" placeholder='Email-adress' />
-//                 <label for="">Email</label>
-//             </div>
-//             <div className={styled.inputbox}>
-//                 <input type="password" placeholder='Password' />
-//                 <label for="">Password</label>
-//             </div>
-//     </div>
-// </div>
