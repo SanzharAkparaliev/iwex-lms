@@ -15,9 +15,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/tech" element={<Techers />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="*" element={<h1>Страница не найдено</h1>} />
         <Route path="/corses">
           <Route index element={<Courses />} />
-          
         </Route>
       </Routes>
     </Layout>

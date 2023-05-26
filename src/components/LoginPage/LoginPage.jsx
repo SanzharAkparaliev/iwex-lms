@@ -28,9 +28,9 @@ export const LoginPage = () => {
     console.log(data);
 
     const date = new Date();
-    date.setTime(date.getTime() + 20 * 1000);
+    date.setTime(date.getTime() + 10 * 1000);
     Cookies.set('token', data.token, {
-      expires: date,
+      expires: 10,
     });
 
     if (data.token) {

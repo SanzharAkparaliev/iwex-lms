@@ -14,13 +14,14 @@ const Navigation = () => {
   const [show, setShow] = useState(false);
   const [showLink, setShowLink] = useState(null);
   const [link, setLink] = useState();
+  const [user, setUser] = useState(false);
 
   console.log(location.pathname);
 
   const path = useLocation().pathname;
   console.log(path);
   useEffect(() => {
-    const checkUserData = () => {
+    const checkUserData = async () => {
       const checkTokenUser = Cookies.get('token');
       if (checkTokenUser) {
         return;
@@ -28,7 +29,7 @@ const Navigation = () => {
       }
     };
     checkUserData();
-    if (path === '/login') {
+    if (path === '/login' || '/') {
       setLink(loginLink);
     } else {
       setLink(NavData);
@@ -38,9 +39,8 @@ const Navigation = () => {
   const hendler = () => {
     setShow((show) => !show);
   };
-  const [user, setUser] = useState(false);
 
-  if (path === '/login') {
+  if (Cookies.get('token')) {
     return (
       <div className={styles.conteiner}>
         <div className={styles.blok}>
@@ -64,57 +64,19 @@ const Navigation = () => {
             }
             onClick={() => setShow(false)}
           >
-            {link &&
-              loginLink.map((item) => {
-                if (showLink && item.href === '/login') return null;
-
-                if (!showLink && item.href === '/tech') return null;
-
-                return (
-                  <NavLink
-                    key={item.id}
-                    className={({ isActive }) =>
-                      cn(styles.join, isActive && styles.activeJoin)
-                    }
-                    to={item.href}
-                  >
-                    {item.title}
-                  </NavLink>
-                );
-              })}
-
-            {/* <NavLink
-            className={({ isActive }) =>
-              cn(styles.join, isActive && styles.activeJoin)
-            }
-            to={'/tech'}
-          >
-            Techers
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              cn(styles.join, isActive && styles.activeJoin)
-            }
-            to={'/corses'}
-          >
-            Courses
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              cn(styles.join, isActive && styles.activeJoin)
-            }
-            to={'/profile'}
-          >
-            Profile
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              cn(styles.join, isActive && styles.activeJoin)
-            }
-            to={'/login'}
-          >
-            <label className={styles.lab}>login </label>
-          </NavLink> */}
+            {NavData.map((item) => {
+              return (
+                <NavLink
+                  key={item.id}
+                  className={({ isActive }) =>
+                    cn(styles.join, isActive && styles.activeJoin)
+                  }
+                  to={item.href}
+                >
+                  {item.title}
+                </NavLink>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -143,57 +105,19 @@ const Navigation = () => {
             }
             onClick={() => setShow(false)}
           >
-            {link &&
-              NavData.map((item) => {
-                if (showLink && item.href === '/login') return null;
-
-                if (!showLink && item.href === '/tech') return null;
-
-                return (
-                  <NavLink
-                    key={item.id}
-                    className={({ isActive }) =>
-                      cn(styles.join, isActive && styles.activeJoin)
-                    }
-                    to={item.href}
-                  >
-                    {item.title}
-                  </NavLink>
-                );
-              })}
-
-            {/* <NavLink
-            className={({ isActive }) =>
-              cn(styles.join, isActive && styles.activeJoin)
-            }
-            to={'/tech'}
-          >
-            Techers
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              cn(styles.join, isActive && styles.activeJoin)
-            }
-            to={'/corses'}
-          >
-            Courses
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              cn(styles.join, isActive && styles.activeJoin)
-            }
-            to={'/profile'}
-          >
-            Profile
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              cn(styles.join, isActive && styles.activeJoin)
-            }
-            to={'/login'}
-          >
-            <label className={styles.lab}>login </label>
-          </NavLink> */}
+            {loginLink.map((item) => {
+              return (
+                <NavLink
+                  key={item.id}
+                  className={({ isActive }) =>
+                    cn(styles.join, isActive && styles.activeJoin)
+                  }
+                  to={item.href}
+                >
+                  {item.title}
+                </NavLink>
+              );
+            })}
           </div>
         </div>
       </div>
