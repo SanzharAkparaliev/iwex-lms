@@ -1,6 +1,6 @@
 import styles from '../Home/home.module.css';
 import InputLabel from '../Input';
-import SocialS from './Social';
+
 
 const BannerContent = () => {
   return (
@@ -25,7 +25,7 @@ const BannerContent = () => {
           />
         </div>
       </div>
-      <SocialS />
+      {/* <SocialS /> */}
     </>
   );
 };

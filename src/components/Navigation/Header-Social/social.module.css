@@ -1,0 +1,23 @@
+.socials{
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  background: #333;
+  color: #fff;
+  width: 100%;
+}
+
+.social_container{
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.socialIcon{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffcc00;
+}

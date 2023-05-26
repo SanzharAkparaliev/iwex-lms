@@ -9,6 +9,7 @@ import logo1 from './logo3.png';
 import './habmerger.css';
 import { NavData, loginLink } from '../navigation';
 import Cookies from 'js-cookie';
+import HeaderSocial from './Header-Social';
 
 const Navigation = () => {
   const [show, setShow] = useState(false);
@@ -43,40 +44,45 @@ const Navigation = () => {
   if (Cookies.get('token')) {
     return (
       <div className={styles.conteiner}>
-        <div className={styles.blok}>
-          <div className={styles.contlogo}>
+        <HeaderSocial />
+        <div className={styles.header_container}>
+          <a href="/" className={styles.contlogo}>
             <img className={styles.img} src={logo1} alt="" />
-
             <p className={styles.parag}>LMS</p>
-          </div>
+          </a>
+          <div className={styles.blok}>
+            <button
+              className={styles.hamburger}
+              onClick={hendler}
+              type="button"
+            >
+              {show ? (
+                <AiOutlineClose className={styles.iconCloss} />
+              ) : (
+                <AiOutlineMenu className={styles.iconCloss} />
+              )}
+            </button>
 
-          <button className={styles.hamburger} onClick={hendler} type="button">
-            {show ? (
-              <AiOutlineClose className={styles.iconCloss} />
-            ) : (
-              <AiOutlineMenu className={styles.iconCloss} />
-            )}
-          </button>
-
-          <div
-            className={
-              show ? [styles.nav, styles.active].join(' ') : [styles.nav]
-            }
-            onClick={() => setShow(false)}
-          >
-            {NavData.map((item) => {
-              return (
-                <NavLink
-                  key={item.id}
-                  className={({ isActive }) =>
-                    cn(styles.join, isActive && styles.activeJoin)
-                  }
-                  to={item.href}
-                >
-                  {item.title}
-                </NavLink>
-              );
-            })}
+            <div
+              className={
+                show ? [styles.nav, styles.active].join(' ') : [styles.nav]
+              }
+              onClick={() => setShow(false)}
+            >
+              {NavData.map((item) => {
+                return (
+                  <NavLink
+                    key={item.id}
+                    className={({ isActive }) =>
+                      cn(styles.join, isActive && styles.activeJoin)
+                    }
+                    to={item.href}
+                  >
+                    {item.title}
+                  </NavLink>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

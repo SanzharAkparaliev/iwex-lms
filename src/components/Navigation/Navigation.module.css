@@ -1,23 +1,32 @@
-.conteiner {
-  width: 100%;
-  display: flex;
-  align-items: center;
+.conteiner{
   background: #ffcc00;
-  height: 80px;
-  position: fixed; 
+  position: fixed;
   top: 0;
   z-index: 999;
-  box-shadow: 2px 3px 5px 2px #0000005a;
+  box-shadow: 3px 4px 5px 3px #33333356;
+  width: 100%;
 }
 .blok {
-  margin: 0 auto;
   color: white;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
 }
+
+.nav{
+  padding: 25px;
+}
+
+.header_container{
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .icon {
   cursor: pointer;
   font-size: clamp(14px, 8vw, 25px);
@@ -26,7 +35,6 @@
 .logo {
   cursor: pointer;
   color: #ffffff;
-
   font-family: Oswald;
   font-weight: 700;
   font-size: clamp(20px, 6vw, 30px);
@@ -38,21 +46,17 @@
 .join {
   font-family: Roboto;
   font-weight: 500;
-  font-size: clamp(17px , 2.5vw , 25px);
+  font-size: clamp(16px , 2.5vw , 18px);
   text-decoration: none;
   color: #333333;
-  padding: 15px;
-
+  transition: 0.5s ease-in-out;
 }
 .join:hover {
-  transition: 0.4s;
-
   color: #ffffff;
 }
 .activeJoin {
   border-radius: 10px;
   transition: 0.5s;
- 
   color: white;
 }
 .lab {
@@ -66,10 +70,9 @@
   text-decoration: none;
 }
 .contlogo {
-  height: 100px;
+  /* height: 100px; */
   margin-left: 70px;
   display: flex;
-
   gap: 10px;
   align-items: center;
 }
@@ -109,10 +112,8 @@
     z-index: 160;
       display: inline-flex;
       background: none;
-    
       margin-right: 20px;
       border: none;
-     
   }
   .nav {
     position: fixed;
@@ -128,17 +129,16 @@
     z-index: 100;
     flex-direction: column;
     background-image: linear-gradient(#ffcc00, rgb(235, 235, 32));
-    transition: 0.5s  ;
+    transition: 0.5s ;
     transform: translateX(calc(100% + 70px));
   }
   .contlogo {
-    margin-left: 10px;
+    margin-left: 20px;
   }
 
   .nav.active {
   transition: 0.5s  ;
-
-    transform: translateX(calc(0%));
+  transform: translateX(calc(0%));
   }
 }
 @media (max-width: 608px) {
