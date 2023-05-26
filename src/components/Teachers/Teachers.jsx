@@ -1,7 +1,12 @@
 
 import { CardTech } from './CardTech/CardTech'
+import { mockData } from './CardTech/mockData'
 import styled from './Teachers.module.css'
+import { AddTech } from './AddTech/AddTech';
+
+
 const Teachers = () => {
+  const soft = mockData
   return (
     <div className={styled.wrap}>
       <div className={styled.soft}>
@@ -10,7 +15,7 @@ const Teachers = () => {
           <p className={styled.soft_par}>
           Click on the button to see the list of teachers
           </p>
-        <div className={styled.btn_s}>  <button className={styled.soft_btn}>Scroll Down </button></div>
+        <div className={styled.btn_s}>  <button  className={styled.soft_btn}>Scroll Down </button></div>
         </div>
       </div>
 {/* ------------------------------ ----------------------*/}
@@ -32,12 +37,16 @@ const Teachers = () => {
         </div>
       </div>
       {/* ------------------------------------------- */}
-      <div className={styled.cardbox}>
-          <h1 className={styled.card_title}>OUR  TEAM</h1>
+      <div id='akz' className={styled.cardbox}>
+            <h1 className={styled.card_title}>OUR  TEAM</h1>
+            <AddTech/>
         <div className={styled.card_cont}>
-          <CardTech/>
-          <CardTech/>
-         
+         {
+          soft.map((item) =>{
+            return   <CardTech key={item.id} title={item.title} prof={item.prof} opi={item.opi} imgg={item.imgg} twitt={item.twitt} insta={item.insta} link={item.link} fack={item.fack} />
+          })
+         }
+
 
         </div>
       </div>

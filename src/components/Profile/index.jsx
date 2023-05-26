@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import User from '../User';
 import styles from '../Profile/profile.module.css';
+import '../../App.css';
 
 const menuHeight = getComputedStyle(document.documentElement).getPropertyValue(
   '--menu-height'
@@ -36,45 +37,45 @@ const ProfilePage = () => {
         <User />
 
         <article className={`card ${isOpen ? 'open' : ''}`}>
-          <div className={styles.buttons}>
+          <div className="buttons">
             {dataButton.map((item, index) => (
               <button
                 key={item.id}
-                className={index === activeBlock ? styles.active : ''}
+                className={index === activeBlock ? 'active' : ''}
                 onClick={() => toggleMenuBlock(index)}
               >
                 {item.name}
               </button>
             ))}
           </div>
-          <div className={styles.wrapper}>
+          <div className="wrapper">
             <div
-              className={styles.content}
+              className="content"
               style={{
                 translate: `0 calc(0px - ${menuHeight} * ${activeBlock})`,
               }}
             >
-              <div className={styles.block}>
-                <h2 className={styles.name_object}>Оценки</h2>
-                <p className={styles.desc_object}>
+              <div className="block">
+                <h2 className="name_object">Оценки</h2>
+                <p className="desc_object">
                   Vivamus volutpat ipsum ac ipsum feugiat, vel molestie elit
                   vestibulum. Donec luctus commodo dictum. Aenean in turpis
                   erat. Vestibulum imperdiet nibh. Ipsum ac ipsum feugiat, vel
                   molestie.
                 </p>
               </div>
-              <div className={styles.block}>
-                <h2 className={styles.name_object}>Результаты экз-ов </h2>
-                <p className={styles.desc_object}>
+              <div className="block">
+                <h2 className="name_object">Результаты экз-ов </h2>
+                <p className="desc_object">
                   Vivamus volutpat ipsum ac ipsum feugiat, vel molestie elit
                   vestibulum. Donec luctus commodo dictum. Aenean in turpis
                   erat. Vestibulum imperdiet nibh. Ipsum ac ipsum feugiat, vel
                   molestie.
                 </p>
               </div>
-              <div className={styles.block}>
-                <h2 className={styles.name_object}>Посещаемость</h2>
-                <p className={styles.desc_object}>
+              <div className="block">
+                <h2 className="name_object">Посещаемость</h2>
+                <p className="desc_object">
                   Vivamus volutpat ipsum ac ipsum feugiat, vel molestie elit
                   vestibulum. Donec luctus commodo dictum. Aenean in turpis
                   erat. Vestibulum imperdiet nibh. Ipsum ac ipsum feugiat, vel
