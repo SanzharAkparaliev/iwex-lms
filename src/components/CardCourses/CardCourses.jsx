@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './card.module.css'
+import { NavLink } from 'react-router-dom'
 const CardCourses = ({name, title}) => {
   return (
     
@@ -14,9 +15,9 @@ const CardCourses = ({name, title}) => {
 
       </div>
 <div className={styles.starANDButton}>
-    
-    <button className={styles.goRegistr}>Go Now</button>
-    
+    <NavLink to='/corses/id'  className={styles.goRegistr} >Go Now</NavLink>
+    {/* <button className={styles.goRegistr}>Go Now</button>
+     */}
     
 </div>
     </div>

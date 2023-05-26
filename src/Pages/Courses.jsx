@@ -6,7 +6,7 @@ const Courses = () => {
   return (
     <div>
         <CoursesPages/>
-        <Taskwork/>
+    
     </div>
   )
 }

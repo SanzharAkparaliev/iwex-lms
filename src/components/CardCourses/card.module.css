@@ -4,6 +4,8 @@
     width: 350px;
     height: 430px;
     padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 box-shadow: 0 0 3px 1px rgb(16, 16, 16);
     margin-inline: auto;
   /* border-bottom: 1px solid #333333;
@@ -101,6 +103,7 @@ justify-content: center;
     margin-top: 20px;
 }
 .goRegistr{
+    text-align: center;
     margin: 0 auto;
     cursor: pointer;
     border: none;

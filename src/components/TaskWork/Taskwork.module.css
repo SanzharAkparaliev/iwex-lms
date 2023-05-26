@@ -1,6 +1,7 @@
 .wraper{
     max-width: 100%;
-    margin-top: 200px;
+    margin-top: 100px;
+    margin-bottom: 50px;
     display: flex;
 }
 .block1{
@@ -21,7 +22,7 @@
     margin: 0 auto;
     margin-top: 100px;
     margin-bottom: 100px;
-    border-radius: 20px;
+    border-radius: 10px;
     color: rgb(0, 0, 0);
     background: #474444;
 }
@@ -57,7 +58,9 @@
     background: #000000;
 }
 label::after{
-    /* content: ""; */
+
+    /* content: ''; */
+
     display: block;
     border-style: solid;
     border-width: 14px 10px 0 10px;
@@ -101,8 +104,8 @@ label::after{
     border-radius: 0px 0px 20px 20px ;
 }
 .p{
-    width: 80%;
+    width: 90%;
     padding: 0;
-   
+   line-height: 1.8;
     margin: 0 auto;
 }
