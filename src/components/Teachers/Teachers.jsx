@@ -47,8 +47,6 @@ const Teachers = () => {
           })
          }
 
-        
-         
 
         </div>
       </div>
