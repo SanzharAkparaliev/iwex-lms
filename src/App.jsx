@@ -7,6 +7,7 @@ import Techers from './Pages/Techers';
 import ProfilePage from './components/Profile';
 import Courses from './Pages/Courses';
 import Lessons from './components/Lessons/Lessons';
+import Page404 from './components/PageNotFound';
 
 function App() {
   return (
@@ -16,12 +17,10 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/tech" element={<Techers />} />
         <Route path="/profile" element={<ProfilePage />} />
-        <Route path="*" element={<h1>Страница не найдено</h1>} />
+        <Route path="*" element={<Page404 />} />
         <Route path="/corses">
-
           <Route index element={<Courses />} />
-           <Route path=":id" element={<Lessons/>} /> 
-
+          <Route path=":id" element={<Lessons />} />
         </Route>
       </Routes>
     </Layout>

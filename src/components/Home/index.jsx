@@ -2,6 +2,7 @@ import AboutContent from '../AboutContent/AboutContent';
 import BannerContent from '../Banner';
 
 import ChooseUs from '../ChooseUs';
+import { Footer } from '../Footer/Footer';
 import GerBlok from '../GerCard/GerBlok';
 
 import styles from './home.module.css';
@@ -15,6 +16,7 @@ const HomePage = () => {
         <AboutContent />
         <ChooseUs />
       </div>
+      <Footer />
     </div>
   );
 };

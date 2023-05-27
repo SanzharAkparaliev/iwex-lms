@@ -62,7 +62,6 @@ const Navigation = () => {
                 <AiOutlineMenu className={styles.iconCloss} />
               )}
             </button>
-
             <div
               className={
                 show ? [styles.nav, styles.active].join(' ') : [styles.nav]
