@@ -17,8 +17,6 @@ const Navigation = () => {
   const [link, setLink] = useState();
   const [user, setUser] = useState(false);
 
-  console.log(location.pathname);
-
   const path = useLocation().pathname;
   console.log(path);
   useEffect(() => {

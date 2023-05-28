@@ -1,4 +1,6 @@
+import { useScroll } from '../../../hooks/useScroll';
 import styles from './social.module.css';
+import cn from 'clsx';
 
 import {
   FaFacebook,
@@ -10,8 +12,14 @@ import {
 } from 'react-icons/fa';
 
 const HeaderSocial = () => {
+  const scrolly = useScroll();
+
+  const isHideHeaderTop = scrollY > 450;
+
   return (
-    <div className={styles.socials}>
+    <div
+      className={cn(styles.socials, isHideHeaderTop && styles.headerScrolled)}
+    >
       <div className={styles.social_container}>
         <div className={styles.socialIcon}>
           <FaInstagram className={styles.iconInstagram} />
