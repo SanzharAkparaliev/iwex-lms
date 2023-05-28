@@ -4,7 +4,7 @@ let t1 = gsap.timeline();
 let t2 = gsap.timeline();
 let t3 = gsap.timeline();
 
-const page404 = () => {
+export const page404 = () => {
   t1.to('.cog1', {
     transformOrigin: '50% 50%',
     rotation: '+=360',
@@ -37,4 +37,4 @@ const page404 = () => {
   );
 };
 
-export default page404;
+// export default page404;
