@@ -27,3 +27,23 @@
 }
 
 
+@media screen and (max-width: 1340px) {
+  .socials{
+    overflow-x: scroll;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .social_container{
+    display: flex;
+    gap: 25px;
+    padding: 8px;
+  }
+  .socialIcon{
+    padding: 8px 10px;
+    background: #ffcc00;
+    border-radius: 10px;
+    color: #333;
+    font-weight: 500;
+  }
+}

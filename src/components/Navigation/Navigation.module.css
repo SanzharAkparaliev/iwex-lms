@@ -19,7 +19,6 @@
   padding: 25px;
 }
 
-
 .header_container{
   max-width: 1440px;
   margin: 0 auto;
@@ -108,7 +107,12 @@
 }
 
 @media (max-width: 768px) {
-
+  .conteiner{
+    height: 146px;
+  }
+  .blok{
+    padding: 12px;
+  }
   .hamburger{
     z-index: 160;
       display: inline-flex;
