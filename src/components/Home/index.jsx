@@ -1,5 +1,6 @@
 import AboutContent from '../AboutContent/AboutContent';
 import BannerContent from '../Banner';
+import Cardinfo from '../Cardinfo/Cardinfo';
 
 import ChooseUs from '../ChooseUs';
 import { Footer } from '../Footer/Footer';
@@ -15,6 +16,7 @@ const HomePage = () => {
         <GerBlok />
         <AboutContent />
         <ChooseUs />
+        <Cardinfo/>
       </div>
       <Footer />
     </div>

@@ -14,7 +14,7 @@ console.log(data)
       <div className={styles.cardBlok}>
   {
     data.map((item ) => {
-return <CardG key={item.id} name={item.name} lesson = {item.leson} people = {item.people}/>
+return <CardG item={item} key={item.id} name={item.name} lesson = {item.leson} people = {item.people}/>
     })
   }
       

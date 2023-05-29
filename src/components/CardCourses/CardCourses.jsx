@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './card.module.css';
-import { NavLink } from 'react-router-dom';
-const CardCourses = ({ name, title }) => {
+import { NavLink, useNavigate } from 'react-router-dom';
+const CardCourses = ({ name, title, item, }) => {
+  const [data, setData] = useState(item);
+
+  const navigate = useNavigate();
+  const hendler = () => {
+    navigate(`/corses/${item.id}`);
+  };
+
   return (
     <div className={styles.box}>
       <div className={styles.flagBox}>
@@ -16,11 +23,10 @@ const CardCourses = ({ name, title }) => {
         <p className={styles.title}>{title}</p>
       </div>
       <div className={styles.starANDButton}>
-        <NavLink to="/corses/id" className={styles.goRegistr}>
+        {/* <NavLink to='/corses/:id'  className={styles.goRegistr} >Go Now</NavLink> */}
+        <button onClick={hendler} className={styles.goRegistr}>
           Go Now
-        </NavLink>
-        {/* <button className={styles.goRegistr}>Go Now</button>
-         */}
+        </button>
       </div>
     </div>
   );

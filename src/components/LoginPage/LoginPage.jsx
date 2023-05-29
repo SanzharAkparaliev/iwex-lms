@@ -37,7 +37,7 @@ export const LoginPage = () => {
     if (data.token) {
       redirect('/');
     } else {
-      alert('идите лесом');
+      alert('.');
     }
   };
 

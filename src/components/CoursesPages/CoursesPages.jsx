@@ -7,19 +7,19 @@ import { Footer } from '../Footer/Footer';
 const CoursesPages = () => {
   const data = CoursesData;
   return (
-    <>
-      <div className={styles.conteiner}>
-        <div className={styles.cardBlok}>
-          {data.map((item) => {
-            return (
-              <CardCourses key={item.id} name={item.name} title={item.title} />
-            );
-          })}
-        </div>
+    <div className={styles.conteiner}>
+      <div className={styles.cardBlok}>
+        {data.map((item) => {
+          return (
+            <CardCourses
+              key={item.id}
+              item={item}
+              name={item.name}
+              title={item.title}
+            />
+          );
+        })}
       </div>
-      <Footer />
-    </>
+    </div>
   );
 };
-
-export default CoursesPages;

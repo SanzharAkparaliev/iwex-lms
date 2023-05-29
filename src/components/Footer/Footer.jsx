@@ -10,60 +10,34 @@ export const Footer = () => {
     <footer className={styled.site_footer}>
       <div className={styled.footer_container}>
         <div className={styled.row}>
-          <div className={styled.roww}>
-            <div className={styled.catt}>
-              <h4 className={styled.title}>A B O U T</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-                accusantium architecto iste maiores aliquam magni ipsa rerum
-                perspiciatis cum illo sunt corporis soluta in id tempora nihil
-                tempore, sint reiciendis!
-              </p>
-            </div>
-            {/* ------------ */}
-            <div className={styled.cat}>
-              <h4 className={styled.title}>C A T E G O R I E S</h4>
-              <ul className={styled.footer_links}>
-                <li>
-                  <NavLink to={'/'}>Home </NavLink>
-                </li>
-                <li>
-                  <NavLink to={'/tech'}>Techers </NavLink>
-                </li>
-                <li>
-                  <a href="#">Courses</a>
-                </li>
-                <li>
-                  <a href="#">Profile</a>
-                </li>
-                <li>
-                  <NavLink to={'/'}>Logout </NavLink>
-                </li>
-              </ul>
-            </div>
-            <div className={styled.cat}>
-              <h4 className={styled.title}>C O N T A C T</h4>
-              <ul className={styled.footer_links}>
-                <li>
-                  <a href="https://www.instagram.com/iwex.kg/">Instagram</a>
-                </li>
-                <li>
-                  <a href="https://www.facebook.com/iwex.kg/?locale=ru_RU">
-                    Facebook
-                  </a>
-                </li>
-                <li>
-                  <a href="https://kg.linkedin.com/in/team-iwex-93ba0624b?original_referer=https%3A%2F%2Fwww.google.com%2F">
-                    Linkedin
-                  </a>
-                </li>
-                <li>
-                  <a href="#">Twitter</a>
-                </li>
-                <li className={styled.phone}>Phone: +996776262328</li>
-              </ul>
-            </div>
-          </div>
+       <div className={styled.roww}>
+              <div className={styled.catt}>
+                  <h4 className={styled.title}>A B O U T</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat accusantium architecto iste maiores aliquam magni ipsa rerum perspiciatis cum illo sunt corporis soluta in id tempora nihil tempore, sint reiciendis!</p>
+              </div>
+              {/* ------------ */}
+              <div className={styled.cat}>
+                  <h4 className={styled.title}>C A T E G O R I E S</h4>
+                  <ul className={styled.footer_links}>
+                      <li><NavLink to={'/home'}>Home </NavLink></li>
+                      <li><NavLink to={'/tech'}>Techers </NavLink></li>
+                      <li><a href="#">Courses</a></li>
+                      <li><a href="#">Profile</a></li>
+                      <li><NavLink to={'/home'}>Logout </NavLink></li>
+                  </ul>
+              </div>
+              <div className={styled.cat}>
+                  <h4 className={styled.title}>C O N T A C T</h4>
+                  <ul className={styled.footer_links}>
+                  <li><a href="https://www.instagram.com/iwex.kg/">Instagram</a></li>
+                  <li><a href="https://www.facebook.com/iwex.kg/?locale=ru_RU">Facebook</a></li>
+                  <li><a href="https://kg.linkedin.com/in/team-iwex-93ba0624b?original_referer=https%3A%2F%2Fwww.google.com%2F">Linkedin</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li className={styled.phone}>Phone: +996776262328</li>
+  
+                  </ul>
+              </div>
+       </div>
         </div>
         <div className={styled.line}>
           <div className={styled.title_footer}>
