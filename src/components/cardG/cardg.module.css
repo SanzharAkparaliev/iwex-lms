@@ -81,8 +81,10 @@
     border-radius: 5px;
     transition: 0.3s;
 }
-/* .goRegistr:hover{
-    transition: 0.3s;
-    transform: scale(1.07);
-    padding: 10px;
-} */
+
+@media screen and (max-width: 1140px) {
+    .box{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

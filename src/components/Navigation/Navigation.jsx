@@ -12,6 +12,7 @@ import Cookies from 'js-cookie';
 import HeaderSocial from './Header-Social';
 
 const Navigation = () => {
+  const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const [showLink, setShowLink] = useState(null);
   const [link, setLink] = useState();
@@ -37,6 +38,11 @@ const Navigation = () => {
   //  console.log(showLink)
   const hendler = () => {
     setShow((show) => !show);
+  };
+
+  const logout = () => {
+    Cookies.remove('token');
+    navigate('/login');
   };
 
   if (Cookies.get('token')) {
@@ -79,6 +85,9 @@ const Navigation = () => {
                   </NavLink>
                 );
               })}
+              <NavLink onClick={logout} className={styles.join}>
+                Logout
+              </NavLink>
             </div>
           </div>
         </div>
