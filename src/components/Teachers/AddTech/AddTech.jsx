@@ -1,9 +1,8 @@
-import React, { useState, useRef } from 'react'
-import styled from './AddTech.module.css'
-import { BiPlusMedical } from "react-icons/bi";
-import { AiOutlineClose} from "react-icons/ai";
-import {DiYeoman,DiUikit,DiSqllite} from "react-icons/di";
-
+import React, { useState, useRef } from 'react';
+import styled from './AddTech.module.css';
+import { BiPlusMedical } from 'react-icons/bi';
+import { AiOutlineClose } from 'react-icons/ai';
+import { DiYeoman, DiUikit, DiSqllite } from 'react-icons/di';
 
 export const AddTech = () => {
   const [open, setOpen] = useState(false);
@@ -23,57 +22,68 @@ export const AddTech = () => {
 
   return (
     <div className={styled.add}>
-        {
-            open &&    <div  className={styled.modal}>
-            <div className={styled.modal_card}>
-                <div className={styled.modal_vel}>
-                    <div className={styled.exitt}>
-                        <AiOutlineClose onClick={()=> setOpen(false)} className={styled.exit}/>
-                        </div>
-                        <form className={styled.form} >
-                          {/* ------------------------------ */}
-                          <h1 className={styled.aa}>Avatar</h1>
-                          <div className={styled.imgv}>                           
-                          <div className={styled.inp_file}> 
-                          <label htmlFor="file_loader" className={styled.lab}>Загрузить файл</label>
-                          <input  className={styled.inp_ff} 
-                           type="file" 
-                           id='file_loader'
-                           onChange={handleOnChange}
-                           />
-                           <p></p>
-                          </div>
-                           <div className={styled.imgh}>
-                            
-                            <img className={styled.imgg} src={imageURL } alt="" />
-                           </div>
-                          </div>
-                          {/* -------------------------- */}
-                         <h2 className={styled.aa}>Name Techers</h2>
-                         <div className={styled.inputbox}>
-                         <DiYeoman className={styled.icon}/>
-                          <input className={styled.ino}  type="text" />
-                          <label className={styled.la} htmlFor="">Name</label>
-                         </div>
-                         <h2 className={styled.aa}>Profession</h2>
-                         <div className={styled.inputbox}>
-                         <DiUikit className={styled.icon}/>
-                          <input className={styled.ino}  type="text" />
-                          <label className={styled.la} htmlFor="">Profession</label>
-                         </div>
-                         <h2 className={styled.aa}>Descriptions</h2>
-                         <div className={styled.inputbox}>
-                         <DiSqllite className={styled.icon}/>
-                          <input className={styled.ino}  type="text" />
-                          <label className={styled.la} htmlFor="">Descriptions</label>
-                         </div>
-                         <button className={styled.btn_modal}>Save Teachers</button>
-                        </form>
+      {open && (
+        <div className={styled.modal}>
+          <div className={styled.modal_card}>
+            <div className={styled.modal_vel}>
+              <div className={styled.exitt}>
+                <AiOutlineClose
+                  onClick={() => setOpen(false)}
+                  className={styled.exit}
+                />
+              </div>
+              <form className={styled.form}>
+                {/* ------------------------------ */}
+                <h1 className={styled.aa}>Avatar</h1>
+                <div className={styled.imgv}>
+                  <div className={styled.inp_file}>
+                    <label htmlFor="file_loader" className={styled.lab}>
+                      Загрузить файл
+                    </label>
+                    <input
+                      className={styled.inp_ff}
+                      type="file"
+                      id="file_loader"
+                      onChange={handleOnChange}
+                    />
+                    <p></p>
+                  </div>
+                  <div className={styled.imgh}>
+                    <img className={styled.imgg} src={imageURL} alt="" />
+                  </div>
                 </div>
+                {/* -------------------------- */}
+                <h2 className={styled.aa}>Name Techers</h2>
+                <div className={styled.inputbox}>
+                  <DiYeoman className={styled.icon} />
+                  <input className={styled.ino} type="text" />
+                  <label className={styled.la} htmlFor="">
+                    Name
+                  </label>
+                </div>
+                <h2 className={styled.aa}>Profession</h2>
+                <div className={styled.inputbox}>
+                  <DiUikit className={styled.icon} />
+                  <input className={styled.ino} type="text" />
+                  <label className={styled.la} htmlFor="">
+                    Profession
+                  </label>
+                </div>
+                <h2 className={styled.aa}>Descriptions</h2>
+                <div className={styled.inputbox}>
+                  <DiSqllite className={styled.icon} />
+                  <input className={styled.ino} type="text" />
+                  <label className={styled.la} htmlFor="">
+                    Descriptions
+                  </label>
+                </div>
+                <button className={styled.btn_modal}>Save Teachers</button>
+              </form>
             </div>
+          </div>
         </div>
       )}
-
+      )
       <button onClick={() => setOpen(true)} className={styled.addTech}>
         Add a Teacher <BiPlusMedical className={styled.icon_add} />
       </button>
