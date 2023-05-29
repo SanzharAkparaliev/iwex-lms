@@ -2,6 +2,8 @@ import React, { useState, useRef } from 'react'
 import styled from './AddTech.module.css'
 import { BiPlusMedical } from "react-icons/bi";
 import { AiOutlineClose} from "react-icons/ai";
+import {DiYeoman,DiUikit,DiSqllite} from "react-icons/di";
+
 
 export const AddTech = () => {
     const [open, setOpen] = useState(false)
@@ -47,12 +49,27 @@ export const AddTech = () => {
                            </div>
                           </div>
                           {/* -------------------------- */}
-                         
+                         <h2 className={styled.aa}>Name Techers</h2>
+                         <div className={styled.inputbox}>
+                         <DiYeoman className={styled.icon}/>
+                          <input className={styled.ino}  type="text" />
+                          <label className={styled.la} htmlFor="">Name</label>
+                         </div>
+                         <h2 className={styled.aa}>Profession</h2>
+                         <div className={styled.inputbox}>
+                         <DiUikit className={styled.icon}/>
+                          <input className={styled.ino}  type="text" />
+                          <label className={styled.la} htmlFor="">Profession</label>
+                         </div>
+                         <h2 className={styled.aa}>Descriptions</h2>
+                         <div className={styled.inputbox}>
+                         <DiSqllite className={styled.icon}/>
+                          <input className={styled.ino}  type="text" />
+                          <label className={styled.la} htmlFor="">Descriptions</label>
+                         </div>
+                         <button className={styled.btn_modal}>Save Teachers</button>
                         </form>
                 </div>
-               
-              
-                
             </div>
         </div>
         }
