@@ -23,7 +23,10 @@ const HeaderSocial = () => {
       <div className={styles.social_container}>
         <div className={styles.socialIcon}>
           <FaInstagram className={styles.iconInstagram} />
-          <a href="#" className={styles.iconLink}>
+          <a
+            href="https://www.instagram.com/iwex.kg/"
+            className={styles.iconLink}
+          >
             Instagram
           </a>
         </div>
