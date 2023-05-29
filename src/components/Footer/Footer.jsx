@@ -20,11 +20,11 @@ export const Footer = () => {
               <div className={styled.cat}>
                   <h4 className={styled.title}>C A T E G O R I E S</h4>
                   <ul className={styled.footer_links}>
-                      <li><NavLink to={'/'}>Home </NavLink></li>
+                      <li><NavLink to={'/home'}>Home </NavLink></li>
                       <li><NavLink to={'/tech'}>Techers </NavLink></li>
                       <li><a href="#">Courses</a></li>
                       <li><a href="#">Profile</a></li>
-                      <li><NavLink to={'/'}>Logout </NavLink></li>
+                      <li><NavLink to={'/home'}>Logout </NavLink></li>
                   </ul>
               </div>
               <div className={styled.cat}>

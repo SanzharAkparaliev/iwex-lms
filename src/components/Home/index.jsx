@@ -1,5 +1,6 @@
 import AboutContent from '../AboutContent/AboutContent';
 import BannerContent from '../Banner';
+import Cardinfo from '../Cardinfo/Cardinfo';
 
 import ChooseUs from '../ChooseUs';
 import GerBlok from '../GerCard/GerBlok';
@@ -16,6 +17,7 @@ const HomePage = () => {
         <AboutContent />
         <GerBlok/>
         <ChooseUs />
+        <Cardinfo/>
       </div>
     </div>
   );

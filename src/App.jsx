@@ -8,11 +8,17 @@ import ProfilePage from './components/Profile';
 import Courses from './Pages/Courses';
 import Lessons from './components/Lessons/Lessons';
 
+import Cardinfo from './components/Cardinfo/Cardinfo';
+
 function App() {
   return (
+   
     <Layout>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home"  >
+        <Route index element={<Home />} />
+        <Route path=":id" element={<Cardinfo/>} /> 
+           </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/tech" element={<Techers />} />
         <Route path="/profile" element={<ProfilePage />} />

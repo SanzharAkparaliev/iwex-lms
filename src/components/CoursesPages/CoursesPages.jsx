@@ -11,8 +11,8 @@ const CoursesPages = () => {
     <div className={styles.conteiner}>
     <div className={styles.cardBlok}>
 {
-  data.map((item ) => {
-return <CardCourses key={item.id} name={item.name} title = {item.title} />
+  data.map((item) => {
+return <CardCourses key={item.id} item={item} name={item.name} title = {item.title} />
   })
 }
     
