@@ -12,24 +12,20 @@ import Cardinfo from './components/Cardinfo/Cardinfo';
 
 function App() {
   return (
-   
     <Layout>
       <Routes>
-        <Route path="/home"  >
-        <Route index element={<Home />} />
-        <Route path=":id" element={<Cardinfo/>} /> 
-           </Route>
+        <Route path="/home">
+          <Route index element={<Home />} />
+          <Route path=":id" element={<Cardinfo />} />
+        </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/tech" element={<Techers />} />
         <Route path="/profile" element={<ProfilePage />} />
-        <Route path="*" element={<Page404 />} />
         <Route path="/corses">
           <Route index element={<Courses />} />
-
-           <Route path=":id" element={<Lessons/>} /> 
-
-
+          <Route path=":id" element={<Lessons />} />
         </Route>
+        {/* <Route path="*" element={<Page404 />} /> */}
       </Routes>
     </Layout>
   );

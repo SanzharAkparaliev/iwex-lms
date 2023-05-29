@@ -23,3 +23,5 @@ const CoursesPages = () => {
     </div>
   );
 };
+
+export default CoursesPages;

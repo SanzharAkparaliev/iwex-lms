@@ -16,7 +16,7 @@ const HomePage = () => {
         <GerBlok />
         <AboutContent />
         <ChooseUs />
-        <Cardinfo/>
+        {/* <Cardinfo/> */}
       </div>
       <Footer />
     </div>

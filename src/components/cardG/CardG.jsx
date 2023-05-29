@@ -8,16 +8,11 @@ import { AiFillStar } from 'react-icons/ai';
 import { Outlet, useNavigate } from 'react-router';
 import { NavLink } from 'react-router-dom';
 
-const CardG = ({ name, lesson, people, item,  }) => {
-
+const CardG = ({ name, lesson, people, item }) => {
   const redir = useNavigate();
 
-
   const hendNavigeit = () => {
-    redir(
-     `/home/${item.id}`,
-     
-    );
+    redir(`/home/${item.id}`);
   };
 
   return (
@@ -40,7 +35,6 @@ const CardG = ({ name, lesson, people, item,  }) => {
           <p className={styles.leson}>{people}k</p>
         </div>
       </div>
-
       <div className={styles.starANDButton}>
         <div className={styles.lessonsBlok2}>
           <p className={styles.leson}>5</p>
@@ -50,12 +44,12 @@ const CardG = ({ name, lesson, people, item,  }) => {
         </div>
         <div className={styles.lessonsBlok}>
           {/* <NavLink to="/home/:id">holo</NavLink> */}
-           <button onClick={hendNavigeit} className={styles.goRegistr}>
-    More
-</button>  
+          <button onClick={hendNavigeit} className={styles.goRegistr}>
+            More
+          </button>
         </div>
       </div>
-      <Outlet context={item}/>
+      <Outlet context={item} />
     </div>
   );
 };

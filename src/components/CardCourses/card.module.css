@@ -6,27 +6,21 @@
     padding: 30px;
     margin-top: 50px;
     margin-bottom: 50px;
-box-shadow: 0 0 3px 1px rgb(16, 16, 16);
+    box-shadow: 0 0 3px 1px rgb(16, 16, 16);
     margin-inline: auto;
-  /* border-bottom: 1px solid #333333;
-  border-left:1px solid #333333;
-  border-right:1px solid #333333; */
-  /* border: 1px solid black; */
 }
 .box:hover{
     transition: 0.3s;
     transform: scale(1.03);
 }
 .flagBox{
-   height: 200px;
+    height: 200px;
     width: 100%;
     display: flex;
     align-items: center;
-    
     justify-content: center;
     background: #333333;
     border-radius: 10px;
-  
 }
 
 .flagBox:hover > img {

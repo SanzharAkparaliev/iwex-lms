@@ -1,16 +1,7 @@
 .conteiner{
   background: #ffcc00;
-<<<<<<< HEAD
   position: fixed;
   top: 0;
-=======
-  height: 80px;
-
-  position: fixed; 
-  top: 0;
-
-
->>>>>>> 57d0fb4d3d8659dd7fdf8df7710f997f72f3d5f1
   z-index: 999;
   box-shadow: 3px 4px 5px 3px #33333356;
   width: 100%;
