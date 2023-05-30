@@ -2,9 +2,12 @@ import styled from './CardTech.module.css';
 import { FaFacebook } from 'react-icons/fa';
 import { RxLinkedinLogo } from 'react-icons/rx';
 import { RiInstagramFill, RiTwitterFill } from 'react-icons/ri';
+import { AiOutlineClose } from 'react-icons/ai';
+import { useState } from 'react';
+
 
 export const CardTech = ({
-  key,
+ 
   title,
   prof,
   opi,
@@ -13,14 +16,24 @@ export const CardTech = ({
   insta,
   link,
   fack,
+  visble,
 }) => {
+  // const [show,setShow] = useState(false)
+
+
   return (
-    <div className={styled.card} id={key}>
+    <div className={styled.card}>
       <div className={styled.card_img}>
         <img className={styled.img} src={imgg} alt="" />
       </div>
       {/* ------------------------- */}
       <div className={styled.card_text}>
+      {
+        visble && (<div className={styled.exit_bt}><AiOutlineClose className={styled.exit_ic}/></div>
+        ) 
+      }
+
+
         <h2 className={styled.card_title}>{title}</h2>
         <h4 className={styled.card_prof}>{prof}</h4>
         <div className={styled.line}></div>
