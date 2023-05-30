@@ -28,13 +28,13 @@ export const NavData = [
 
 export const loginLink = [
   {
-    id: 5,
-    title: 'Login',
-    href: '/login',
-  },
-  {
     id: 1,
     title: 'Home',
     href: '/',
+  },
+  {
+    id: 5,
+    title: 'Login',
+    href: '/login',
   },
 ];

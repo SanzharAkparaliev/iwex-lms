@@ -3,9 +3,18 @@ import { mockData } from './CardTech/mockData';
 import styled from './Teachers.module.css';
 import { AddTech } from './AddTech/AddTech';
 import { Footer } from '../Footer/Footer';
+import { useState } from 'react';
+import { BsTrash3Fill} from "react-icons/bs";
+
+
 
 const Teachers = () => {
+  const [show , setShow] =  useState(false)
   const soft = mockData;
+const visble = () => {
+setShow(!show)
+}
+
   return (
     <>
       <div className={styled.wrap}>
@@ -53,11 +62,16 @@ const Teachers = () => {
         {/* ------------------------------------------- */}
         <div id="akz" className={styled.cardbox}>
           <h1 className={styled.card_title}>OUR TEAM</h1>
-          <AddTech />
+         <div className={styled.btn_admin}>
+            <AddTech />
+
+            <button className={styled.btn_remove} onClick={visble}>Remove Techers <BsTrash3Fill/></button>
+         </div>
           <div className={styled.card_cont}>
             {soft.map((item) => {
               return (
                 <CardTech
+                visble = {show}
                   key={item.id}
                   title={item.title}
                   prof={item.prof}

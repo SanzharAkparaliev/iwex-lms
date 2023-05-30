@@ -38,8 +38,6 @@ export const LoginPage = () => {
       redirect('/');
       setAuthData(false);
     }
-
-   
   };
 
   return (
