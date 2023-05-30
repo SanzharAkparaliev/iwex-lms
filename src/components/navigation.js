@@ -2,7 +2,7 @@ export const NavData = [
   {
     id: 1,
     title: 'Home',
-    href: '/home',
+    href: '/',
   },
   {
     id: 2,
@@ -35,6 +35,6 @@ export const loginLink = [
   {
     id: 1,
     title: 'Home',
-    href: '/home',
+    href: '/',
   },
 ];
