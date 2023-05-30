@@ -1,15 +1,43 @@
+import { useState } from 'react';
 import styles from './Moda;.module.css';
+import { useNavigate } from 'react-router';
+import Cookies from 'js-cookie';
 
-const ModalLogout = () => {
-  return (
+const ModalLogout = ({ close }) => {
+  const [toggle, setToggle] = useState(true);
+  const navigate = useNavigate();
+  const [closeModal, setCloseModal] = useState(false);
+
+  const logout = () => {
+    Cookies.remove('token');
+    navigate('/login');
+  };
+
+  return toggle ? (
     <div className={styles.modal_wrapper}>
       <div className={styles.modal_content}>
-        <h3>Вы действительно хотите выйти?</h3>
-        <button className={styles.btnExit}>Да</button>
-        <button className={styles.btnExit}>Нет</button>
+        <h3 className={styles.title}>Вы действительно хотите выйти?</h3>
+        <div className={styles.btns}>
+          <div>
+            <button className={styles.btnExit} onClick={logout}>
+              Да
+            </button>
+          </div>
+          <div>
+            <button
+              className={styles.btnExit}
+              onClick={() => setToggle((toggle) => !toggle)}
+            >
+              Нет
+            </button>
+          </div>
+        </div>
       </div>
+      <p className={styles.close} onClick={close}>
+        &#215;
+      </p>
     </div>
-  );
+  ) : null;
 };
 
 export default ModalLogout;
