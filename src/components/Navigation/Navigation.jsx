@@ -46,10 +46,6 @@ const Navigation = ({ click }) => {
     setModal((modal) => !modal);
   };
 
-  // const close = () => {
-  //   setModal(false);
-  // };
-
   if (Cookies.get('token')) {
     return (
       <div className={styles.conteiner}>
@@ -97,7 +93,7 @@ const Navigation = ({ click }) => {
             </div>
           </div>
         </div>
-        {modal && <ModalLogout />}
+        <ModalLogout isVisible={modal} setIsVisible={setModal} />
       </div>
     );
   } else {
@@ -106,7 +102,6 @@ const Navigation = ({ click }) => {
         <div className={styles.blok}>
           <div className={styles.contlogo}>
             <img className={styles.img} src={logo1} alt="" />
-
             <p className={styles.parag}>LMS</p>
           </div>
 
