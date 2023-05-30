@@ -35,7 +35,7 @@ export const LoginPage = () => {
     });
 
     if (data.token) {
-      redirect('/home');
+      redirect('/');
       setAuthData(false);
     }
 

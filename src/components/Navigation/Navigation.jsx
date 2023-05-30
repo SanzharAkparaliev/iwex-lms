@@ -44,7 +44,7 @@ const Navigation = ({ click }) => {
 
   const showModal = () => {
     setModal((modal) => !modal);
-  };
+  }
 
   // const close = () => {
   //   setModal(false);
@@ -90,10 +90,11 @@ const Navigation = ({ click }) => {
                   </NavLink>
                 );
               })}
-              {/* onClick={logout} */}
-              <NavLink onClick={showModal} className={styles.join}>
+                <NavLink onClick={showModal} className={styles.join}>
                 Logout
               </NavLink>
+              {/* onClick={logout} */}
+           
             </div>
           </div>
         </div>
