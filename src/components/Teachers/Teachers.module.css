@@ -57,6 +57,30 @@
     justify-content: center;
     align-items: center;
 }
+/* ------------ */
+.btn_remove{
+    font-size: 20px;
+    padding: 12px 50px;
+    border: 3px solid #333333;
+    border-radius: 30px ;
+    transition: 0.5s;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    color: #c8c6be;
+    background: #333333;
+    align-items: center;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.btn_remove:hover{
+    background: none;
+    color: #333333;
+}
+/* ------------- */
 .soft_btn{
     background: #ffcc00;
     color: #333333;
@@ -82,6 +106,12 @@
     margin: 0 auto;
     padding-bottom: 140px;
     background: #ffcc00;
+}
+.btn_admin{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 20px;
 }
 .card_title{
     padding-top: 50px;

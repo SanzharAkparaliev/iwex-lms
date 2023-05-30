@@ -32,7 +32,7 @@ export const AddTech = () => {
                   className={styled.exit}
                 />
               </div>
-              <form className={styled.form}>
+              <form onSubmit={handleOnChange}  className={styled.form}>
                 {/* ------------------------------ */}
                 <h1 className={styled.aa}>Avatar</h1>
                 <div className={styled.imgv}>
@@ -77,13 +77,13 @@ export const AddTech = () => {
                     Descriptions
                   </label>
                 </div>
-                <button className={styled.btn_modal}>Save Teachers</button>
+                <button  className={styled.btn_modal}>Save Teachers</button>
               </form>
             </div>
           </div>
         </div>
       )}
-      )
+      
       <button onClick={() => setOpen(true)} className={styled.addTech}>
         Add a Teacher <BiPlusMedical className={styled.icon_add} />
       </button>
