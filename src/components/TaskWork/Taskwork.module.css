@@ -1,7 +1,11 @@
+.cont{
+    border: 1px solid black;
+    margin: 145px auto;
+}
 .wraper{
     max-width: 100%;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    
+  
     display: flex;
 }
 .block1{
