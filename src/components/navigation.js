@@ -19,11 +19,11 @@ export const NavData = [
     title: 'Profile',
     href: '/profile',
   },
-  {
-    id: 5,
-    title: 'Login',
-    href: '/login',
-  },
+  // {
+  //   id: 5,
+  //   title: 'Login',
+  //   href: '/login',
+  // },
 ];
 
 export const loginLink = [

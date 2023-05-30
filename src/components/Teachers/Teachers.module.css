@@ -296,6 +296,10 @@ color: #333333;
        .parr{
         font-size: 10px;
        }
+       .soft_btn{
+        font-size: 20px;
+        padding: 10px 90px;
+       }
 }
 @media(max-width:424px){
    
