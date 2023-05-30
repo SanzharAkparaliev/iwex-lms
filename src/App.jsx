@@ -25,7 +25,7 @@ function App() {
           <Route index element={<Courses />} />
           <Route path=":id" element={<Lessons />} />
         </Route>
-        {/* <Route path="*" element={<Page404 />} /> */}
+        <Route path="*" element={<Page404 />} />
       </Routes>
     </Layout>
   );

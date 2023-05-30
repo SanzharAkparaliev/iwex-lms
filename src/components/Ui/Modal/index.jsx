@@ -33,9 +33,6 @@ const ModalLogout = ({ close }) => {
           </div>
         </div>
       </div>
-      <p className={styles.close} onClick={close}>
-        &#215;
-      </p>
     </div>
   ) : null;
 };
