@@ -14,7 +14,7 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/home">
+        <Route path="/">
           <Route index element={<Home />} />
           <Route path=":id" element={<Cardinfo />} />
         </Route>
