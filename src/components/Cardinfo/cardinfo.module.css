@@ -1,7 +1,46 @@
-.cont{
-    border: 1px solid black;
-    max-width: 100%;
-    margin-top: 150px;
-    height: 20px;
+.cont {
+
+  max-width: 100%;
+  margin-top: 150px;
+  height: 20px;
 }
 
+.blok {
+  margin: 0 auto;
+
+}
+.title {
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: clamp(20px, 6vw, 40px);
+}
+.infoblok {
+    margin:  50px auto;
+ 
+ 
+width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.blokPeople{
+    margin-top: 20px;
+    
+    height: 100px;
+    width: 100px;
+    text-align: center;
+}
+.iconPeople{
+font-size: clamp(35px , 7vw, 43px);
+
+}
+.people{
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: clamp(15px, 5vw, 20px);
+}
+.discription{
+width: 60%;
+margin: 50px auto;
+text-align: center;
+}
