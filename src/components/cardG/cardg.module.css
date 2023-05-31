@@ -1,90 +1,96 @@
-.box{
-    margin: 10px;
-    width: 350px;
-    height: auto;
-    box-shadow: 2px 2px 4px 2px rgba(16, 16, 16, 0.192);
-    margin-inline: auto;
-    transition: 0.3s;
+.box {
+  margin: 10px;
+  max-width: 280px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px 2px rgba(16, 16, 16, 0.192);
+  margin-inline: auto;
+  transition: 0.3s;
 }
-.box:hover{
-    transform: scale(1.019);
+.box:hover {
+  transform: scale(1.019);
 }
-.flagBox{
-    width: 100%;
-    height: 300px;
+.flagBox {
+  max-width: 100%;
+  height: 200px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
 }
-.imgGer{
-    border-radius: 0px 0 5px 5px;
-    width: 100%;
-    height: 100%;
-}
-
-.name{
-    font-family: Roboto;
-    font-weight: 500;
-    text-align: center;
-    font-size: clamp(15px , 6vw , 21px);
-    padding-top: 16px;
-}
-.boxlesPepl{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 25px;
-}
-.lessonsBlok{
-    margin: 10px;
-    max-width: 140px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-.lessonsBlok2{
-    margin: 10px;
-    max-width: 140px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 1px;
-}
-.iconBook{
-    font-size: 
-    16px;
-    margin-top: 6px;
-    color: #333333;
-}
-.iconBook2{
-    font-size: 
-    16px;
-    margin-top: 6px;
-    color: gold;
-}
-.leson{
-    font-size: 15px;
-    margin-top: 4px;
-    color: #333333;
+.imgGer {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 5px 5px 5px 5px;
+  max-width: 100%;
 }
 
-.starANDButton{
-    display: flex;
-   
-    justify-content: space-between;
-    margin-top: 5px;
+.name {
+  margin: 0 auto;
+  width: 80%;
+  font-family: Roboto;
+  font-weight: 500;
+  text-align: center;
+  font-size: clamp(15px, 6vw, 21px);
+  padding-top: 16px;
 }
-.goRegistr{
-    cursor: pointer;
-    border: none;
-    width: 150px;
-    padding: 5px;
-    background: #333333;
-    text-shadow: 4px 0 0 0  #ffcc00;
-    color: #ffcc00;
-    border-radius: 5px;
-    transition: 0.3s;
+.boxlesPepl {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px auto;
+}
+.lessonsBlok {
+  margin: 10px;
+  max-width: 140px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.lessonsBlok2 {
+  margin: 10px;
+  max-width: 140px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+}
+.iconBook {
+  font-size: 16px;
+  margin-top: 6px;
+  color: #333333;
+}
+.iconBook2 {
+  font-size: 16px;
+  margin-top: 6px;
+  color: gold;
+}
+.leson {
+  font-size: 15px;
+  margin-top: 4px;
+  color: #333333;
+}
+
+.starANDButton {
+  display: flex;
+
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.goRegistr {
+  cursor: pointer;
+  border: none;
+  width: 150px;
+  padding: 5px;
+  background: #333333;
+  text-shadow: 4px 0 0 0 #ffcc00;
+  color: #ffcc00;
+  border-radius: 5px;
+  transition: 0.3s;
 }
 
 @media screen and (max-width: 1140px) {
-    .box{
-        display: flex;
-        flex-wrap: wrap;
-    }
+  .box {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
