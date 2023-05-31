@@ -26,64 +26,70 @@ setShow(!show)
             </p>
             <div className={styled.btn_s}>
               {' '}
-              <button className={styled.soft_btn}>Scroll Down </button>
+              <button  className={styled.soft_btn}>
+                <a className={styled.scroll} href="#part1">Scroll Down</a>
+                 </button>
             </div>
           </div>
         </div>
         {/* ------------------------------ ----------------------*/}
         <div className={styled.wraper}>
           {/* ------------------ */}
-          <div className={styled.grid}>
-            <div className={styled.textdiv}>
-              <h1 className={styled.title}> About Us</h1>
-              <p className={styled.par}>
-                Here you can find information about our teachers and our staff.
-                With our teachers you can easily learn German or Polish and you
-                will be able to easily live and find a job in a large part of
-                Europe
-              </p>
+          <div className={styled.wrp_1}>
+            <div className={styled.grid1}>
+              <div className={styled.textdiv}>
+                <h1 className={styled.title}> About Us</h1>
+                <p className={styled.par}>
+                  Here you can find information about our teachers and our staff.
+                  With our teachers you can easily learn German or Polish and you
+                  will be able to easily live and find a job in a large part of
+                  Europe
+                </p>
+              </div>
             </div>
-          </div>
-          <div className={styled.grid}></div>
-          <div className={styled.grid}></div>
-          <div className={styled.grid}>
-            <div className={styled.textdivv}>
-              <h1 className={styled.titlee}>Techers</h1>
-              <p className={styled.parr}>
-                {' '}
-                Our teachers were taught by experienced people who have been
-                teaching languages ​​for several years and have vast experience
-                in this field, under their teaching, dozens of students have
-                already gone to study, live and work in Germany and Poland
-              </p>
+            <div className={styled.grid2}></div>
+            <div className={styled.grid3}></div>
+            <div className={styled.grid4}>
+              <div className={styled.textdivv}>
+                <h1 className={styled.titlee}>Techers</h1>
+                <p className={styled.parr}>
+                  {' '}
+                  Our teachers were taught by experienced people who have been
+                  teaching languages ​​for several years and have vast experience
+                  in this field, under their teaching, dozens of students have
+                  already gone to study, live and work in Germany and Poland
+                </p>
+              </div>
             </div>
           </div>
         </div>
         {/* ------------------------------------------- */}
-        <div id="akz" className={styled.cardbox}>
-          <h1 className={styled.card_title}>OUR TEAM</h1>
-         <div className={styled.btn_admin}>
-            <AddTech />
-
-            <button className={styled.btn_remove} onClick={visble}>Remove Techers <BsTrash3Fill/></button>
-         </div>
-          <div className={styled.card_cont}>
-            {soft.map((item) => {
-              return (
-                <CardTech
-                visble = {show}
-                  key={item.id}
-                  title={item.title}
-                  prof={item.prof}
-                  opi={item.opi}
-                  imgg={item.imgg}
-                  twitt={item.twitt}
-                  insta={item.insta}
-                  link={item.link}
-                  fack={item.fack}
-                />
-              );
-            })}
+        <div id="part1" className={styled.cardbox}>
+          <div className={styled.cardbox2}>
+            <h1 className={styled.card_title}>OUR TEAM</h1>
+           <div className={styled.btn_admin}>
+              <AddTech />
+  
+              <button className={styled.btn_remove} onClick={visble}>Remove Techers <BsTrash3Fill/></button>
+           </div>
+            <div className={styled.card_cont}>
+              {soft.map((item) => {
+                return (
+                  <CardTech
+                  visble = {show}
+                    key={item.id}
+                    title={item.title}
+                    prof={item.prof}
+                    opi={item.opi}
+                    imgg={item.imgg}
+                    twitt={item.twitt}
+                    insta={item.insta}
+                    link={item.link}
+                    fack={item.fack}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
