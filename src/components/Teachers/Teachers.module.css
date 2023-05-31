@@ -1,24 +1,18 @@
 
+html{
+    scroll-behavior: smooth;
 
+}
 .wrap{
-    background: #333333c9;
+    background: white;
 
     padding:  0;
     margin: 0;
     box-sizing: border-box;
 }
-.wraper{
-    max-width: 1440px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-}
+
 /* ------------------ */
 .soft{
-    max-width: 1440px;
 
     margin: 0 auto;
     background-repeat: no-repeat;
@@ -40,6 +34,9 @@
     padding-top: 100px;
     padding-bottom: 60px;
     border-radius: 20px;
+}
+.scroll{
+    padding: 8px 100px ;
 }
 .soft_title{
     text-align: center;
@@ -87,10 +84,10 @@
     cursor: pointer;
     border: 1px solid #ffcc00;
     
+    padding: 6px 0px;
     font-size: 26px;
     font-weight: 600;
     border-radius: 30px;
-    padding: 8px 100px ;
     font-family: 'Poppins', sans-serif;
     transition: .5s;
 
@@ -102,10 +99,13 @@
 }
 /* -------------------------- */
 .cardbox{
-    max-width: 1440px;
     margin: 0 auto;
     padding-bottom: 140px;
     background: #ffcc00;
+}
+.cardbox2{
+    margin: 0 auto;
+    max-width: 1440px;
 }
 .btn_admin{
     align-items: center;
@@ -130,30 +130,47 @@ color: #333333;
 }
 
 /* ----------------------------- */
-.grid{
+.wraper{
+    background: rgb(51,51,51);
+    background: linear-gradient(180deg, rgba(51,51,51,1) 50%, rgba(255,204,0,1) 50%);    margin: 0 auto;
+    
+}
+.wrp_1{
+    max-width: 1440px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.grid1,
+.grid2,
+.grid3,
+.grid4{
     padding-top: 60px;
     padding-bottom: 60px;
 }
-.grid:nth-child(1){
+.grid1{
     display: flex;
     justify-content: center;
     align-items: center;
     background:#333333;
 }
-.grid:nth-child(2){
+.grid2{
     background: url(./bac1.jpg);
     background-size: cover;
     background-position: center;
     overflow: hidden;
     object-fit: cover;
 }
-.grid:nth-child(3){
+.grid3{
     background: url(./bac2.jpg);
     background-size: cover;
     background-position: center;
     overflow: hidden;
 }
-.grid:nth-child(4){
+.grid4{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -328,7 +345,9 @@ color: #333333;
        }
        .soft_btn{
         font-size: 20px;
-        padding: 10px 90px;
+       }
+       .cardbox{
+        padding-bottom: 60px;
        }
 }
 @media(max-width:424px){
@@ -365,5 +384,30 @@ color: #333333;
         gap: 15px;
     }
   }
+  @media(max-width:616px){
+    .btn_remove{
+        font-size: 18px;
+        padding: 10px 40px;
+    }
+  }
+  @media(max-width:571px ){
+    .btn_admin{
+        display: block;
+    }
+    .btn_remove{
+        margin: 0 auto;
+        margin-bottom: 20px;
 
+    }
+  }
+@media(max-width:333px){
+    .scroll{
+        padding: 8px 80px;
+    }
+}
+@media(max-width:300px){
+    .scroll{
+        padding: 8px 60px;
+    }
+}
 /* ----------------------- */

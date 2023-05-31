@@ -204,3 +204,12 @@ background: black;
         align-items: center;
     }
 }
+@media(max-width:812px){
+    .exit_ic{
+        width: 36px;
+        height: 36px;
+    }
+    .exit_bt{
+        top: -116.5px;
+    }
+}
