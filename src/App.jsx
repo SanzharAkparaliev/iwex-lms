@@ -9,6 +9,7 @@ import Courses from './Pages/Courses';
 import Lessons from './components/Lessons/Lessons';
 
 import Cardinfo from './components/Cardinfo/Cardinfo';
+import Cookies from 'js-cookie';
 
 function App() {
   return (
@@ -21,10 +22,12 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/tech" element={<Techers />} />
         <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/corses">
-          <Route index element={<Courses />} />
-          <Route path=":id" element={<Lessons />} />
-        </Route>
+        {Cookies.get('token') && (
+          <Route path="/corses">
+            <Route index element={<Courses />} />
+            <Route path=":id" element={<Lessons />} />
+          </Route>
+        ) }
         {/* <Route path="*" element={<Page404 />} /> */}
       </Routes>
     </Layout>

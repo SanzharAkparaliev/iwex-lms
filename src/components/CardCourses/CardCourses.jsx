@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './card.module.css';
 import { NavLink, useNavigate } from 'react-router-dom';
-const CardCourses = ({ name, title, item, }) => {
+import Cookies from 'js-cookie';
+const CardCourses = ({ name, title, item }) => {
   const [data, setData] = useState(item);
 
   const navigate = useNavigate();

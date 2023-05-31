@@ -70,6 +70,7 @@
 
 .starANDButton {
   display: flex;
+  margin-inline: auto;
   gap: 90px;
   justify-content: space-between;
   margin-top: 5px;
