@@ -56,7 +56,7 @@ export const AddTech = () => {
                 <h2 className={styled.aa}>Name Techers</h2>
                 <div className={styled.inputbox}>
                   <DiYeoman className={styled.icon} />
-                  <input className={styled.ino} type="text" />
+                  <input className={styled.ino}  required type="text" />
                   <label className={styled.la} htmlFor="">
                     Name
                   </label>
@@ -64,7 +64,7 @@ export const AddTech = () => {
                 <h2 className={styled.aa}>Profession</h2>
                 <div className={styled.inputbox}>
                   <DiUikit className={styled.icon} />
-                  <input className={styled.ino} type="text" />
+                  <input className={styled.ino} required type="text" />
                   <label className={styled.la} htmlFor="">
                     Profession
                   </label>
@@ -72,7 +72,7 @@ export const AddTech = () => {
                 <h2 className={styled.aa}>Descriptions</h2>
                 <div className={styled.inputbox}>
                   <DiSqllite className={styled.icon} />
-                  <input className={styled.ino} type="text" />
+                  <input className={styled.ino} required type="text" />
                   <label className={styled.la} htmlFor="">
                     Descriptions
                   </label>

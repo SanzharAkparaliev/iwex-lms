@@ -162,13 +162,19 @@ background: black;
 .inputbox label{
     position: absolute;
     color: white;
+    top: 45%;
+    transform: translateY(-50%);
     font-size: 1em;
     left: 5px;
     transform: translateY(0);
     pointer-events: none;
     transition: .5s;
 }
-
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+    color: rgba(255, 255, 255, 0.348);
+}
 
 .inputbox input{
     width: 100%;
@@ -208,7 +214,6 @@ background: black;
         margin-top: 0;
         font-size: 26px;
     }
-    .inp_file{}
     .imgh{
         height: 60px;
     }
