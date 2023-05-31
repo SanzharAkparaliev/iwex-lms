@@ -162,7 +162,7 @@ background: black;
 .inputbox label{
     position: absolute;
     color: white;
-    top: 45%;
+    top: 40%;
     transform: translateY(-50%);
     font-size: 1em;
     left: 5px;
@@ -173,6 +173,7 @@ background: black;
 input:focus ~ label,
 input:valid ~ label{
     top: -5px;
+    left: 0;
     color: rgba(255, 255, 255, 0.348);
 }
 
