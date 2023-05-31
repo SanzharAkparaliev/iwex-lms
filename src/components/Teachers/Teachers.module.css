@@ -400,5 +400,14 @@ color: #333333;
 
     }
   }
-
+@media(max-width:333px){
+    .scroll{
+        padding: 8px 80px;
+    }
+}
+@media(max-width:300px){
+    .scroll{
+        padding: 8px 60px;
+    }
+}
 /* ----------------------- */
