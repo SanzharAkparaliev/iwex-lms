@@ -66,7 +66,7 @@ body{
 
 .buttons {
   padding-top: 20px;
-  width: 130px;
+  width: 160px;
   display: flex;
   flex-direction: column;
 }
@@ -151,4 +151,25 @@ body{
   font-weight: 500;
   font-size: 20px;
   padding-bottom: 12px;
+}
+
+
+@media screen and (max-width: 780px) {
+  .card{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 65px;
+    width: 100%;
+    padding: 24px;
+  }
+  .wrapper{
+    /* width: 100%; */
+    padding-top: 34px;
+    background: #ffcc00;
+  }
 }
