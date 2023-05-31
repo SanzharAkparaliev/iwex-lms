@@ -12,7 +12,7 @@ const CardG = ({ name, lesson, people, item }) => {
   const redir = useNavigate();
 
   const hendNavigeit = () => {
-    redir(`/${item.id}`);
+    redir(`/home/${item.id}`);
   };
 
   return (
