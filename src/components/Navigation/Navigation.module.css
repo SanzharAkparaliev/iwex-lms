@@ -108,7 +108,7 @@
 
 @media (max-width: 768px) {
   .conteiner{
-    height: 146px;
+    padding: 3px;
   }
   .blok{
     padding: 12px;
