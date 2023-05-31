@@ -73,3 +73,27 @@
   transform: scale(1);
   }
 }
+
+@media screen and (max-width: 770px) {
+  .modal_content{
+    width: 70%;
+    border-radius: 12px;
+  }
+  .title{
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .modal_content{
+    width: 300px;
+    height: 320px;
+  }
+  .title{
+    font-size: 20px;
+  }
+  .btnExit{
+    padding: 5px 10px;
+  }
+}
+
