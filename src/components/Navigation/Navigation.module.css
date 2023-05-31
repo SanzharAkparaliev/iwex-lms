@@ -1,6 +1,6 @@
 .conteiner{
   background: #ffcc00;
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 999;
   box-shadow: 3px 4px 5px 3px #33333356;

@@ -44,12 +44,12 @@ const Navigation = ({ click }) => {
 
   const showModal = () => {
     setModal((modal) => !modal);
-  }
+  };
 
   if (Cookies.get('token')) {
     return (
       <div className={styles.conteiner}>
-        <HeaderSocial />
+        {/* <HeaderSocial /> */}
         <div className={styles.header_container}>
           <a href="/" className={styles.contlogo}>
             <img className={styles.img} src={logo1} alt="" />
@@ -86,11 +86,10 @@ const Navigation = ({ click }) => {
                   </NavLink>
                 );
               })}
-                <NavLink onClick={showModal} className={styles.join}>
+              <NavLink onClick={showModal} className={styles.join}>
                 Logout
               </NavLink>
               {/* onClick={logout} */}
-           
             </div>
           </div>
         </div>
