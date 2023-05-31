@@ -10,6 +10,7 @@ import Lessons from './components/Lessons/Lessons';
 
 import Cardinfo from './components/Cardinfo/Cardinfo';
 import Cookies from 'js-cookie';
+import AddLesons from './components/AddLeson/index';
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           <Route path="/corses">
             <Route index element={<Courses />} />
             <Route path=":id" element={<Lessons />} />
-            <Route path=":id/lessons" element={<Lessons />} />
+            <Route path=":id/lessons" element={<AddLesons/>} />
           </Route>
         ) } 
         {/* <Route path="*" element={<Page404 />} /> */}
