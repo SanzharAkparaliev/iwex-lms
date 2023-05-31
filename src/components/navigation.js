@@ -2,7 +2,7 @@ export const NavData = [
   {
     id: 1,
     title: 'Home',
-    href: '/home',
+    href: '/',
   },
   {
     id: 2,
@@ -19,22 +19,22 @@ export const NavData = [
     title: 'Profile',
     href: '/profile',
   },
-  {
-    id: 5,
-    title: 'Login',
-    href: '/login',
-  },
+  // {
+  //   id: 5,
+  //   title: 'Login',
+  //   href: '/login',
+  // },
 ];
 
 export const loginLink = [
   {
+    id: 1,
+    title: 'Home',
+    href: '/',
+  },
+  {
     id: 5,
     title: 'Login',
     href: '/login',
-  },
-  {
-    id: 1,
-    title: 'Home',
-    href: '/home',
   },
 ];

@@ -28,16 +28,15 @@ export const LoginPage = () => {
     const data = await userAuth(authData);
     console.log(data);
 
-    const date = new Date();
-    date.setTime(date.getTime() + 10 * 1000);
+    // const date = new Date();
+    // date.setTime(date.getTime() + 10 * 1000);
     Cookies.set('token', data.token, {
       expires: 10,
     });
 
     if (data.token) {
       redirect('/');
-    } else {
-      alert('.');
+      setAuthData(false);
     }
   };
 

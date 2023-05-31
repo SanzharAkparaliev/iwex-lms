@@ -12,15 +12,15 @@ const CardG = ({ name, lesson, people, item }) => {
   const redir = useNavigate();
 
   const hendNavigeit = () => {
-    redir(`/home/${item.id}`);
+    redir(`/${item.id}`);
   };
 
   return (
     <div className={styles.box}>
+      <h2 className={styles.name}>{name}</h2>
       <div className={styles.flagBox}>
         <img className={styles.imgGer} src={img} alt="" />
       </div>
-      <h2 className={styles.name}>{name}</h2>
       <div className={styles.boxlesPepl}>
         <div className={styles.lessonsBlok}>
           <i className={styles.iconBook}>
