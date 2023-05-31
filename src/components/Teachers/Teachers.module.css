@@ -346,6 +346,9 @@ color: #333333;
        .soft_btn{
         font-size: 20px;
        }
+       .cardbox{
+        padding-bottom: 60px;
+       }
 }
 @media(max-width:424px){
    
