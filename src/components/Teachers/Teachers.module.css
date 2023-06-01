@@ -346,6 +346,9 @@ color: #333333;
        .soft_btn{
         font-size: 20px;
        }
+       .cardbox{
+        padding-bottom: 60px;
+       }
 }
 @media(max-width:424px){
    
@@ -381,5 +384,30 @@ color: #333333;
         gap: 15px;
     }
   }
+  @media(max-width:616px){
+    .btn_remove{
+        font-size: 18px;
+        padding: 10px 40px;
+    }
+  }
+  @media(max-width:571px ){
+    .btn_admin{
+        display: block;
+    }
+    .btn_remove{
+        margin: 0 auto;
+        margin-bottom: 20px;
 
+    }
+  }
+@media(max-width:333px){
+    .scroll{
+        padding: 8px 80px;
+    }
+}
+@media(max-width:300px){
+    .scroll{
+        padding: 8px 60px;
+    }
+}
 /* ----------------------- */
