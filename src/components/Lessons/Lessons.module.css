@@ -1,0 +1,39 @@
+.conteiner{
+width: 100%;
+
+}
+.title {
+    font-family: Roboto;
+    font-weight: 600;
+    color: #333333;
+    font-size: clamp(20px , 7vw , 38px);
+ text-align: center;
+ margin-top: 50px;
+}
+.addButton{
+    cursor: pointer;
+    border-radius: 8px;
+color: white;
+background: #333333;
+font-size: clamp(20px, 5vw , 25px);
+
+padding: 10px 20px 10px 20px;
+
+
+
+}
+.addButton:hover{
+    transition: 0.2s;
+    transform: scale(1.010);
+color: #ffcc00;
+
+box-shadow: 0px 0px 5px 1px #ffcc00 ;
+
+}
+.blok_button{
+    width: 100%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+ 
+}

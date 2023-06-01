@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Courses.module.css';
 import { CoursesData } from '../CardCoursesData';
 import CardCourses from '../CardCourses/CardCourses';
@@ -6,6 +6,7 @@ import { Footer } from '../Footer/Footer';
 import Cookies from 'js-cookie';
 
 const CoursesPages = () => {
+  useState
   const data = CoursesData;
   return (
     <div className={styles.conteiner}>
