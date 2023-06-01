@@ -1,12 +1,20 @@
 import { useState } from 'react';
 import styles from './AddLesons.module.css';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+import EditorToolbar, { modules, formats } from './EditorToolbar';
+import '../../App.css';
 
 const AddLesons = () => {
   const [selectedOption, setSelectedOption] = useState('');
+  const [state, setState] = useState();
 
   const handleChange = (event) => {
-    setSelectedOption(event.target.value);
+    selectedOption({ value });
   };
+  // const handleChange = (value) => {
+  //   setState({ value });
+  // };
 
   return (
     <div className={styles.input_wrapper}>
@@ -27,7 +35,19 @@ const AddLesons = () => {
           <input className={styles.input} placeholder="Название урока" />
         </div>
         <div className={styles.input_group}>
-          <textarea className={styles.input} placeholder="content"></textarea>
+          {/* <textarea className={styles.input} placeholder="content"></textarea> */}
+          {/* <ReactQuill theme="snow" /> */}
+          <EditorToolbar />
+          <ReactQuill
+            theme="snow"
+            // value={state.value}
+            onChange={handleChange}
+            placeholder={'Write something awesome...'}
+            modules={modules}
+            formats={formats}
+            className={styles.editor}
+            name="editor"
+          />
         </div>
         <div className={styles.input_group}>
           <button className={styles.btn}>Добавить</button>

@@ -60,6 +60,14 @@ body{
   margin-bottom: 45px;
 }
 
+.text-editor {
+  width: 186px;
+  margin: 0 auto;
+}
+.ql-editor {
+  min-width: 100px;
+  min-height: 200px;
+}
 
 
 
