@@ -23,6 +23,12 @@ export const LoginPage = () => {
     });
   };
 
+  const [inputType, setInputType] = useState('password');
+
+  const toggleInputeType = () => {
+    setInputType((prevType) => (prevType === 'password' ? 'text' : 'password'));
+  };
+
   const submitForm = async (e) => {
     e.preventDefault();
     const data = await userAuth(authData);
@@ -58,9 +64,9 @@ export const LoginPage = () => {
                 <label htmlFor="">Email</label>
               </div>
               <div className={styled.inputbox}>
-                <BsCpuFill className={styled.icon} />
+                <BsCpuFill onClick={toggleInputeType} className={styled.icon} />
                 <input
-                  type="password"
+                  type={inputType}
                   required
                   onChange={changeHandler}
                   name="password"
