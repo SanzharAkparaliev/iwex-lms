@@ -21,7 +21,7 @@ const AddLesons = () => {
       <form className={styles.form}>
         <div className={styles.input_group}>
           <select
-            value={selectedOption}
+            // value={selectedOption}
             onChange={handleChange}
             className={styles.selectStyle}
           >

@@ -44,6 +44,7 @@ export const LoginPage = () => {
       redirect('/');
       setAuthData(false);
     }
+    location.reload();
   };
 
   return (

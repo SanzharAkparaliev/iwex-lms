@@ -11,11 +11,16 @@ export const NavData = [
   },
   {
     id: 3,
+    title: 'Materials',
+    href: '/materials',
+  },
+  {
+    id: 4,
     title: 'Courses',
     href: '/corses',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Profile',
     href: '/profile',
   },
