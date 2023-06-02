@@ -13,6 +13,7 @@ import Cookies from 'js-cookie';
 import AddLesons from './components/AddLeson/index';
 import Page404 from './components/PageNotFound';
 import { useState } from 'react';
+import Material from './components/Materials';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <>
             <Route path="/tech" element={<Techers />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/materials" element={<Material />} />
           </>
         ) : (
           <Route path="*" element={<Page404 />} />
