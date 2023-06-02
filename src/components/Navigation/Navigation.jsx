@@ -29,7 +29,7 @@ const Navigation = ({ click }) => {
         return;
         setShowLink(checkTokenUser);
       }
-    };
+  };
     checkUserData();
     if (path === '/login' || '/') {
       setLink(loginLink);
@@ -37,7 +37,6 @@ const Navigation = ({ click }) => {
       setLink(NavData);
     }
   }, [path]);
-  //  console.log(showLink)
   const hendler = () => {
     setShow((show) => !show);
   };
@@ -49,7 +48,6 @@ const Navigation = ({ click }) => {
   if (Cookies.get('token')) {
     return (
       <div className={styles.conteiner}>
-        {/* <HeaderSocial /> */}
         <div className={styles.header_container}>
           <a href="/" className={styles.contlogo}>
             <img className={styles.img} src={logo1} alt="" />
@@ -89,7 +87,6 @@ const Navigation = ({ click }) => {
               <NavLink onClick={showModal} className={styles.join}>
                 Logout
               </NavLink>
-              {/* onClick={logout} */}
             </div>
           </div>
         </div>
