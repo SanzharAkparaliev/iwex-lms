@@ -4,11 +4,21 @@ const requestApi = ky.create({
   prefixUrl: import.meta.env.VITE_USER_AUTH,
 });
 
+// const requestTeach = ky.create({
+//   prefixUrl: import.meta.env.VITE_USER_TEACH,
+// });
+
 export const userAuth = (data) => {
   return requestApi.post('v1/auth/login', { json: data }).json();
 };
 
 // запросы учителей
-export const teachers = (data) => {
-  return requestApi.get('/api/users/get-all', { json: data }).json();
+export const getTeachers = (token) => {
+  return requestApi 
+    .get('users/get-all', {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    .json();
 };
