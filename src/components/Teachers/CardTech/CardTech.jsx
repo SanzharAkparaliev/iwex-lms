@@ -5,9 +5,7 @@ import { RiInstagramFill, RiTwitterFill } from 'react-icons/ri';
 import { AiOutlineClose } from 'react-icons/ai';
 import { useState } from 'react';
 
-
 export const CardTech = ({
- 
   title,
   prof,
   opi,
@@ -20,7 +18,6 @@ export const CardTech = ({
 }) => {
   // const [show,setShow] = useState(false)
 
-
   return (
     <div className={styled.card}>
       <div className={styled.card_img}>
@@ -28,11 +25,11 @@ export const CardTech = ({
       </div>
       {/* ------------------------- */}
       <div className={styled.card_text}>
-      {
-        visble && (<div className={styled.exit_bt}><AiOutlineClose className={styled.exit_ic}/></div>
-        ) 
-      }
-
+        {visble && (
+          <div className={styled.exit_bt}>
+            <AiOutlineClose className={styled.exit_ic} />
+          </div>
+        )}
 
         <h2 className={styled.card_title}>{title}</h2>
         <h4 className={styled.card_prof}>{prof}</h4>

@@ -6,18 +6,17 @@ import { DiYeoman, DiUikit, DiSqllite } from 'react-icons/di';
 
 export const AddTech = () => {
   const [open, setOpen] = useState(false);
-  const fileReader = new FileReader();
-  fileReader.onloadend = () => {
-    setImageURL(fileReader.result);
-  };
+
   const [image, setImage] = useState();
   const [imageURL, setImageURL] = useState();
   const handleOnChange = (event) => {
-    event.preventDefault();
-    console.log('change', event.target.files);
-    const file = event.target.files[0];
-    setImage(file);
-    fileReader.readAsDataURL(file);
+    if (event.target.files[0]) {
+      event.preventDefault(); 
+      console.log('change', event.target.files);
+      const file = event.target.files[0];
+      setImage(file);
+      setImageURL(URL.createObjectURL(file));
+    }
   };
 
   return (
@@ -32,7 +31,7 @@ export const AddTech = () => {
                   className={styled.exit}
                 />
               </div>
-              <form onSubmit={handleOnChange}  className={styled.form}>
+              <form onSubmit={handleOnChange} className={styled.form}>
                 {/* ------------------------------ */}
                 <h1 className={styled.aa}>Avatar</h1>
                 <div className={styled.imgv}>
@@ -56,7 +55,7 @@ export const AddTech = () => {
                 <h2 className={styled.aa}>Name Techers</h2>
                 <div className={styled.inputbox}>
                   <DiYeoman className={styled.icon} />
-                  <input className={styled.ino}  required type="text" />
+                  <input className={styled.ino} required type="text" />
                   <label className={styled.la} htmlFor="">
                     Name
                   </label>
@@ -77,13 +76,13 @@ export const AddTech = () => {
                     Descriptions
                   </label>
                 </div>
-                <button  className={styled.btn_modal}>Save Teachers</button>
+                <button className={styled.btn_modal}>Save Teachers</button>
               </form>
             </div>
           </div>
         </div>
       )}
-      
+
       <button onClick={() => setOpen(true)} className={styled.addTech}>
         Add a Teacher <BiPlusMedical className={styled.icon_add} />
       </button>
