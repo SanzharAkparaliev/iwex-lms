@@ -27,9 +27,11 @@ export const Addcorses = () => {
     setImage(file);
     fileReader.readAsDataURL(file);
 
+   
+  
     const avatar = new FormData();
     avatar.append('file', file);
-    postImgCourses(avatar)
+    console.log(avatar)
   };
 
 
@@ -41,6 +43,12 @@ export const Addcorses = () => {
       };
     });
   };
+
+ const Submit = (e) => {
+e.preventDefault()
+
+postImgCourses(avatar)
+ }
 
   return (
     <div className={styled.add}>
@@ -54,7 +62,7 @@ export const Addcorses = () => {
                   className={styled.exit}
                 />
               </div>
-              <form onSubmit={handleOnChange} className={styled.form}>
+              <form onSubmit={Submit} className={styled.form}>
                 {/* ------------------------------ */}
                 <h1 className={styled.aa}>Picture</h1>
                 <div className={styled.imgv}>
@@ -79,6 +87,7 @@ export const Addcorses = () => {
                 <div className={styled.inputbox}>
                   <IoBookSharp className={styled.icon} />
                   <input
+                  onChange={changeHend}
                     name="name"
                     className={styled.ino}
                     required
@@ -93,6 +102,7 @@ export const Addcorses = () => {
                 <div className={styled.inputbox}>
                   <DiSqllite className={styled.icon} />
                   <input
+                    onChange={changeHend}
                     name="descriptions"
                     className={styled.ino}
                     required
@@ -102,7 +112,7 @@ export const Addcorses = () => {
                     Descriptions
                   </label>
                 </div>
-                <button className={styled.btn_modal}>Save Courses</button>
+                <button  className={styled.btn_modal}>Save Courses</button>
               </form>
             </div>
           </div>
