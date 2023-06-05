@@ -19,6 +19,6 @@ export const postImgCourses = (data) => {
 
 // запросы учителей
 export const teachers = (data) => {
-  return requestApi.get('/api/users/get-all', { json: data }).json();
+  return requestApi.get('users/get-all', { json: data }).json();
 };
 

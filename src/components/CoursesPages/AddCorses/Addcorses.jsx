@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styled from './addcorses.module.css';
 
 import { IoBookSharp } from 'react-icons/io5';
@@ -18,22 +18,28 @@ export const Addcorses = () => {
     name: '',
     descriptions: '',
   });
-  const [image, setImage] = useState();
+
+  const [image, setImage] = useState(null);
   const [imageURL, setImageURL] = useState();
-  const handleOnChange = (event) => {
-    event.preventDefault();
-    console.log('change', event.target.files);
-    const file = event.target.files[0];
-    setImage(file);
-    fileReader.readAsDataURL(file);
 
-   
-  
-    const avatar = new FormData();
-    avatar.append('file', file);
-    console.log(avatar)
-  };
+  //   const handleOnChange = (event) => {
+  //     event.preventDefault();
+  //     console.log('change', event.target.files);
+  //     const file = event.target.files[0];
+  //     setImage(file);
+  //     setImageURL(URL.createObjectURL(file));
 
+  //     const avatar = new FormData();
+  //     avatar.append('file', file);
+  //     console.log(avatar);
+  //   };
+
+  useEffect(() => {
+    if (image) {
+      setImageURL(URL.createObjectURL(image));
+    }
+    console.log(image)
+  }, [image]);
 
   const changeHend = (e) => {
     setCorses((prev) => {
@@ -44,11 +50,13 @@ export const Addcorses = () => {
     });
   };
 
- const Submit = (e) => {
-e.preventDefault()
+  const Submit = (e) => {
+    e.preventDefault();
+    const data = new FormData();
+    data.append('files', image);
 
-postImgCourses(avatar)
- }
+    postImgCourses(data);
+  };
 
   return (
     <div className={styled.add}>
@@ -74,7 +82,7 @@ postImgCourses(avatar)
                       className={styled.inp_ff}
                       type="file"
                       id="file_loader"
-                      onChange={handleOnChange}
+                      onChange={(e) => setImage(e.target.files[0])}
                     />
                     <p></p>
                   </div>
@@ -87,7 +95,7 @@ postImgCourses(avatar)
                 <div className={styled.inputbox}>
                   <IoBookSharp className={styled.icon} />
                   <input
-                  onChange={changeHend}
+                    onChange={changeHend}
                     name="name"
                     className={styled.ino}
                     required
@@ -112,7 +120,7 @@ postImgCourses(avatar)
                     Descriptions
                   </label>
                 </div>
-                <button  className={styled.btn_modal}>Save Courses</button>
+                <button className={styled.btn_modal}>Save Courses</button>
               </form>
             </div>
           </div>
