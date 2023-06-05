@@ -7,14 +7,29 @@ import '../../App.css';
 
 const AddLesons = () => {
   const [selectedOption, setSelectedOption] = useState('');
-  const [state, setState] = useState();
+  // const [state, setState] = useState();
+  const [input, setInput] = useState();
 
   const handleChange = (event) => {
-    selectedOption({ value });
+    setSelectedOption((prevValue) => {
+      return {
+        ...prevValue,
+        [event.target.name]: event.target.value,
+      };
+    });
   };
   // const handleChange = (value) => {
   //   setState({ value });
   // };
+
+  const handleInput = (e) => {
+    setInput((prev) => {
+      return {
+        ...prev,
+        [e.target.name]: e.target.value,
+      };
+    });
+  };
 
   return (
     <div className={styles.input_wrapper}>
@@ -25,14 +40,26 @@ const AddLesons = () => {
             onChange={handleChange}
             className={styles.selectStyle}
           >
-            <option value="">Выберите урок</option>
-            <option value="option1">Опция 1</option>
-            <option value="option2">Опция 2</option>
-            <option value="option3">Опция 3</option>
+            <option name="changeLesson" value="">
+              Выберите урок
+            </option>
+            <option name="lesson01" value="option1">
+              Опция 1
+            </option>
+            <option name="lesson02" value="option2">
+              Опция 2
+            </option>
+            <option name="lesson03" value="option3">
+              Опция 3
+            </option>
           </select>
         </div>
         <div className={styles.input_group}>
-          <input className={styles.input} placeholder="Название урока" />
+          <input
+            className={styles.input}
+            placeholder="Название урока"
+            onChange={handleInput}
+          />
         </div>
         <div className={styles.input_group}>
           {/* <textarea className={styles.input} placeholder="content"></textarea> */}

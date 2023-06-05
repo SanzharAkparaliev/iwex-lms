@@ -19,6 +19,7 @@ const MaterialCards = () => {
             </h3>
           </div>
         </div>
+        <button className={styles.btn}>Подробнее</button>
       </div>
       <div className={styles.card}>
         <div className={styles.cards_img}>
@@ -34,11 +35,12 @@ const MaterialCards = () => {
             </h3>
           </div>
         </div>
+        <button className={styles.btn}>Подробнее</button>
       </div>
       <div className={styles.card}>
         <div className={styles.cards_img}>
           <img
-            src="../../../../public/img/material_img4.jpg"
+            src="../../../../public/img/material_img4.jpg "
             alt=""
             className={styles.card_inner__img}
           ></img>
@@ -49,6 +51,7 @@ const MaterialCards = () => {
             </h3>
           </div>
         </div>
+        <button className={styles.btn}>Подробнее</button>
       </div>
       {/* </div> */}
     </div>
