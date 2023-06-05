@@ -7,7 +7,7 @@ import '../../App.css';
 
 const AddLesons = () => {
   const [selectedOption, setSelectedOption] = useState('');
-  const [state, setState] = useState();
+  // const [state, setState] = useState();
   const [input, setInput] = useState();
 
   const handleChange = (event) => {
