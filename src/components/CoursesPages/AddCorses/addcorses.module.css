@@ -1,0 +1,225 @@
+.addTech{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    justify-content: center ;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 30px ;
+    background: #333333;
+    color: #c8c6be;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.5s;
+    border: 3px solid #333333;
+    padding: 12px 60px;
+    
+}
+.addTech:hover{
+    background: none;
+    color: #333333;
+}
+.add{
+    position: relative;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+   
+
+ .modal{
+   z-index: 1   ;
+    position: fixed;
+    top: 55%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.566);
+    width: 700px;
+    height: 100%;
+    width: 100%;
+    right: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+} 
+.modal_card{
+    width: 500px;
+    margin: 0 auto;
+    top: 50%;
+    display: block !important;
+    background: #333333;
+    border-radius: 30px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.exitt{
+    display: flex;
+    justify-content: end;
+
+}
+.exit{
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    width: 40px;
+    border-radius: 0px 20px 0px 20px;
+    height: 40px;
+    background: rgb(160, 155, 155);
+    transition: 0.5s ease-out;
+}
+.exit:hover{
+color: #ffcc00;
+background: black;
+}
+/* --------------- */
+.form{
+    padding: 20px;
+    padding-top: 0;
+}
+.aa{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+
+    color: #ffcc00;
+}
+.imgv{
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.inp_file{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background: #737373;
+
+}
+.inp_ff{
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    cursor: pointer;
+    padding-left: 10px;
+}
+.lab{
+    cursor: pointer;
+    background: #ffcc00;
+    border: 1px soild black;
+    border-radius: 12px;
+    padding: 10px 20px;
+    color: #000000;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+
+.imgh{
+    width: 30%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+.imgg{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+/* ------------------ */
+.inp_name{
+    border: 1px solid #000;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        
+}
+.icon{
+    position: absolute;
+    right: 8px;
+    color: rgb(252, 247, 247);
+    font-size: 1.2em;
+    top: 20px;
+}
+.inputbox{
+    position: relative;
+    margin: 10px auto;
+    width: 350px;
+    
+    border-bottom: 2px solid #fff;
+}
+.inputbox label{
+    position: absolute;
+    color: white;
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    left: 5px;
+    transform: translateY(0);
+    pointer-events: none;
+    transition: .5s;
+}
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+    left: 0;
+    color: rgba(255, 255, 255, 0.348);
+}
+
+.inputbox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 35px 0 5px;
+    color: white;
+    font-size: 1em;
+}
+.btn_modal{
+    display: flex;
+    justify-content: center;
+    margin:  auto;
+    padding: 8px 30px;
+    background: #ffcc00;
+    color: #333333;
+    font-weight: 600;
+    border: #ffcc00;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 20px;
+}
+@media(max-width:616px){
+    .addTech{
+        font-size: 18px;
+        padding: 10px 50px;
+    }
+}
+@media(max-width:523px){
+    .modal_card{
+        width: 400px;
+    }
+    .aa{
+        padding-top: 0;
+        margin-top: 0;
+        font-size: 26px;
+    }
+    .imgh{
+        height: 60px;
+    }
+    .lab{
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}

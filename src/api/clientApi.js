@@ -7,3 +7,9 @@ const requestApi = ky.create({
 export const userAuth = (data) => {
   return requestApi.post('v1/auth/login', { json: data }).json();
 };
+export const postCourses = (data) => {
+  return requestApi.post('courses/' ,  {json:data}).json()
+}
+export const postImgCourses = (data) => {
+  return requestApi.post('courses/' ,  {body:data}).json()
+}
