@@ -11,13 +11,16 @@ export const AddTech = () => {
   const [imageURL, setImageURL] = useState();
   const handleOnChange = (event) => {
     if (event.target.files[0]) {
-      event.preventDefault(); 
       console.log('change', event.target.files);
       const file = event.target.files[0];
       setImage(file);
       setImageURL(URL.createObjectURL(file));
     }
+   
   };
+  const formHand = (e)=>{
+    e.preventDefault()
+  }
 
   return (
     <div className={styled.add}>
@@ -31,7 +34,7 @@ export const AddTech = () => {
                   className={styled.exit}
                 />
               </div>
-              <form onSubmit={handleOnChange} className={styled.form}>
+              <form onSubmit={formHand} className={styled.form}>
                 {/* ------------------------------ */}
                 <h1 className={styled.aa}>Avatar</h1>
                 <div className={styled.imgv}>
@@ -42,6 +45,7 @@ export const AddTech = () => {
                     <input
                       className={styled.inp_ff}
                       type="file"
+                      
                       id="file_loader"
                       onChange={handleOnChange}
                     />
