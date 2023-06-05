@@ -48,8 +48,9 @@ export const Addcorses = () => {
         [e.target.name]: e.target.value,
       };
     });
+   
   };
-
+  console.log(courses)
   const Submit = (e) => {
     e.preventDefault();
     const data = new FormData();

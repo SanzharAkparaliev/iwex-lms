@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './AddLesons.module.css';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
@@ -8,19 +8,22 @@ import '../../App.css';
 const AddLesons = () => {
   const [selectedOption, setSelectedOption] = useState('');
   const [state, setState] = useState();
+ 
+  const handleChange = (e) => {
+  
+    SelectedOption({ value });
 
-  const handleChange = (event) => {
-    selectedOption({ value });
+   
+   
   };
-  // const handleChange = (value) => {
-  //   setState({ value });
-  // };
+
 
   return (
     <div className={styles.input_wrapper}>
       <form className={styles.form}>
         <div className={styles.input_group}>
           <select
+            name="choice"
             // value={selectedOption}
             onChange={handleChange}
             className={styles.selectStyle}
@@ -32,7 +35,11 @@ const AddLesons = () => {
           </select>
         </div>
         <div className={styles.input_group}>
-          <input className={styles.input} placeholder="Название урока" />
+          <input
+            className={styles.input}
+            name="name"
+            placeholder="Название урока"
+          />
         </div>
         <div className={styles.input_group}>
           {/* <textarea className={styles.input} placeholder="content"></textarea> */}
