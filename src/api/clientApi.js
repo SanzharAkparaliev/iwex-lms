@@ -7,3 +7,8 @@ const requestApi = ky.create({
 export const userAuth = (data) => {
   return requestApi.post('v1/auth/login', { json: data }).json();
 };
+
+// запросы учителей
+export const teachers = (data) => {
+  return requestApi.get('/api/users/get-all', { json: data }).json();
+};
