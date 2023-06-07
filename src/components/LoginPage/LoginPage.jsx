@@ -32,7 +32,6 @@ export const LoginPage = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     try{
-z 
   const data = await userAuth(authData);
   console.log(data);
 
