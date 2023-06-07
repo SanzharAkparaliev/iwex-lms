@@ -35,6 +35,6 @@ export const getTeachers = (token) => {
 };
 
 
-export const AddLessons  = (id) => {
+export const AddLessons  = (id, ) => {
 return requestApi.post(`courses/${id}/lessons`, {json:id}).json()
 }

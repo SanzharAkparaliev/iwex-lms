@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from './AddLesons.module.css';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
@@ -7,25 +7,15 @@ import '../../App.css';
 
 const AddLesons = () => {
   // const [selectedOption, setSelectedOption] = useState('');
-
-  const [selectedOption, setSelectedOption] = useState({
-    select: '',
-    // editor:'',
-  });
-  // const [state, setState] = useState();
+  const [state, setState] = useState();
   const [input, setInput] = useState();
 
-  const handleChange = (event) => {
-    setSelectedOption((prevValue) => {
-      return {
-        ...prevValue,
-        [event.target.name]: event.target.value,
-      };
-    });
-  };
-  // const handleChange = (value) => {
-  //   setState({ value });
+  // const handleChange = (event) => {
+  //   setSelectedOption(value);
   // };
+  const handleChange = (value) => {
+    setState({ value });
+  };
 
   const handleInput = (e) => {
     setInput((prev) => {
@@ -36,29 +26,25 @@ const AddLesons = () => {
     });
   };
 
-  console.log(input);
-  console.log(selectedOption);
   return (
     <div className={styles.input_wrapper}>
       <form className={styles.form}>
         <div className={styles.input_group}>
           <select
-            name="select"
             // value={selectedOption}
             onChange={handleChange}
             className={styles.selectStyle}
           >
-            <option name="changeLesson" value="">
+            <option name="changeLesson" value="" onChange={handleInput}>
               Выберите урок
             </option>
-
-            <option name="lesson01" value="option1">
+            <option name="lesson01" value="option1" onChange={handleInput}>
               Опция 1
             </option>
-            <option name="lesson02" value="option2">
+            <option name="lesson02" value="option2" onChange={handleInput}>
               Опция 2
             </option>
-            <option name="lesson03" value="option3">
+            <option name="lesson03" value="option3" onChange={handleInput}>
               Опция 3
             </option>
           </select>
@@ -66,7 +52,6 @@ const AddLesons = () => {
         <div className={styles.input_group}>
           <input
             className={styles.input}
-            name="name"
             placeholder="Название урока"
             onChange={handleInput}
           />

@@ -6,7 +6,7 @@ import { BiPlusMedical } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { DiYeoman, DiUikit, DiSqllite } from 'react-icons/di';
 import Courses from './../../../Pages/Courses';
-import { postImgCourses } from '../../../api/clientApi';
+import { postCourses, postImgCourses } from '../../../api/clientApi';
 
 export const Addcorses = () => {
   const [open, setOpen] = useState(false);
@@ -48,15 +48,16 @@ export const Addcorses = () => {
         [e.target.name]: e.target.value,
       };
     });
+    
    
   };
   console.log(courses)
-  const Submit = (e) => {
-    e.preventDefault();
+  const Submit = async (e) => {
+    // e.preventDefault();
     const data = new FormData();
     data.append('files', image);
-
-    postImgCourses(data);
+    const postDataCourses= await postCourses(courses);
+    const postimg= await postImgCourses(data);
   };
 
   return (
