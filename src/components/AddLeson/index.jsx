@@ -6,21 +6,16 @@ import EditorToolbar, { modules, formats } from './EditorToolbar';
 import '../../App.css';
 
 const AddLesons = () => {
-  const [selectedOption, setSelectedOption] = useState('');
-  // const [state, setState] = useState();
+  // const [selectedOption, setSelectedOption] = useState('');
+  const [state, setState] = useState();
   const [input, setInput] = useState();
 
-  const handleChange = (event) => {
-    setSelectedOption((prevValue) => {
-      return {
-        ...prevValue,
-        [event.target.name]: event.target.value,
-      };
-    });
-  };
-  // const handleChange = (value) => {
-  //   setState({ value });
+  // const handleChange = (event) => {
+  //   setSelectedOption(value);
   // };
+  const handleChange = (value) => {
+    setState({ value });
+  };
 
   const handleInput = (e) => {
     setInput((prev) => {
@@ -40,16 +35,16 @@ const AddLesons = () => {
             onChange={handleChange}
             className={styles.selectStyle}
           >
-            <option name="changeLesson" value="">
+            <option name="changeLesson" value="" onChange={handleInput}>
               Выберите урок
             </option>
-            <option name="lesson01" value="option1">
+            <option name="lesson01" value="option1" onChange={handleInput}>
               Опция 1
             </option>
-            <option name="lesson02" value="option2">
+            <option name="lesson02" value="option2" onChange={handleInput}>
               Опция 2
             </option>
-            <option name="lesson03" value="option3">
+            <option name="lesson03" value="option3" onChange={handleInput}>
               Опция 3
             </option>
           </select>

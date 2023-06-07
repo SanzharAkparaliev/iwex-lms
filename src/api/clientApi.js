@@ -12,7 +12,17 @@ export const userAuth = (data) => {
   return requestApi.post('v1/auth/login', { json: data }).json();
 };
 
+// добовление курса
+export const postCourses = (data) => {
+  return requestApi.post('courses/' ,  {json:data}).json()
+}
+export const postImgCourses = (data) => {
+  return requestApi.post('courses/' ,  {body:data}).json()
+}
+
+
 // запросы учителей
+
 export const getTeachers = (token) => {
   return requestApi 
     .get('users/get-all', {
@@ -21,4 +31,10 @@ export const getTeachers = (token) => {
       },
     })
     .json();
+
 };
+
+
+export const AddLessons  = (id, ) => {
+return requestApi.post(`courses/${id}/lessons`, {json:id}).json()
+}
