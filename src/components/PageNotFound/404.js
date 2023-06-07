@@ -19,7 +19,7 @@ export const page404 = () => {
     repeat: -1,
     ease: Linear.easeNone,
     duration: 8,
-  });
+  }); 
 
   t3.fromTo(
     '.wrong_para',
