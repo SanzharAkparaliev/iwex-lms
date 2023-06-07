@@ -10,6 +10,7 @@ import { getTeachers } from '../../../api/clientApi';
 export const AddTech = () => {
   const [open, setOpen] = useState(false);
 
+
   const [input, setInput] = useState();
 
   const fileReader = new FileReader();
@@ -17,10 +18,13 @@ export const AddTech = () => {
     setImageURL(fileReader.result);
   };
 
+
   const [image, setImage] = useState();
   const [imageURL, setImageURL] = useState();
   const handleOnChange = (event) => {
     if (event.target.files[0]) {
+
+
 
       event.preventDefault();
 
@@ -31,28 +35,28 @@ export const AddTech = () => {
     }
   };
 
-  const handleInput = (e) => {
-    setInput((prev) => {
-      return {
-        ...prev,
-        [e.target.value]: e.target.name,
-      };
-    });
-  };
+  // const handleInput = (e) => {
+  //   setInput((prev) => {
+  //     return {
+  //       ...prev,
+  //       [e.target.value]: e.target.name,
+  //     };
+  //   });
+  // };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const token = Cookies.get('token');
-        const response = await getTeachers(token);
-        const data = await response.json();
-        console.log(data);
-      } catch (errors) {
-        console.log(errors);
-      }
-    };
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const token = Cookies.get('token');
+  //       const response = await getTeachers(token);
+  //       const data = await response.json();
+  //       console.log(data);
+  //     } catch (errors) {
+  //       console.log(errors);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
 
   return (
     <div className={styled.add}>
@@ -78,7 +82,7 @@ export const AddTech = () => {
                       className={styled.inp_ff}
                       type="file"
                       id="file_loader"
-                      onChange={handleInput}
+                      onChange={handleOnChange}
                     />
                     <p></p>
                   </div>
@@ -95,7 +99,7 @@ export const AddTech = () => {
                     className={styled.ino}
                     required
                     type="text"
-                    onChange={handleInput}
+                    onChange={handleOnChange}
                   />
 
 
@@ -118,7 +122,7 @@ export const AddTech = () => {
                     className={styled.ino}
                     required
                     type="text"
-                    onChange={handleInput}
+                    onChange={handleOnChange}
                   />
                   <label className={styled.la} htmlFor="">
                     Descriptions
