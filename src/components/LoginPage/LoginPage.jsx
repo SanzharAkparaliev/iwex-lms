@@ -13,6 +13,7 @@ export const LoginPage = () => {
     email: '',
     password: '',
   });
+  const [err, setErr] = useState()
 
   const changeHandler = (e) => {
     setAuthData((prev) => {
@@ -31,22 +32,24 @@ export const LoginPage = () => {
 
   const submitForm = async (e) => {
     e.preventDefault();
-    try {
-      const data = await userAuth(authData);
-      console.log(data);
+    try{
+  const data = await userAuth(authData);
+  console.log(data);
 
-      Cookies.set('token', data.token, {
-        expires: 10,
-      });
+  Cookies.set('token', data.token, {
+    expires: 10,
+  });
+ 
+  if (data.token) {
+    
+    redirect('/');
+    setAuthData(false);
+  } 
+  location.reload();
 
-      if (data.token) {
-        redirect('/');
-        setAuthData(false);
-      }
-      location.reload();
-    } catch (error) {
-      alert('Incorrect password or email address entered!');
-      console.log(error + 'hola');
+    }catch(error){
+     setErr('Incorrect password or email address entered!')
+console.log(error + 'hola')
     }
   };
 
@@ -88,6 +91,7 @@ export const LoginPage = () => {
                 <p>
                   Dont have a account <a href="@">Register</a>
                 </p>
+                <p className={styled.error_title}>{err}</p>
               </div>
             </form>
           </div>
