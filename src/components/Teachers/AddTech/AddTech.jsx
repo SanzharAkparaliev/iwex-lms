@@ -9,17 +9,25 @@ import { getTeachers } from '../../../api/clientApi';
 
 export const AddTech = () => {
   const [open, setOpen] = useState(false);
+
+
   const [input, setInput] = useState();
 
   const fileReader = new FileReader();
   fileReader.onloadend = () => {
     setImageURL(fileReader.result);
   };
+
+
   const [image, setImage] = useState();
   const [imageURL, setImageURL] = useState();
   const handleOnChange = (event) => {
     if (event.target.files[0]) {
+
+
+
       event.preventDefault();
+
       console.log('change', event.target.files);
       const file = event.target.files[0];
       setImage(file);
@@ -86,12 +94,14 @@ export const AddTech = () => {
                 <h2 className={styled.aa}>Name Techers</h2>
                 <div className={styled.inputbox}>
                   <DiYeoman className={styled.icon} />
+
                   <input
                     className={styled.ino}
                     required
                     type="text"
                     onChange={handleOnChange}
                   />
+
 
                   <label className={styled.la} htmlFor="">
                     Name
