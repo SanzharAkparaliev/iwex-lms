@@ -13,28 +13,41 @@ export const userAuth = (data) => {
 };
 
 // добовление курса
-export const postCourses = (data) => {
-  return requestApi.post('courses/' ,  {json:data}).json()
-}
-export const postImgCourses = (data) => {
-  return requestApi.post('courses/' ,  {body:data}).json()
-}
-
+export const postCourses = (courses, token) => {
+  return requestApi
+    .post('courses', {
+      json: courses,
+      headers: {
+        Authorization: `Bearer ${token}`,
+        
+      },
+    })
+    .json();
+};
+export const postImgCourses = (dataimg, token) => {
+  return requestApi
+    .post('courses', {
+      body: dataimg,
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-type": "multipart-formdata"
+      },
+    })
+    .json();
+};
 
 // запросы учителей
 
 export const getTeachers = (token) => {
-  return requestApi 
+  return requestApi
     .get('users/get-all', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     })
     .json();
-
 };
 
-
-export const AddLessons  = (id, ) => {
-return requestApi.post(`courses/${id}/lessons`, {json:id}).json()
-}
+export const AddLessons = (id) => {
+  return requestApi.post(`courses/${id}/lessons`, { json: id }).json();
+};

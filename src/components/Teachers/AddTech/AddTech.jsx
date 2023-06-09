@@ -35,28 +35,28 @@ export const AddTech = () => {
     }
   };
 
-  // const handleInput = (e) => {
-  //   setInput((prev) => {
-  //     return {
-  //       ...prev,
-  //       [e.target.value]: e.target.name,
-  //     };
-  //   });
-  // };
+   const handleInput = (e) => {
+     setInput((prev) => {
+       return {
+        ...prev,
+         [e.target.value]: e.target.name,
+   };
+     });
+   };
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const token = Cookies.get('token');
-  //       const response = await getTeachers(token);
-  //       const data = await response.json();
-  //       console.log(data);
-  //     } catch (errors) {
-  //       console.log(errors);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const token = Cookies.get('token');
+        const response = await getTeachers(token);
+        const data = await response.json();
+        console.log(data);
+      } catch (errors) {
+        console.log(errors);
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
     <div className={styled.add}>
