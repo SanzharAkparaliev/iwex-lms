@@ -31,27 +31,23 @@ export const LoginPage = () => {
 
   const submitForm = async (e) => {
     e.preventDefault();
-    try{
-z 
-  const data = await userAuth(authData);
-  console.log(data);
+    try {
+      const data = await userAuth(authData);
+      console.log(data);
 
-  Cookies.set('token', data.token, {
-    expires: 10,
-  });
- 
-  if (data.token) {
-    
-    redirect('/');
-    setAuthData(false);
-  } 
-  location.reload();
+      Cookies.set('token', data.token, {
+        expires: 10,
+      });
 
-    }catch(error){
-      alert('Incorrect password or email address entered!')
-console.log(error + 'hola')
+      if (data.token) {
+        redirect('/');
+        setAuthData(false);
+      }
+      location.reload();
+    } catch (error) {
+      alert('Incorrect password or email address entered!');
+      console.log(error + 'hola');
     }
- 
   };
 
   return (

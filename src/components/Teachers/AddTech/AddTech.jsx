@@ -10,7 +10,6 @@ import { getTeachers } from '../../../api/clientApi';
 export const AddTech = () => {
   const [open, setOpen] = useState(false);
 
-
   const [input, setInput] = useState();
 
   const fileReader = new FileReader();
@@ -18,14 +17,10 @@ export const AddTech = () => {
     setImageURL(fileReader.result);
   };
 
-
   const [image, setImage] = useState();
   const [imageURL, setImageURL] = useState();
   const handleOnChange = (event) => {
     if (event.target.files[0]) {
-
-
-
       event.preventDefault();
 
       console.log('change', event.target.files);
@@ -35,28 +30,28 @@ export const AddTech = () => {
     }
   };
 
-  // const handleInput = (e) => {
-  //   setInput((prev) => {
-  //     return {
-  //       ...prev,
-  //       [e.target.value]: e.target.name,
-  //     };
-  //   });
-  // };
+  const handleInput = (e) => {
+    setInput((prev) => {
+      return {
+        ...prev,
+        [e.target.value]: e.target.name,
+      };
+    });
+  };
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const token = Cookies.get('token');
-  //       const response = await getTeachers(token);
-  //       const data = await response.json();
-  //       console.log(data);
-  //     } catch (errors) {
-  //       console.log(errors);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const token = Cookies.get('token');
+        const response = await getTeachers(token);
+        const data = await response.json();
+        console.log(data);
+      } catch (errors) {
+        console.log(errors);
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
     <div className={styled.add}>
@@ -101,7 +96,6 @@ export const AddTech = () => {
                     type="text"
                     onChange={handleOnChange}
                   />
-
 
                   <label className={styled.la} htmlFor="">
                     Name
