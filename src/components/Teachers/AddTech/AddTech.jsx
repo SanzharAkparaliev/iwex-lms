@@ -10,7 +10,6 @@ import { getTeachers } from '../../../api/clientApi';
 export const AddTech = () => {
   const [open, setOpen] = useState(false);
 
-
   const [input, setInput] = useState();
 
   const fileReader = new FileReader();
@@ -18,13 +17,10 @@ export const AddTech = () => {
     setImageURL(fileReader.result);
   };
 
-
   const [image, setImage] = useState();
   const [imageURL, setImageURL] = useState();
   const handleOnChange = (event) => {
     if (event.target.files[0]) {
-
-
 
       event.preventDefault();
 

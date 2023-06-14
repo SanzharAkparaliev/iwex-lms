@@ -13,6 +13,7 @@ export const LoginPage = () => {
     email: '',
     password: '',
   });
+  const [err, setErr] = useState()
 
   const changeHandler = (e) => {
     setAuthData((prev) => {
@@ -48,8 +49,7 @@ export const LoginPage = () => {
   location.reload();
 
     }catch(error){
-      alert('Incorrect password or email address entered!')
-console.log(error + 'hola')
+     setErr('Incorrect password or email address entered!')
     }
  
   };
@@ -92,6 +92,7 @@ console.log(error + 'hola')
                 <p>
                   Dont have a account <a href="@">Register</a>
                 </p>
+                <p className={styled.error_title}>{err}</p>
               </div>
             </form>
           </div>

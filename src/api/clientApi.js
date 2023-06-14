@@ -1,7 +1,7 @@
 import ky from 'ky';
 
 const requestApi = ky.create({
-  prefixUrl: import.meta.env.VITE_USER_AUTH,
+  prefixUrl: import.meta.env.VITE_USER_TEACH,
 });
 
 // const requestTeach = ky.create({
