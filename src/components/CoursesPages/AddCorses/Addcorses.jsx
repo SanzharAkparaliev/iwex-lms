@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styled from './addcorses.module.css';
-
+import Cookies from 'js-cookie';
 import { IoBookSharp } from 'react-icons/io5';
 import { BiPlusMedical } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
@@ -16,29 +16,17 @@ export const Addcorses = () => {
   };
   const [courses, setCorses] = useState({
     name: '',
-    descriptions: '',
+ 
   });
 
   const [image, setImage] = useState(null);
   const [imageURL, setImageURL] = useState();
 
-  //   const handleOnChange = (event) => {
-  //     event.preventDefault();
-  //     console.log('change', event.target.files);
-  //     const file = event.target.files[0];
-  //     setImage(file);
-  //     setImageURL(URL.createObjectURL(file));
-
-  //     const avatar = new FormData();
-  //     avatar.append('file', file);
-  //     console.log(avatar);
-  //   };
-
   useEffect(() => {
     if (image) {
       setImageURL(URL.createObjectURL(image));
     }
-    console.log(image)
+    console.log(image);
   }, [image]);
 
   const changeHend = (e) => {
@@ -48,16 +36,20 @@ export const Addcorses = () => {
         [e.target.name]: e.target.value,
       };
     });
-    
-   
   };
-  console.log(courses)
+  console.log(courses);
   const Submit = async (e) => {
-    // e.preventDefault();
-    const data = new FormData();
-    data.append('files', image);
-    const postDataCourses= await postCourses(courses);
-    const postimg= await postImgCourses(data);
+    e.preventDefault();
+    const dataimg = new FormData();
+    dataimg.append('files', image);
+    console.log(dataimg);
+    const token = Cookies.get('token');
+    // try {
+      const postDataCourses = await postCourses(courses, token);
+      // const postimg = await postImgCourses(dataimg, token);
+    // } catch (err) {
+      console.log(err);
+    // }
   };
 
   return (

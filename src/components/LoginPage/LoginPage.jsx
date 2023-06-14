@@ -32,22 +32,24 @@ export const LoginPage = () => {
 
   const submitForm = async (e) => {
     e.preventDefault();
-    try {
-      const data = await userAuth(authData);
-      console.log(data);
+    try{
 
-      Cookies.set('token', data.token, {
-        expires: 10,
-      });
+  const data = await userAuth(authData);
+  console.log(data);
 
-      if (data.token) {
-        redirect('/');
-        setAuthData(false);
-      }
-      location.reload();
-    } catch (error) {
-      setErr('Incorrect password or email address entered!');
-      console.log(error + 'hola');
+  Cookies.set('token', data.token, {
+    expires: 10,
+  });
+ 
+  if (data.token) {
+    
+    redirect('/');
+    setAuthData(false);
+  } 
+  location.reload();
+
+    }catch(error){
+     setErr('Incorrect password or email address entered!')
     }
   };
 

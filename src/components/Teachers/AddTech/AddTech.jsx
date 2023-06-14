@@ -21,6 +21,7 @@ export const AddTech = () => {
   const [imageURL, setImageURL] = useState();
   const handleOnChange = (event) => {
     if (event.target.files[0]) {
+
       event.preventDefault();
 
       console.log('change', event.target.files);
@@ -30,14 +31,14 @@ export const AddTech = () => {
     }
   };
 
-  const handleInput = (e) => {
-    setInput((prev) => {
-      return {
+   const handleInput = (e) => {
+     setInput((prev) => {
+       return {
         ...prev,
-        [e.target.value]: e.target.name,
-      };
-    });
-  };
+         [e.target.value]: e.target.name,
+   };
+     });
+   };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -96,6 +97,7 @@ export const AddTech = () => {
                     type="text"
                     onChange={handleOnChange}
                   />
+
 
                   <label className={styled.la} htmlFor="">
                     Name
