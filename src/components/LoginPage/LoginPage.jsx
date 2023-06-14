@@ -8,12 +8,12 @@ import { Footer } from '../Footer/Footer';
 
 export const LoginPage = () => {
   const redirect = useNavigate();
+  const [err, setErr] = useState();
 
   const [authData, setAuthData] = useState({
     email: '',
     password: '',
   });
-  const [err, setErr] = useState()
 
   const changeHandler = (e) => {
     setAuthData((prev) => {
@@ -32,24 +32,22 @@ export const LoginPage = () => {
 
   const submitForm = async (e) => {
     e.preventDefault();
-    try{
-  const data = await userAuth(authData);
-  console.log(data);
+    try {
+      const data = await userAuth(authData);
+      console.log(data);
 
-  Cookies.set('token', data.token, {
-    expires: 10,
-  });
- 
-  if (data.token) {
-    
-    redirect('/');
-    setAuthData(false);
-  } 
-  location.reload();
+      Cookies.set('token', data.token, {
+        expires: 10,
+      });
 
-    }catch(error){
-     setErr('Incorrect password or email address entered!')
-console.log(error + 'hola')
+      if (data.token) {
+        redirect('/');
+        setAuthData(false);
+      }
+      location.reload();
+    } catch (error) {
+      setErr('Incorrect password or email address entered!');
+      console.log(error + 'hola');
     }
   };
 

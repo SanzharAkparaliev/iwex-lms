@@ -1,7 +1,7 @@
 import ky from 'ky';
 
 const requestApi = ky.create({
-  prefixUrl: import.meta.env.VITE_USER_AUTH,
+  prefixUrl: import.meta.env.VITE_USER_TEACH,
 });
 
 // const requestTeach = ky.create({
@@ -14,27 +14,24 @@ export const userAuth = (data) => {
 
 // добовление курса
 export const postCourses = (data) => {
-  return requestApi.post('courses/' ,  {json:data}).json()
-}
+  return requestApi.post('courses/', { json: data }).json();
+};
 export const postImgCourses = (data) => {
-  return requestApi.post('courses/' ,  {body:data}).json()
-}
-
+  return requestApi.post('courses/', { body: data }).json();
+};
 
 // запросы учителей
 
 export const getTeachers = (token) => {
-  return requestApi 
+  return requestApi
     .get('users/get-all', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     })
     .json();
-
 };
 
-
-export const AddLessons  = (id, ) => {
-return requestApi.post(`courses/${id}/lessons`, {json:id}).json()
-}
+export const AddLessons = (id) => {
+  return requestApi.post(`courses/${id}/lessons`, { json: id }).json();
+};
