@@ -48,7 +48,8 @@ export const LoginPage = () => {
   } 
   location.reload();
 
-    }catch(error){
+    }catch
+    (error){
      setErr('Incorrect password or email address entered!')
     }
  
