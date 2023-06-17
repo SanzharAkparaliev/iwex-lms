@@ -1,5 +1,4 @@
 .wraper{
-    background: url(./background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -39,7 +38,7 @@
 .text{
     font-size: 2rem;
     text-align: center;
-    color:#333333;
+    color:#ffffff;
 }
 .inputbox{
     position: relative;

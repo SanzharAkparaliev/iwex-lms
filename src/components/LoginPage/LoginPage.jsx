@@ -5,6 +5,8 @@ import Cookies from 'js-cookie';
 import { userAuth } from '../../api/clientApi';
 import { useNavigate } from 'react-router';
 import { Footer } from '../Footer/Footer';
+import Particles from 'react-tsparticles';
+import { ParticlesBackground } from './ParticlesBackground';
 
 export const LoginPage = () => {
   const redirect = useNavigate();
@@ -56,6 +58,8 @@ console.log(error + 'hola')
 
   return (
     <>
+            <ParticlesBackground/>
+
       <div className={styled.wraper}>
         <div className={styled.box}>
           <div className={styled.value}>
