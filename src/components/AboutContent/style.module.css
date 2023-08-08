@@ -1,0 +1,92 @@
+.conteiner {
+  margin-bottom: 20px;
+  width: 100%;
+  margin: 50px auto;
+}
+.postBlok {
+  display: flex;
+  margin: 0 auto;
+  gap: 20px;
+}
+.blok {
+  width: 50%;
+
+  margin: 0 auto;
+}
+.imgmen {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.cont {
+  margin-top: 40px;
+margin-left: 20px;
+  max-width: 400px;
+
+}
+.contblok {
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.icon{
+    margin-top: 6px;
+    font-family: Roboto;
+  font-weight: 500;
+    font-size: clamp(15px , 8vw ,35px);
+}
+.title {
+  font-size: clamp(25px ,6vw , 35px);
+  font-family: Roboto;
+  font-weight: 500;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.text {
+    margin-top: 30px;
+  width: 90%;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.8;
+  margin-left: 20px;
+  color: #c8c8c8;
+  opacity: 100%;
+  font-size: clamp(10px, 6vw, 18px);
+}
+.intblok {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  margin: 0 auto;
+
+  width: 180px;
+  height: 100px;
+}
+.par{
+  color:  black;
+    font-family: Roboto;
+  font-weight: 500;
+    font-size: clamp(19px , 6vw , 32px);
+}
+
+@media (max-width: 1100px) {
+  .postBlok {
+    flex-wrap: wrap-reverse;
+  }
+  .blok {
+    width: 80%;
+  }
+  .text{
+    text-align: center;
+  }
+  .cont {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .title{
+text-align: center;
+  }
+}

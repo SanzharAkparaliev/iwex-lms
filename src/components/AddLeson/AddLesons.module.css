@@ -1,0 +1,41 @@
+.input_wrapper{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.selectStyle{
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.form{
+  padding: 12px;
+  padding-top: 45px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 24px;
+}
+
+.input{
+  outline: none;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  border: solid 1px #ffcc00;
+  font-size: 16px;
+}
+
+
+.btn{
+  padding: 10px 170px;
+}
+
+/* .editor{
+  width: 500px;
+} */

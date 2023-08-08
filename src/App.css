@@ -1,27 +1,34 @@
 @font-face {
-  font-family: Nunito;
-  src: url('../public/fonts/Nunito/Nunito-Regular.ttf');
+  font-family: Roboto;
+  src: url('../public/fonts/Roboto/Roboto-Light.ttf');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: Roboto;
+  src: url('../public/fonts/Roboto/Roboto-Regular.ttf');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: Nunito;
-  src: url('../public/fonts/Nunito/Nunito-Medium.ttf');
+  font-family: Roboto;
+  src: url('../public/fonts/Roboto/Roboto-Medium.ttf');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: Nunito;
-  src: url('../public/fonts/Nunito/Nunito-SemiBold.ttf');
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: Nunito;
-  src: url('../public/fonts/Nunito/Nunito-Bold.ttf');
+  font-family: Roboto;
+  src: url('../public/fonts/Roboto/Roboto-Bold.ttf');
   font-weight: 700;
   font-style: normal;
 }
+
+:root {
+  --color-primary: #ffcc00;
+  --sidebar-width: 520px;
+  --menu-height: 450px;
+}
+
 
 * {
   margin: 0;
@@ -30,11 +37,147 @@
   color: inherit;
   box-sizing: border-box;
 }
+
 .cont {
   width: 1400px;
 }
 
 body{
-  font-family: 'Nunito';
+  font-family: 'Roboto';
+  /* display: grid; */
 }
 
+.card{
+  display: flex;
+  padding: 0 20px;
+  gap: 65px;
+  width: var(--sidebar-width);
+  height: var(--menu-height);
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 20px 30px rgba(57, 76, 96, 0.266);
+  transition: 0.3s;
+  margin-bottom: 45px;
+}
+
+.text-editor {
+  width: 186px;
+  margin: 0 auto;
+}
+.ql-editor {
+  min-width: 100px;
+  min-height: 200px;
+}
+
+
+
+
+.buttons {
+  padding-top: 20px;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons button {
+  margin: 0;
+  font-size: 17px;
+  width: 100%;
+  height: 36px;
+  padding: 0 0 0 12px;
+  background: transparent;
+  border-radius: 6px;
+  border: 0;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  color: #5a5555;
+  margin-bottom: 12px;
+}
+
+.buttons button.active {
+  background: var(--color-primary);
+  color: #333;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 auto;
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  width: 100%;
+  height: 36px;
+}
+
+.wrapper::before {
+  top: 0;
+  background: linear-gradient(#ffffff, rgb(255 255 255 / 0%));
+}
+
+.wrapper::after {
+  bottom: 0;
+  background: linear-gradient(rgb(255 255 255 / 0%), #ffffff);
+}
+
+.content {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: calc(var(----menu-height) * 3);
+  transition: 0.6s;
+}
+
+.desc_object{
+  display: flex;
+  align-items: center;
+  line-height: 1.6;
+  font-size: 16px;
+  margin: 0;
+  color: #222222;
+  /* opacity: 0.8; */
+}
+
+.block {
+  padding: 0 30px;
+  height: var(--menu-height);
+}
+
+.name_object {
+  padding-top: 20px;
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 500;
+  font-size: 20px;
+  padding-bottom: 12px;
+}
+
+
+@media screen and (max-width: 780px) {
+  .card{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 65px;
+    width: 100%;
+    padding: 24px;
+  }
+  .wrapper{
+    /* width: 100%; */
+    padding-top: 34px;
+    background: #ffcc00;
+  }
+}

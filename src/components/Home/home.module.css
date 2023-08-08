@@ -1,5 +1,5 @@
 .wrappper_container{
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -11,15 +11,275 @@
 
 .banner{
   padding: 35px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
 }
 
 .description_title{
-  color: #333;
+  color: #333333;
   font-size: 45px;
   padding-bottom: 35px;
+  font-weight: 700;
 }
 
 .paragraph{
-  font-size: 24px;
+  font-size: 18px;
   max-width: 550px;
+  color: #333333;
+  line-height: 32px;
+}
+
+.banner_girl{
+  width: 660px;
+}
+
+.label{
+  padding-top: 45px;
+  display: flex;
+  gap: 70px;
+}
+
+.input{
+  width: 182%;
+  padding: 8px;
+  height: 36px;
+  border-radius: 10px;
+  outline: none;
+  border: solid 2px #ffcc00
+}
+
+.btn{
+  font-size: 14px;
+  padding: 10px 20px;
+  background: #333333;
+  color: #ffcc00;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.socials{
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 110px;
+  /* overflow-x: scroll; */
+  flex-wrap: wrap;
+}
+
+.socialIcon{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto;
+}
+
+.iconInstagram{
+  color: #ffcc00;
+  font-size: 24px;
+}
+
+.iconLink{
+  font-size: 24px;
+}
+
+.article{
+  padding-top: 45px;
+  display: flex;
+  padding: 25px;
+}
+
+.article_blog{
+  display: flex;
+  gap: 100px;
+}
+
+.article_title{
+  font-size: 30px;
+  padding-bottom: 18px;
+}
+
+.subImage{
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+
+
+.play_icon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #ffcc00;
+  z-index: 7777;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.article_description{
+  width: 600px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.article_video_blog{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 777;
+}
+
+.video_img{
+  border-radius: 50px;
+}
+
+.card_section{
+  padding-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px;
+  padding-bottom: 35px;
+}
+
+.single_card{
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: auto;
+  /* border: solid 1px #000; */
+  padding: 12px;
+}
+
+.card_icon{
+  font-size: 56px;
+  color: #ffcc00;
+  width: 120px;
+  margin: 0 auto;
+}
+
+.card_title{
+  color: #333333;
+  font-size: 20px;
+  padding-top: 24px;
+  margin-bottom: 18px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.card_single_desc{
+  text-align: center;
+  line-height: 34px;
+  opacity: .8;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1396px) {
+  .socials{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .article_blog{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 24px;
+  }
+  .article_video_blog{
+    width: 100%;
+  }
+  .subImage{
+    width: 100%;
+  }
+  .video_img{
+    width: 100%;
+  }
+  .card_section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .banner{
+    padding: 35px;
+  }
+  .banner_girl{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner{
+    display: flex;
+    flex-direction: column;
+  }
+  .descriptions{
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .description_title{
+    text-align: center;
+  }
+  .paragraph{
+    text-align: center;
+  }
+  .label{
+    display: flex;
+    justify-content: center;
+  }
+
+  .socials{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+    align-items: center;
+  }
+  .article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .video_img{
+    display: flex;
+    justify-content: center;
+  }
+  .article_desc{
+    text-align: center;
+  }
+  .article_description{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .article{
+    padding-top: 12px;
+  }
 }

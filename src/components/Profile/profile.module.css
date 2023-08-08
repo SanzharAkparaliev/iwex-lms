@@ -1,0 +1,39 @@
+.sidebar_wrapper{
+  padding-top: 45px;
+  margin-left: 24px;
+  width: 600px;
+}
+
+.sidebar_title{
+  margin-bottom: 18px;
+  font-size: 20px;
+}
+
+.user_wrapper{
+  background: #ffcc00;
+  padding: 10px;
+  width: 350px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 4px 1px 4px 3px #00000021;
+  margin-bottom: 40px;
+}
+
+.user_name{
+  padding-bottom: 5px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.user_email{
+  font-size: 14px;
+}
+
+
+
+
+/* .name_object{
+  color: #000;
+} */
